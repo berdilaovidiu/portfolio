@@ -69,7 +69,7 @@
 				<div><a href="index.html">About</a></div>
 				<div><a href="projects.html">Projects</a></div>
 				<div><a href="education.html">Education</a></div>
-				<div><a href="contact.html">Contact</a></div>	
+				<div><a href="contact.html">Contact</a></div>
 			</div>
 		</div>
 		<div id="right_panel">
@@ -81,18 +81,18 @@
 
 				<h2>PROBLEM TO SOLVE</h2>
 				<p>In the first days from starting with a new job, I got the task to fix some of the bugs they had with an internal test automation tool. The problems were not trivial and were mostly created by the large amounts of data that were loaded in the web page, the persistence mechanism that used a lot of space on the drive and the comparison algorithms that did not cover all the cases and gave false positives.</p>
-				
+
 				<p>There was no other way around this but to rewrite a significant part of the application to optimize the traffic between the server and the browser and also to persist smaller and more flexible data structures.</p>
-				
+
 				<p>I thought this was the perfect opportunity to propose a new design of the entire application, including a brand new user interface. I can say I was lucky to get the approval for such an ambitious plan, given the fact that most companies don't invest more than necessary in their internal tools and on top of that, I had zero web development skills at that time.</p>
-				
+
 				<p>In a nutshell, this is a record/replay tool for the communication between the components of the system. The communication consists of serialized Java objects that are passed between components on specific requests. The tool is based on the idea that recordings will be done when the system is in a stable state and those recordings will be compared against the traffic within the system at a future date to make sure nothing changed or to spot what changed.</p>
-				
+
 				<a class="fancybox" rel="storyboards" title="Cooking a nice dinner" href="img/hci_project/hand drawn/cooking_storyboard_full_size.jpg"><img id="function_candidates_1" src="img/hci_project/hand drawn/cooking_storyboard_stripe.jpg" alt="" /></a>
-				
+
 				<p>For those of you not familiar with test automation, I will describe it to you in a nutshell.</p>
-								
-				<p>The needs of such a testing tool gravitate along these lines : 
+
+				<p>The needs of such a testing tool gravitate along these lines :
 					<ul>
 						<li>Record</li>
 						<li>Replay and compare</li>
@@ -101,7 +101,7 @@
 						<li>Fix tests that are providing wrong assessment</li>
 					</ul>
 				</p>
-				
+
 				<p>There are some notions that need to be defined before going further :
 					<ul>
 						<li>API - description of an interaction with the service defined by the name of the request, the kind of the input it needs and the type of the output it provides</li>
@@ -111,45 +111,48 @@
 						<li>Suite - a collection of scenarios grouped around a similar need or functionality</li>
 					</ul>
 				</p>
-								
+
 				<h2>SKETCHES</h2>
-				
-				<p>So I started by sketching some ideas I had after having a discussion with the original author of the application where he explained to me the purpose of the tool and some of the ways it is being used by the Quality Assurance team.</p> 
-				
+
+				<p>So I started by sketching some ideas I had after having a discussion with the original author of the application where he explained to me the purpose of the tool and some of the ways it is being used by the Quality Assurance team.</p>
+
 				<p>I played along the idea of having a tree of items on the left and a larger area on the right to display more information about the selected item from the tree.</p>
+                <a class="fancybox" rel="sketches" title="Suite view" href="img/quesee/after/sketches/suite.jpg"><img class="gallery3" id="sketches_1" src="img/quesee/after/sketches/suite.jpg" alt="" /></a>
+                <a class="fancybox" rel="sketches" title="Scenario view" href="img/quesee/after/sketches/scenario.jpg"><img class="gallery3" id="sketches_2" src="img/quesee/after/sketches/scenario.jpg" alt="" /></a>
+                <a class="fancybox" rel="sketches" title="Test view" href="img/quesee/after/sketches/test.jpg"><img class="gallery3" id="sketches_3" src="img/quesee/after/sketches/test.jpg" alt="" /></a>
+
+
+                <p>The tree would display two different groupings of the collection of tests (by Component and by Suite) and would also provide contextual actions on mouse over for each type of item.</p>
+
 				<!-- picture here -->
-				
-				<p>The tree would display two different groupings of the collection of tests (by Component and by Suite) and would also provide contextual actions on mouse over for each type of item.</p>
-				
-				<!-- picture here -->
-				
+
 				<p>I also wanted to have the most important actions like running, recording and reports easy to access and have the state of the application visible at all times.</p>
-				
+
 				<!-- picture here -->
-				
+
 				<h2>WIREFRAMES</h2>
-				
+
 				<p>After having a clearer idea of how I wanted the application to look like, I created a series of wireframes in order to communicate with the remote team I was working for and ask for their feedback.</p>
-				
+
 				<!-- mention balsamiq -->
 				<!-- picture here -->
-				
+
 				<!-- talk about the JSON tree and about the progressive disclosure which is key in solving the performance problem -->
-				
+
 				<p>As you can see, the wireframes are not complete and do not cover all the possible scenarios, but this was enough to get the conversation started, get some feedback and start to develop the new user interface.</p>
 
 				<h2>IMPLEMENTATION</h2>
-				
+
 				<p>Starting from the wireframes and from the feedback of the users, I began to implement the design. There was no hi fidelity prototype since there was no need of a polished version and more that that, I liked the look and feel of the wireframes that suggested a flat UI with no bells and whistles but also with a feel of playfulness and friendliness coming from the round corners and alive colours.</p>
-				
+
 		        <p>It took more than a few months for the design to come to life and there were a lot of tiny additional decisions that were made along the line to accommodate all the requirements.</p>
-				
+
 				<!-- picture here -->
-				
+
 				<!-- talk about the comparison view -->
-				
+
 				<!-- talk about the history view and give a link to the article -->
-						
+
 				<h2>CONCLUSION</h2>
 				<p>The tool is now being used by the QA team</p>
 				<p>Most of the complaints were about the back-end functionality. There were some things related to the UI, like the history chart that became unusable until redesigned and the colours that were being used in the comparison view</p>
