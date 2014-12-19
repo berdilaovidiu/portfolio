@@ -1,0 +1,21 @@
+
+
+- add subtitles for pictures to create a story
+- review all copy/content
+- spell check all text
+- show more and less
+- vertical align text with pictures
+- break education in seminars and university
+- do not reload profile picture when changing the page
+- test on all browsers
+- make layout responsive
+- complete the list of books											DONE
+- complete contact page													DONE
+- buy .com domain														DONE
+- make sure links look alike on all pages (about page is an example)	DONE
+- complete NDA text														DONE
+- fix padding bottom													DONE
+- fix project topics to align middle									DONE
+- fix education page statement size										DONE
+- make sure navigation works on all pages								DONE
+- make sure menu looks the same on all pages							DONE

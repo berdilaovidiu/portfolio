@@ -1,0 +1,19 @@
+#right_panel{
+	font-family: "Open Sans", Arial, sans-serif;
+	color: black;
+	font-size : 12pt;
+	//background-image : url(../img/baseline_grid_19px_14pt.gif);
+	
+	padding: 100px;
+	line-height : 19px;
+}
+
+.key{
+	color : grey;
+	width : 65px;
+	line-height : 30px;
+}
+
+.value{
+	color : rgb(150, 0, 132);
+}

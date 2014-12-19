@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="style/resets.css"/>
+		<!--<link rel="stylesheet" href="style/customgrid.css"/>-->
+		<link rel="stylesheet" href="style/layout.css"/>
+		<link rel="stylesheet" href="style/projects.css"/>
+		<meta charset="utf-8"/>
+		
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'/>
+		
+		<!-- Add jQuery library -->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+		
+		
+		
+		<title>Ovidiu Berdila - Projects</title>
+	</head>
+	<body>
+		<div id="grid">
+			<div class = "column"></div>
+			<div class = "column"></div>
+			<div class = "column"></div>
+			<div class = "column"></div>
+			<div class = "column"></div>
+			<div class = "column"></div>
+			<div class = "column"></div>
+			<div class = "column"></div>
+			<div class = "column"></div>
+			<div class = "column"></div>
+			<div class = "column"></div>
+			<div class = "column"></div>
+			<div class = "column"></div>
+			<div class = "column"></div>
+			<div class = "column"></div>
+			<div class = "column"></div>
+		</div>
+	
+		<div id="left_panel">
+			<div id="photo_container">
+				<img id="profile_photo" src="img/profile_photo2.png"/>
+				<div id="summary"><span id="name">Ovidiu Berdila</span><br><span id="statement">I like to design simple and elegant solutions for complex problems.</span></div>
+			</div>
+			<div id="menu">
+				<div><a href="index.html">About</a></div>
+				<div>Projects</div>
+				<div><a href="education.html">Education</a></div>
+				<div><a href="contact.html">Contact</a></div>	
+			</div>
+		</div>
+		<div id="right_panel">
+			<div id="about_projects">
+				<p>These are a part of the projects I have been working on. You can read the whole story for each project where there is a lenghty text will all the design steps in detail, or just click on the pictures and go through the slideshows. 
+				Each picture has a meaningfull description and you will still be able to follow the story even if you don't have the time for the detailed description.</p>
+				<p>Unfortunately, some of the most interesting things I have done are under Non Disclosure Agreements and I cannot share them here. 
+				I am currently in the process of getting approval for some of them and luckily I will be able to post them soon.</p>
+			</div>
+
+			<div id="projects_list">
+				<div class="project">
+					<div class = "project_thumbnail" onmouseover="hover($(this));" onmouseout="unhover($(this));">
+						<a class="bottom" href="function_candidates.html" >
+							<img src="img/function_candidates/thumbnail2.png"/>
+						</a>
+						<div class="overlay"> 
+							<div class="overlay_inner"> 
+								<div class="topics">
+									<div class="topic">HUMAN COGNITION</div>
+									<div class="topic">VISUAL DESIGN</div>
+									<div class="topic">TYPOGRAPHY</div>
+									<div class="topic">CODE</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="project_title">Biological Functions Suggestions Spreadsheet</div>
+				</div>
+				
+				<div class="project">
+					<div class = "project_thumbnail" onmouseover="hover($(this));" onmouseout="unhover($(this));">
+						<a  class="bottom"href="test_history.html">
+							<img src="img/test_history/thumbnail2.png"/>
+						</a>
+						<div class="overlay"> 
+							<div class="overlay_inner"> 
+								<div class="topics">
+									<div class="topic">HUMAN COGNITION</div>
+									<div class="topic">VISUALIZATION</div>
+									<div class="topic">INTERACTION DESIGN</div>
+									<div class="topic">VISUAL DESIGN</div>
+									<div class="topic">CODE</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="project_title">Test Execution History Widget</div>
+				</div>
+				
+				<div class="project">
+					<div class = "project_thumbnail" onmouseover="hover($(this));" onmouseout="unhover($(this));">
+						<a  class="bottom"href="be_healthy.html">
+							<img src="img/hci_project/thumbnail2.png"/>
+						</a>
+						<div class="overlay"> 
+							<div class="overlay_inner"> 
+								<div class="topics">
+									<div class="topic">HUMAN CENTERED</div>
+									<div class="topic">USER OBSERVATION</div>
+									<div class="topic">STORYBOARDS</div>
+									<div class="topic">WIREFRAMES</div>
+									<div class="topic">VISUAL DESIGN</div>
+									<div class="topic">USER TESTING</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="project_title">HCI Course Project</div>
+				</div>
+				
+				<div class="project">
+					<div class = "project_thumbnail" onmouseover="hover($(this));" onmouseout="unhover($(this));">
+						<a  class="bottom"href="quesee.html">
+							<img src="img/quesee/thumbnail.png"/>
+						</a>
+						<div class="overlay"> 
+							<div class="overlay_inner"> 
+								<div class="topics">
+									<div class="topic">CODE</div>
+									<div class="topic">WIREFRAMES</div>
+									<div class="topic">VISUAL DESIGN</div>
+									<div class="topic">USER TESTING</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="project_title">Quesee</div>
+				</div>
+				
+				<div class="project">
+					<div class = "project_thumbnail" onmouseover="hover($(this));" onmouseout="unhover($(this));">
+						<a  class="bottom"href="curation.html">
+							<img src="img/curation/thumbnail.png"/>
+						</a>
+						<div class="overlay"> 
+							<div class="overlay_inner"> 
+								<div class="topics">
+									<div class="topic">HUMAN CENTERED</div>
+									<div class="topic">USER OBSERVATION</div>
+									<div class="topic">WIREFRAMES</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="project_title">Content Curation Tool</div>
+				</div>
+				
+				
+			</div>
+			
+			<script>
+				function hover(element) {
+					element.find(".overlay").css("visibility", "visible");
+				};
+				
+				function unhover(element) {
+					element.find(".overlay").css("visibility", "hidden");
+				};
+			</script>
+		</div>
+	</body>
+</html>
