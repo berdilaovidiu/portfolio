@@ -163,14 +163,27 @@
 				<a class="fancybox" rel="implementation" title="Test view" href="img/quesee/after/implementation/3.test_step_view.PNG"><img class="gallery3" id="impementation_3" src="img/quesee/after/implementation/3.test_step_view.PNG" alt="" /></a>
 				<a class="fancybox" rel="implementation" title="Test editing" href="img/quesee/after/implementation/4.test_step_editing.PNG"><img class="gallery3" id="impementation_4" src="img/quesee/after/implementation/4.test_step_editing.PNG" alt="" /></a>
 				<a class="fancybox" rel="implementation" title="Run all tests" href="img/quesee/after/implementation/5.running_tests.png"><img class="gallery3" id="impementation_5" src="img/quesee/after/implementation/5.running_tests.png" alt="" /></a>
-				<a class="fancybox" rel="implementation" title="Test failure" href="img/quesee/after/implementation/6.exploring_test_failure.png"><img class="gallery3" id="impementation_6" src="img/quesee/after/implementation/6.exploring_test_failure.png" alt="" /></a>
+
 				<a class="fancybox" rel="implementation" title="Recording tests" href="img/quesee/after/implementation/7.recording_sceanrio.PNG"><img class="gallery3" id="impementation_7" src="img/quesee/after/implementation/7.recording_sceanrio.PNG" alt="" /></a>
 				<a class="fancybox" rel="implementation" title="Reports" href="img/quesee/after/implementation/8.reports_view.PNG"><img class="gallery3" id="impementation_8" src="img/quesee/after/implementation/8.reports_view.PNG" alt="" /></a>
 				<a class="fancybox" rel="implementation" title="Reports expanded" href="img/quesee/after/implementation/9.reports_expanded.PNG"><img class="gallery3" id="impementation_9" src="img/quesee/after/implementation/9.reports_expanded.PNG" alt="" /></a>
 
 				<!-- talk about the comparison view -->
 
+                <p>The comparison view leverages the object explorer view and decorates the tree elements with visual annotations in order to convey the changes. This is very different from the side by side view of the previous version of the application and it has both
+                advantages and disadvantages. The pros are the ease of implementation and integration in the new design. The con is the color coding that needs to be learned by the users (yellow for a change in value, blue for an addition and red for a deletion); the side by side comparison
+                can convey those meanings without using colors.</p>
+
+                <p>In order to make the comparison work along the progressive disclosure nature of the tree, the changes need to bubble up so that the user knows how to drill down in order to find them. This is done by adding a red dotted underline to the element that needs to be expanded in order to find the change. I used the same visual cue found in most spell checkers to convey that something is wrong.</p>
+
+                <a class="fancybox" rel="comparison" title="Test failure" href="img/quesee/after/implementation/6.exploring_test_failure.png"><img class="gallery3" id="comparison_1" src="img/quesee/after/implementation/6.exploring_test_failure.png" alt="" /></a>
+                <a class="fancybox" rel="comparison" title="Test failure" href="img/quesee/after/implementation/6.exploring_test_failure.png"><img class="gallery3" id="comparison_2" src="img/quesee/after/implementation/6.exploring_test_failure.png" alt="" /></a>
+                <a class="fancybox" rel="comparison" title="Test failure" href="img/quesee/after/implementation/6.exploring_test_failure.png"><img class="gallery3" id="comparison_3" src="img/quesee/after/implementation/6.exploring_test_failure.png" alt="" /></a>
+
 				<!-- talk about the history view and give a link to the article -->
+
+                <p>The colored chart displays the history of the test executions. Besides displaying information, it is also used for selecting a particular test execution in order to investigate the reasons behind the result. By selecting a test execution, a comparison tree is displayed right bellow the chart.</p>
+                <p>I have written a different article about the <a href="test_history.html">history chart</a> since there is an interesting design story behind it.</p>
 
 				<h2>CONCLUSION</h2>
 				<p>The tool is now being used by the QA team</p>
