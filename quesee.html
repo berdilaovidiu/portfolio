@@ -158,18 +158,25 @@
 
 		        <p>It took more than a few months for the design to come to life and there were a lot of tiny additional decisions that were made along the line to accommodate all the requirements.</p>
 
-				<a class="fancybox" rel="implementation" title="Suite view" href="img/quesee/after/implementation/1.suite_view.PNG"><img class="gallery3" id="impementation_1" src="img/quesee/after/implementation/1.suite_view.PNG" alt="" /></a>
-				<a class="fancybox" rel="implementation" title="Scenario view" href="img/quesee/after/implementation/2.scenario_view.PNG"><img class="gallery3" id="impementation_2" src="img/quesee/after/implementation/2.scenario_view.PNG" alt="" /></a>
-				<a class="fancybox" rel="implementation" title="Test view" href="img/quesee/after/implementation/3.test_step_view.PNG"><img class="gallery3" id="impementation_3" src="img/quesee/after/implementation/3.test_step_view.PNG" alt="" /></a>
-				<a class="fancybox" rel="implementation" title="Test editing" href="img/quesee/after/implementation/4.test_step_editing.PNG"><img class="gallery3" id="impementation_4" src="img/quesee/after/implementation/4.test_step_editing.PNG" alt="" /></a>
-				<a class="fancybox" rel="implementation" title="Run all tests" href="img/quesee/after/implementation/5.running_tests.png"><img class="gallery3" id="impementation_5" src="img/quesee/after/implementation/5.running_tests.png" alt="" /></a>
+                <h3>Visualizing and Editing tests</h3>
+                <p>Notice the contextual actions</p>
+				<a class="fancybox" rel="implementation" title="Suite view" href="img/quesee/after/implementation/1.suite_view.PNG"><img class="gallery4" id="impementation_1" src="img/quesee/after/implementation/1.suite_view.PNG" alt="" /></a>
+				<a class="fancybox" rel="implementation" title="Scenario view" href="img/quesee/after/implementation/2.scenario_view.PNG"><img class="gallery4" id="impementation_2" src="img/quesee/after/implementation/2.scenario_view.PNG" alt="" /></a>
+				<a class="fancybox" rel="implementation" title="Test view" href="img/quesee/after/implementation/3.test_step_view.PNG"><img class="gallery4" id="impementation_3" src="img/quesee/after/implementation/3.test_step_view.PNG" alt="" /></a>
+				<a class="fancybox" rel="implementation" title="Test editing" href="img/quesee/after/implementation/4.test_step_editing.PNG"><img class="gallery4" id="impementation_4" src="img/quesee/after/implementation/4.test_step_editing.PNG" alt="" /></a>
 
-				<a class="fancybox" rel="implementation" title="Recording tests" href="img/quesee/after/implementation/7.recording_sceanrio.PNG"><img class="gallery3" id="impementation_7" src="img/quesee/after/implementation/7.recording_sceanrio.PNG" alt="" /></a>
-				<a class="fancybox" rel="implementation" title="Reports" href="img/quesee/after/implementation/8.reports_view.PNG"><img class="gallery3" id="impementation_8" src="img/quesee/after/implementation/8.reports_view.PNG" alt="" /></a>
-				<a class="fancybox" rel="implementation" title="Reports expanded" href="img/quesee/after/implementation/9.reports_expanded.PNG"><img class="gallery3" id="impementation_9" src="img/quesee/after/implementation/9.reports_expanded.PNG" alt="" /></a>
+                <h3>Recording and Replaying tests</h3>
 
-				<!-- talk about the comparison view -->
+                <a class="fancybox" rel="implementation" title="Recording tests" href="img/quesee/after/implementation/7.recording_sceanrio.PNG"><img class="gallery2" id="impementation_7" src="img/quesee/after/implementation/7.recording_sceanrio.PNG" alt="" /></a>
+                <a class="fancybox" rel="implementation" title="Run all tests" href="img/quesee/after/implementation/5.running_tests.png"><img class="gallery2" id="impementation_5" src="img/quesee/after/implementation/5.running_tests.png" alt="" /></a>
 
+
+                <h3>Test Execution History</h3>
+                <p>The colored chart displays the history of the test executions. Besides displaying information, it is also used for selecting a particular test execution in order to investigate the reasons behind the result. By selecting a test execution, a comparison tree is displayed right bellow the chart.</p>
+                <p>I have written a different article about the <a href="test_history.html">history chart</a> since there is an interesting design story behind it.</p>
+
+
+                <h3>Comparing Objects</h3>
                 <p>The comparison view leverages the object explorer view and decorates the tree elements with visual annotations in order to convey the changes. This is very different from the side by side view of the previous version of the application and it has both
                 advantages and disadvantages. The pros are the ease of implementation and integration in the new design. The con is the color coding that needs to be learned by the users (yellow for a change in value, blue for an addition and red for a deletion); the side by side comparison
                 can convey those meanings without using colors.</p>
@@ -180,15 +187,24 @@
                 <a class="fancybox" rel="comparison" title="Test failure" href="img/quesee/after/implementation/6.exploring_test_failure2.png"><img class="gallery3" id="comparison_2" src="img/quesee/after/implementation/6.exploring_test_failure2.png" alt="" /></a>
                 <a class="fancybox" rel="comparison" title="Test failure" href="img/quesee/after/implementation/6.exploring_test_failure3.png"><img class="gallery3" id="comparison_3" src="img/quesee/after/implementation/6.exploring_test_failure3.png" alt="" /></a>
 
-				<!-- talk about the history view and give a link to the article -->
-
-                <p>The colored chart displays the history of the test executions. Besides displaying information, it is also used for selecting a particular test execution in order to investigate the reasons behind the result. By selecting a test execution, a comparison tree is displayed right bellow the chart.</p>
-                <p>I have written a different article about the <a href="test_history.html">history chart</a> since there is an interesting design story behind it.</p>
+                <h3>Reports</h3>
+                <a class="fancybox" rel="implementation" title="Reports" href="img/quesee/after/implementation/8.reports_view.PNG"><img class="gallery2" id="impementation_8" src="img/quesee/after/implementation/8.reports_view.PNG" alt="" /></a>
+                <a class="fancybox" rel="implementation" title="Reports expanded" href="img/quesee/after/implementation/9.reports_expanded.PNG"><img class="gallery2" id="impementation_9" src="img/quesee/after/implementation/9.reports_expanded.PNG" alt="" /></a>
 
 				<h2>CONCLUSION</h2>
 				<p>The tool has been adopted by the QA team and it is in use for most than a year at the time I wrote this article.</p>
 				<p>Most of the complaints were related to the back-end functionality. There were also some things related to the user interface, like the history chart that became unusable until redesigned and the colours that were being used in the comparison view and were creating confusion for some of the users.</p>
-				<p>Even though the tool is in a pretty good shape, there are some future improvements that are requested by the users, like a side by side comparison view, a way of editing the expected result directly from the comparison view, hide the actions that are not allowed in some scenarios, drag and drop support in the test explorer tree for moving scenarios between suites, search and filter the test explorer tree, display reports as a hierarchy instead of a flat list, etc.</p>
+
+                <p>Even though the tool is in a pretty good shape, there are some future improvements that are requested by the users, like :
+                <ul>
+                    <li>side by side comparison view</li>
+                    <li>a way of editing the expected result directly from the comparison view</li>
+                    <li>hide the actions that are not allowed in some scenarios</li>
+                    <li>drag and drop support in the test explorer tree for moving scenarios between suites</li>
+                    <li>search and filter the test explorer tree</li>
+                    <li>display reports as a hierarchy instead of a flat list</li>
+                </ul>
+                </p>
                 <p>All in all, I had a great time designing, implementing and improving this tool and I sure learned a lot during the process.</p>
 			</div>
 		</div>

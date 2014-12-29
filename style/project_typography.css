@@ -21,6 +21,7 @@ h3 {
     font-weight: 400;
     color: rgb(150, 150, 150);
     font-family: 'Raleway', sans-serif;
+    line-height: 38px;
 }
 
 .content {
@@ -50,6 +51,11 @@ img {
 
 .gallery3 {
     width: 14.8em;
+    margin-bottom: 3px;
+}
+
+.gallery2 {
+    width: 22.3em;
     margin-bottom: 3px;
 }
 
