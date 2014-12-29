@@ -77,7 +77,7 @@
 
 
 			<div class="content">
-				<h1>QUESEE</h1>
+				<h1>QUESEE - A DIFFERENT KIND OF TEST AUTOMATION TOOL</h1>
 
 				<h2>PROBLEM TO SOLVE</h2>
 				<p>In the first days from starting with a new job, I got the task to fix some of the bugs they had with an internal test automation tool. The problems were not trivial and were mostly created by the large amounts of data that were loaded in the web page, the persistence mechanism that used a lot of space on the drive and the comparison algorithms that did not cover all the cases and gave false positives.</p>
@@ -131,20 +131,22 @@
 
                 <a class="fancybox" rel="sketches" title="Test grouping" href="img/quesee/after/sketches/explorer.jpg"><img  id="sketches_4" src="img/quesee/after/sketches/explorer.jpg" alt="" style="width : 300px;"/></a>
 
-				<p>I also wanted to have the most important actions like running, recording and reports easy to access and have the state of the application visible at all times.</p>
+				<p>I also wanted to have the most important actions like running, recording and reports easy to access and have the state of the application visible all the time.</p>
 
                 <a class="fancybox" rel="sketches" title="Replaying and recording tests" href="img/quesee/after/sketches/motion.jpg"><img  id="sketches_5" src="img/quesee/after/sketches/motion.jpg" alt="" /></a>
+
+                <p>Theese drawing may not make too much sense for now but things will become more clear in the next section so please bear with me.</p>
 
 				<h2>WIREFRAMES</h2>
 
 				<p>After having a clearer idea of how I wanted the application to look like, I created a series of wireframes in order to communicate with the remote team I was working for and ask for their feedback.</p>
 
-				<!-- mention balsamiq -->
                 <a class="fancybox" rel="wireframes" title="Suite selection" href="img/quesee/after/wireframes/1.suite_view.png"><img class="gallery3" id="wireframes_1" src="img/quesee/after/wireframes/1.suite_view.png" alt="" /></a>
                 <a class="fancybox" rel="wireframes" title="Scenario selection" href="img/quesee/after/wireframes/2.scenario%20view.png"><img class="gallery3" id="wireframes_2" src="img/quesee/after/wireframes/2.scenario%20view.png" alt="" /></a>
                 <a class="fancybox" rel="wireframes" title="Test selection" href="img/quesee/after/wireframes/3.step_view.png"><img class="gallery3" id="wireframes_3" src="img/quesee/after/wireframes/3.step_view.png" alt="" /></a>
 
-				<p>talk about the JSON tree and about the progressive disclosure which is key in solving the performance problem </p>
+				<p>One of the most important design decision that I took to solve the performance issue was to represent the objects in a hierarchical form, as a tree, and use a progressive disclosure approach when loading the data in the webpage.
+                This way, even though the user deals with huge objects, expanding a node from the tree will only load the closest descendants, minimizing the traffic and making the page snappier. This is also an improvement from a usability stand point since the user has now a better overview of the data and can choose more easily what part of the object to inspect.</p>
 
                 <a class="fancybox" rel="wireframes" title="Run all tests" href="img/quesee/after/wireframes/4.run_all_view.png"><img class="gallery3" id="wireframes_4" src="img/quesee/after/wireframes/4.run_all_view.png" alt="" /></a>
                 <a class="fancybox" rel="wireframes" title="Record tests" href="img/quesee/after/wireframes/5.record_colapsed_view.png"><img class="gallery3" id="wireframes_5" src="img/quesee/after/wireframes/5.record_colapsed_view.png" alt="" /></a>
@@ -152,14 +154,17 @@
 
 				<p>As you can see, the wireframes are not complete and do not cover all the possible scenarios, but this was enough to get the conversation started, get some feedback and start to develop the new user interface.</p>
 
+                <p>I used Balsamiq for creating the wireframes and it worked great for this project.</p>
+
 				<h2>IMPLEMENTATION</h2>
 
-				<p>Starting from the wireframes and from the feedback of the users, I began to implement the design. There was no hi fidelity prototype since there was no need of a polished version and more that that, I liked the look and feel of the wireframes that suggested a flat UI with no bells and whistles but also with a feel of playfulness and friendliness coming from the round corners and alive colours.</p>
+				<p>Starting from the wireframes and from the feedback of the users, I began to implement the design. There was no hi fidelity prototype since there was no need for a polished version and more that that, I liked the look and feel of the wireframes that suggested a flat UI with no bells and whistles but also with a feel of playfulness and friendliness coming from the round corners and alive colours.</p>
 
 		        <p>It took more than a few months for the design to come to life and there were a lot of tiny additional decisions that were made along the line to accommodate all the requirements.</p>
 
                 <h3>Visualizing and Editing tests</h3>
-                <p>Notice the contextual actions</p>
+                <p>Notice the contextual actions (run, ignore, delete, revert, shuffle)</p>
+                <p>Notice the icons (suite, scenario, test, component, api)</p>
 				<a class="fancybox" rel="implementation" title="Suite view" href="img/quesee/after/implementation/1.suite_view.PNG"><img class="gallery4" id="impementation_1" src="img/quesee/after/implementation/1.suite_view.PNG" alt="" /></a>
 				<a class="fancybox" rel="implementation" title="Scenario view" href="img/quesee/after/implementation/2.scenario_view.PNG"><img class="gallery4" id="impementation_2" src="img/quesee/after/implementation/2.scenario_view.PNG" alt="" /></a>
 				<a class="fancybox" rel="implementation" title="Test view" href="img/quesee/after/implementation/3.test_step_view.PNG"><img class="gallery4" id="impementation_3" src="img/quesee/after/implementation/3.test_step_view.PNG" alt="" /></a>
@@ -195,7 +200,7 @@
 				<p>The tool has been adopted by the QA team and it is in use for most than a year at the time I wrote this article.</p>
 				<p>Most of the complaints were related to the back-end functionality. There were also some things related to the user interface, like the history chart that became unusable until redesigned and the colours that were being used in the comparison view and were creating confusion for some of the users.</p>
 
-                <p>Even though the tool is in a pretty good shape, there are some future improvements that are requested by the users, like :
+                <p>Even though the tool is in a pretty good shape, there are some future improvements that are requested by the users and will probably be implemented soon:
                 <ul>
                     <li>side by side comparison view</li>
                     <li>a way of editing the expected result directly from the comparison view</li>

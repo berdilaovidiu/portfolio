@@ -77,17 +77,11 @@
 				<h1>TEST EXECUTION HISTORY CHART</h1>
 
 				<h2>DESCRIPTION</h2>
-				<p>This interactive visualization is part of a larger project used in test automation. I think it deserves a separate article since there are a lot of design tricks that went into producing it.
+				<p>This interactive visualization is part of a <a href="quesee.html">larger project</a> used in test automation. I think it deserves a separate article since there are a lot of design tricks that went into producing it.
 			Since this is an internal project and not a commercial product, the design requirements were not so demanding. I was fortunate enough though to be allowed to do multiple iterations for this widget and get it in a pretty good shape.</p>
 				<p>For those of you who are not familiar with test automation, I will describe it to you in a nutshell.</p>
-				<a>
-				<script type="text/javascript">
-					$(this).click(function(){
-					$(this).hide();
-					$("#automation_details").show();});
-				</script>
-				Show more</a><br>
-				<span id="automation_details" style="display : none;">
+
+				<p>
 				Test automation is about having a bunch of tests that are ran by a computer following a predefined schedule.
 				The goal is to validate that the system is behaving as expected. A test is a script that takes in some input, acts on it and validates the outcome. There are three possible results : 
 					<ul>
@@ -95,7 +89,6 @@
 						<li>the system does not behave as expected and we say that the test fails</li>
 						<li>the system breaks down during the test, the expected behavior cannot be verified and we say the test skipps or throws an exception.</li>
 					</ul>
-
 				</p>
 
 				<p>After running a suite of tests usually a report is generated and if there are failures or exceptions they are further investigated and fixed. In a scenario like this where the test results are a reflection of the system's health, there are some questions that need to be answered by the test automation software:
