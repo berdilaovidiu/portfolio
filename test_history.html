@@ -34,6 +34,8 @@
 		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
 
 		<link rel="stylesheet" href="style/fancybox_styling.css"/>
+
+        <script type="text/javascript" src="js/moreOrLess.js"/>
 	</head>
 	<body>
 		<script type="text/javascript">
@@ -81,6 +83,7 @@
 			Since this is an internal project and not a commercial product, the design requirements were not so demanding. I was fortunate enough though to be allowed to do multiple iterations for this widget and get it in a pretty good shape.</p>
 				<p>For those of you who are not familiar with test automation, I will describe it to you in a nutshell.</p>
 
+                <span id="moreOrLessAutomation">
 				<p>
 				Test automation is about having a bunch of tests that are ran by a computer following a predefined schedule.
 				The goal is to validate that the system is behaving as expected. A test is a script that takes in some input, acts on it and validates the outcome. There are three possible results : 
@@ -162,6 +165,11 @@
 				<p>Maybe one of the most important lessons I learned during this project was to test the design with real data before starting to implement it. Even though the prototypes were looking great for a hand picked scenario, the widget was practicaly unusable with real data.</p>
 				<p>Not throwing away a good idea just because the first iteration was a failure is also a thing I learned during this time.</p>
 			</div>
+
+            <script>
+                moreOrLess($("#moreOrLessAutomation"));
+            </script>
+
 		</div>
 	</body>
 </html>
