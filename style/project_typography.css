@@ -83,13 +83,13 @@ p {
     font-feature-settings: "liga", "dlig";
 }
 
-ul {
+.article_list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-li {
+.article_list li{
     font-size: 1em;
     line-height: 19px;
     font-weight: 400;
@@ -101,7 +101,7 @@ li {
     text-indent: -.7em;
 }
 
-li:before {
+.article_list li:before {
     content: "\002022  ";
     color: grey;
 }

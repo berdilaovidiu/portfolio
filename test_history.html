@@ -39,28 +39,29 @@
 
 	</head>
 	<body>
-		<script type="text/javascript">
-	$(document).ready(function() {
-		$(".fancybox").fancybox({
-    helpers : {
-        title: {
-            type: 'outside',
-            position: 'bottom'
-        },
-		overlay : {
-            css : {
-                'background' : 'rgba(70, 70, 70, 0.90)'
-            }
-        }
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(".fancybox").fancybox({
+				helpers: {
+					title: {
+						type: 'outside',
+						position: 'bottom'
+					},
+					overlay: {
+						css: {
+							'background': 'rgba(70, 70, 70, 0.90)'
+						}
+					}
 
-    },
-    nextEffect: 'fade',
-    prevEffect: 'fade',
-	padding : 0,
-	margin      : [20, 60, 20, 60] // Increase left/right margin
-	});
-	});
-		</script>
+				},
+				nextEffect: 'fade',
+				prevEffect: 'fade',
+				closeBtn: false,
+				padding: 0,
+				margin: [20, 60, 20, 60] // Increase left/right margin
+			});
+		});
+	</script>
 
 		<div id="left_panel">
 			<div id="photo_container">
@@ -88,7 +89,7 @@
 				<p>
 				Test automation is about having a bunch of tests that are ran by a computer following a predefined schedule.
 				The goal is to validate that the system is behaving as expected. A test is a script that takes in some input, acts on it and validates the outcome. There are three possible results : 
-					<ul>
+					<ul class="article_list">
 						<li>the system behaves as expected and we say that the test passes</li>
 						<li>the system does not behave as expected and we say that the test fails</li>
 						<li>the system breaks down during the test, the expected behavior cannot be verified and we say the test skipps or throws an exception.</li>
@@ -96,7 +97,7 @@
 				</p>
 
 				<p>After running a suite of tests usually a report is generated and if there are failures or exceptions they are further investigated and fixed. In a scenario like this where the test results are a reflection of the system's health, there are some questions that need to be answered by the test automation software:
-					<ul>
+					<ul class="article_list">
 						<li>when was the test created?</li>
 						<li>what is the expected behavior of the system?</li>
 						<li>what is the current status of the test?</li>
