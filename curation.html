@@ -16,6 +16,8 @@
 		<!-- Add jQuery library -->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 
+		<script type="text/javascript" src="js/moreOrLess.js"/>
+
 		<!-- Add mousewheel plugin (this is optional) -->
 		<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
 
@@ -82,45 +84,171 @@
 				<h1>CONTENT CURATION TOOL</h1>
 
 				<h2>PROBLEM TO SOLVE</h2>
-				<p>This is a redesign of a non-commercial content curation tool used to build a biological knowledge base with relations between genes and diseases.</p>
-				
+
+				<p>This is a redesign of a non-commercial content curation tool used to build a biological knowledge
+					base with findings (relations between genes and diseases).</p>
+
+				<p>The application would assign articles to the users and more than that, the articles would be pre
+					scanned and analyzed by a natural language processing algorithm in order to extract and suggest the findings.
+					So the users would need to read the articles and validate the findings discovered by the tool.
+				</p>
+
 				<!-- show pictures of the previous version -->
-				<a class="fancybox" rel="curation tool before" title="Findings list" href="img/curation/before/snapshot-all%20findings.JPG"><img id="curation_before_1" src="img/curation/before/snapshot-all%20findings.JPG" alt="" /></a>
-				<a class="fancybox" rel="curation tool before" title="Article" href="img/curation/before/snapshot-top%20screen.JPG"><img id="curation_before_2" src="img/curation/before/snapshot-top%20screen.JPG" alt="" /></a>
+				<a class="fancybox" rel="curation tool before" title="Findings list" href="img/curation/before/snapshot-all%20findings.JPG"><img class="gallery2" id="curation_before_1" src="img/curation/before/snapshot-all%20findings.JPG" alt="" style="vertical-align: top;"/></a>
+				<a class="fancybox" rel="curation tool before" title="Article" href="img/curation/before/snapshot-top%20screen.JPG"><img class="gallery2" id="curation_before_2" src="img/curation/before/snapshot-above%20fold.jpg" alt="" /></a>
 
 				<!-- explain in a few words the main flows -->
-				
-				<p>The product has been used internally for a while with success but it has started to get more and more complaints once more users joined, the volume of work grew and the performance dropped.</p>
+
+				<p>The product has been used internally for a while with success but it has started to get more and more
+					complaints once more users joined, the volume of work grew and the performance dropped.</p>
 				<!-- explain the context of the redesign -->
-				
-				<p>After a period of complaints and also guided by longer term plans, the company decided to rewrite the whole thing. Even though most of the complaints were about performance, the UI was also redesigned and rewritten.</p>
-				
-				<p>Even though I had no previous involvement in the project, I saw this as an opportunity to practice my design skills and most importantly to observe and interview some of the users that were located in the same office as I.</p>
+
+				<p>After a period of complaints and also driven by longer term plans, the company decided to rewrite the
+					whole thing. Most of the complaints were about performance but the user interface was also redesigned
+					and rewritten.</p>
+
+				<p>Even though I had no previous involvement in the project, I saw this as an opportunity to practice my
+					design skills and most importantly, to observe and interview some of the users that were located in
+					the same office as me.</p>
+
 
 				<h2>USER RESEARCH</h2>
-				
-				<p>The goal of the user research was to understand the way users used the tool in their curation efforts and look for pain points or other opportunities of improvement.</p> 
-				
-				<p>So I asked three of the power users to walk me through their most frequent tasks and try to voice out what their were doing along the line. This was a great experience and I got to understand their logic and reasons behind their decisions and complaints much better. The sessions took no more than 45 minutes and they were conducted individually. This gave me to perfect context to ask the right questions and for them to open up and provide honest answers.</p>
-				
+
+				<p>The goal of the user research was to understand the way users used the tool in their curation efforts
+					and look for pain points or other opportunities of improvement.</p>
+
+				<p>So I asked three of the power users to walk me through their most frequent tasks and try to voice out
+					what their were doing along the line. This was a great experience and I got to understand their
+					logic and reasons behind their decisions and complaints much better. The sessions took no more than
+					45 minutes and they were conducted individually. This gave me to perfect context to ask the right
+					questions and for them to open up and provide honest answers.</p>
+
 				<!-- talk about the user research process and how it was conducted -->
-				
+
 				<p>Most of the findings followed a pattern but there were also specific things to each user.</p>
-				<!-- talk about the the general knowledge gained about the tool, why, how and by how many it is used, describe it in a few words -->
-				
-				<!-- summarize the findings during the research, there is an email about this -->
-				
+
+				<p>One of the most interesting things was that most users would take notes on a piece of paper while
+					reading an article and fill the forms in the application afterwards because this meant less context
+					switches and it was less tiring.</p>
+
+				<p>The things I learned from the interviews were:
+
+				<ul class="article_list">
+					<li>the purpose of the tool is fast data entry, the users wanted to spend as less time as possible
+						using the tool
+					</li>
+					<li>most of the time was spent filling the forms and waiting for the application to respond</li>
+					<li>a significant amount of time was spent doing reviews of the work to make sure the data is
+						correct
+					</li>
+				</ul>
+				</p>
+
 				<!-- talk about the mental model of the users, their schedule, contract, way of getting paid, restrictions enforced by the company to limit careless work -->
-				
+				<p>The context of use was also interesting. Most curators were hired as contractors and mainly worked
+					from home on their own schedule and were paid based on how much work they got done in month. Some of
+					them did this only part time as a second job, for some of them, this was their main job. This meant
+					that some of them were using the application during the day, some during the night, some would sit
+					down for hours, some for shorter periods, based on their schedule and needs.</p>
+
+				<p>For a more detailed list of observations you can read the notes I took from the users I observed and interviewed.</p>
+
+				<span id="more_observations" class="definitions">
+					<p>First user</p>
+
+					<ul class="article_list">
+						<li>reduce repetitive work (findings with same values for genes and phenotypes)</li>
+						<li> better/quicker navigation would help</li>
+						<li>prefers to take notes on a paper sheet or a word document and then to do the insertion work (just to do less context switches)</li>
+						<li>stressed the importance of having a way to pre populate some fields</li>
+						<li>finding view, reduce scrolling, the hands starts to numb after a few hours</li>
+						<li>finding view, suggestions for some fields can be removed after a value has been chosen, still needed for corrections and for hovering</li>
+						<li>finding view, sections need to be visible all the time since changes are seldom made (collapse/expand behavior not needed)</li>
+						<li>finding view, a better separation between sections would help</li>
+						<li>genotype table, some columns are complementary and can be shown individually (the ones that are grayed out in the current design)</li>
+						<li>genotype table, duplicated items can be grouped for review purpose</li>
+						<li>genotype table, sense of focus would help not to lose track when transferring the data from the paper sheet (word document) in the application </li>
+						<li>genotype table, management of the rows (move up/down, delete)</li>
+					</ul>
+
+					<p>Second user</p>
+
+					<ul class="article_list">
+						<li>uses the same method to take notes from the articles first and complete the forms in the app later</li>
+						<li>complete findings table would be helpful for review/verification reasons (a table that contains all the data of the findings)</li>
+						<li>a way to pre fill some of the questions for multiple findings would increase the productivity </li>
+						<li>waiting is annoying</li>
+						<li>finding view, there are questions that never had different answers</li>
+						<li>finding view, next finding button is missing, only next unreviewed finding is available</li>
+						<li>finding view, numbers for questions would help, need to be congruent with the notations from the protocol</li>
+						<li>finding view, duplication button in the genotype table messes up the layout</li>
+						<li>finding view, judgement  drop down, options can be grouped</li>
+						<li>finding view, wrong judgements can be spotted by the application (helpful when working late at night and tired)</li>
+						<li>finding view, a section of questions would be nice to fit on one screen without scrolling</li>
+						<li>finding view, mutation checkboxes can be inferred from the mutation description</li>
+						<li>finding view, the abstract is not very helpful, can be hidden but not removed</li>
+						<li>finding view, layout changes and is confusing when selecting a longer text from the judgement dropdown </li>
+						<li>finding view, autocompletion choices can be collapsed to occupy less space</li>
+						<li>finding view, navigation with tab is helpful when you do fast and repetitive tasks</li>
+						<li>finding view, questions page is not to be radically changed, this is a sensitive area since the users are already very familiar with it</li>
+						<li>numbers in findings table do not have to be consecutive, they are mostly used to link the notes to the application</li>
+					</ul>
+
+					<p>Third user</p>
+
+					<ul class="article_list">
+						<li>does no take notes as previous users and fills the finding forms along with reading the article (the delay between actions forced him to follow this workflow)</li>
+						<li>the users are assigned articles with significantly different number of findings</li>
+						<li>the number of findings from an articles dictates the workflow</li>
+						<li>finding view, navigation with tab key would help</li>
+						<li>finding view, more feedback for user actions (e.g. search provides no feedback on empty result set)</li>
+						<li>finding view, there are a lot of delays when filling the finding form</li>
+						<li>finding view, inconsistency in waiting behavior (actions take different amounts of time to complete, it is frustrating)</li>
+						<li>article findings view, need of changing the judgement of a finding from the table </li>
+						<li>report view, links to articles would improve navigation </li>
+						<li>report view, articles listed in reports are not in chronological order</li>
+						<li>there is a nasty shortcut to propagate same values in multiple findings by duplicating a finding and rejecting the ones found by the tool</li>
+					</ul>
+				</span>
+
 				<h2>WIREFRAMES</h2>
 				
 				<p>After having a clearer idea of how I wanted the application to look like, I created a series of wireframes in order to communicate with the remote team I was working for and ask for their feedback.</p>
 				
 				<!-- mention balsamiq -->
 				<!-- picture here -->
-						
+
+				<h3>Articles and Findings management</h3>
+				<a class="fancybox" rel="curation after" title="Home screen" href="img/curation/after/1.homescreen.png"><img class="gallery2" id="curation_after_1" src="img/curation/after/1.homescreen.png" alt="" /></a>
+				<a class="fancybox" rel="curation after" title="Home screen" href="img/curation/after/2.display%20findings%20for%20article.png"><img class="gallery2" id="curation_after_2" src="img/curation/after/2.display%20findings%20for%20article.png" alt="" /></a>
+
+				<h3>Reduced repetitive work</h3>
+				<a class="fancybox" rel="curation after" title="Home screen" href="img/curation/after/3.display%20findings%20for%20article%20-%20fill%20multiple%20findings.png"><img class="gallery1" id="curation_after_3" src="img/curation/after/3.display%20findings%20for%20article%20-%20fill%20multiple%20findings.png" alt="" /></a>
+
+				<h3>The Finding form</h3>
+				<p>better hierarchy</p>
+				<p>moved the mandatory signs to the left</p>
+				<p>changed buttons placement</p>
+				<p>better use of the space, both horizontally and vertically</p>
+				<p>new genotype table</p>
+				<a class="fancybox" rel="curation after" title="Home screen" href="img/curation/after/4.finding%20form%20-%20above%20fold.png"><img class="gallery1" id="curation_after_4" src="img/curation/after/4.finding%20form%20-%20above%20fold.png" alt="" /></a>
+
+				<h3>Improved Genotype Table</h3>
+				<a class="fancybox" rel="curation after" title="Home screen" href="img/curation/after/6.finding%20form%20-%20genotype%20table%20-%20multiple%20rows.png"><img class="gallery3" id="curation_after_6" src="img/curation/after/6.finding%20form%20-%20genotype%20table%20-%20multiple%20rows.png" alt="" /></a>
+				<a class="fancybox" rel="curation after" title="Home screen" href="img/curation/after/7.finding%20form%20-%20genotype%20table%20-%20multiple%20rows%20-%20grouping.png"><img class="gallery3" id="curation_after_7" src="img/curation/after/7.finding%20form%20-%20genotype%20table%20-%20multiple%20rows%20-%20grouping.png" alt="" /></a>
+				<a class="fancybox" rel="curation after" title="Home screen" href="img/curation/after/8.finding%20form%20-%20genotype%20table%20-%20multiple%20rows%20-%20focus.png"><img class="gallery3" id="curation_after_8" src="img/curation/after/8.finding%20form%20-%20genotype%20table%20-%20multiple%20rows%20-%20focus.png" alt="" /></a>
+
+				<h3>Improved navigation</h3>
+				<a class="fancybox" rel="curation after" title="Home screen" href="img/curation/after/9.navigation%20findings.png"><img class="gallery2" id="curation_after_9" src="img/curation/after/9.navigation%20findings.png" alt="" /></a>
+				<a class="fancybox" rel="curation after" title="Home screen" href="img/curation/after/10.navigation%20articles.png"><img class="gallery2" id="curation_after_10" src="img/curation/after/10.navigation%20articles.png" alt="" /></a>
+
+
 				<h2>CONCLUSION</h2>
 				<p>The wireframes were appreciated by the curators but the development team had other plans for the new UI</p>
+
+				<script>
+					moreOrLess($("#more_observations"));
+				</script>
 			</div>
 		</div>
 	</body>
