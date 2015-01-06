@@ -80,22 +80,30 @@
 				<h1>TEST EXECUTION HISTORY CHART</h1>
 
 				<h2>DESCRIPTION</h2>
-				<p>This interactive visualization is part of a <a href="quesee.html">larger project</a> used in test automation. I think it deserves a separate article since there are a lot of design tricks that went into producing it.
-			Since this is an internal project and not a commercial product, the design requirements were not so demanding. I was fortunate enough though to be allowed to do multiple iterations for this widget and get it in a pretty good shape.</p>
-				<p>For those of you who are not familiar with test automation, I will describe it to you in a nutshell.</p>
+
+				<p>This interactive visualization is part of a <a href="quesee.html">larger project</a> used in test
+					automation. I think it deserves a separate article, since there are a lot of design tricks that went
+					into producing it.
+					Since this is an internal project, not a commercial product, the design requirements were not so
+					demanding. I was fortunate enough though, to be allowed to do multiple iterations for this widget and
+					get it in a pretty good shape.</p>
+
+				<p>For those of you who are not familiar with test automation, you can click the link bellow to read a
+					short description.</p>
 
                 <span id="moreOrLessAutomation">
-				<p>
-				Test automation is about having a bunch of tests that are ran by a computer following a predefined schedule.
-				The goal is to validate that the system is behaving as expected. A test is a script that takes in some input, acts on it and validates the outcome. There are three possible results : 
+				<p>Test automation is about having a bunch of tests, that are ran by a computer, following a predefined schedule.
+				The goal is to validate that the system is behaving as expected.</p>
+					<p>A test is a script that takes in some input, acts on it, than validates the outcome. There are three possible results :
 					<ul class="article_list">
-						<li>the system behaves as expected and we say that the test passes</li>
-						<li>the system does not behave as expected and we say that the test fails</li>
-						<li>the system breaks down during the test, the expected behavior cannot be verified and we say the test skipps or throws an exception.</li>
+						<li>the system behaves as expected and we say that the test <b>passes</b></li>
+						<li>the system does not behave as expected and we say that the test <b>fails</b>></li>
+						<li>the system breaks down during the test, the expected behavior cannot be verified, and we say the test <b>skips</b>, or throws an exception.</li>
 					</ul>
 				</p>
 
-				<p>After running a suite of tests usually a report is generated and if there are failures or exceptions they are further investigated and fixed. In a scenario like this where the test results are a reflection of the system's health, there are some questions that need to be answered by the test automation software:
+				<p>After running a suite of tests, usually a report is generated, and if there are failures or exceptions, they are further investigated and fixed.
+					In a scenario like this, where the test results are a reflection of the health of the system, there are some questions that need to be answered by the test automation software:
 					<ul class="article_list">
 						<li>when was the test created?</li>
 						<li>what is the expected behavior of the system?</li>
@@ -103,13 +111,13 @@
 						<li>when was it last executed?</li>
 						<li>when was the last failure?</li>
 						<li>what was the cause of the failure?</li>
-						<li>when was the last Exception?</li>
-						<li>what was the cause of the exception?</li>
+						<li>when was the last skip?</li>
+						<li>what was the cause of the skip?</li>
 						<li>when did it start to fail?</li>
 						<li>when did it start to pass again?</li>
-						<li>when did is start to throw expcetions?</li>
+						<li>when did is start to skip?</li>
 						<li>what is the health status of the test during it's lifetime?</li>
-						<li>what is the health status of the test during a specific timespan?</li>
+						<li>what is the health status of the test during a specific time span?</li>
 						<li>how many times did it pass, fail or skipp?</li>
 					</ul>
 				</p>
@@ -118,84 +126,88 @@
 
 				<h2>FIRST ITERATION</h2>
 
-				<p>Starting from the questions above, I envisioned a visualization based on a time line where the test
-					executions are marked on the line. The line would start from the moment the test was created and
+				<p>Starting from the questions above, I envisioned a visualization based on a time line, where the test
+					executions are marked on the line. The line would start from the moment the test was created, and
 					span all the way to present.
-					The markers would also communicate the status of the test execution by the way they are colored.
-					Green stands for a test pass and red for a failure. The meaning of the colors is well known in the
-					software world.
-					The markers also needed to be click-able and selectable so I made them look like knobs. Clicking on a
-					knob would display details about the test execution in a separate panel.</p>
+					The markers would also communicate the status of the test execution, by the way they are
+					colored.</p>
+
+				<p>Green stands for a test pass, red for a failure, and white for a skip. The meaning of the colors is
+					well known in the software world.
+					The markers also needed to be click-able and selectable, so I made them look like knobs. Clicking on
+					a knob would display details about the test execution in a separate panel.</p>
 				<a class="fancybox" rel="group" title="Horizontal line with test executions" href="img/test_history/1.png"><img class="borderless_image gallery1" id="test_history_1" src="img/test_history/1.1.png" alt="" /></a>
 
-				<p>To make this look more like a time axis, I decorated it with a starting delimiter and an arrow that
-					communicates the direction of the time flow, from left to right. To give a sense of magnitude, I
+				<p>To make this look more like a time line, I decorated it with a starting delimiter and an arrow that
+					communicates the direction of the time flow, from left to right. To give it a sense of magnitude, I
 					added labels for the start and end of the line. This is nothing new, I just reused a well
 					established representation of the time.</p>
 				<a class="fancybox" rel="group" title="Time line with an arrow to indicate the direction of the time flow and labels to describe the moments in time" href="img/test_history/2.png"><img class="borderless_image gallery1" id="test_history_2" src="img/test_history/2.2.png" alt="" /></a>
 
-				<p>This is pretty good so far but there are still questions that are not easy to answer using this
-					representation. It was hard to tell when where the transitions from one state to another because you
+				<p>This is pretty good so far, but there are still questions that are not easy to answer using this
+					representation. It was hard to tell when where the transitions from one state to another, because you
 					would have to follow the line and keep in mind what was the last visited state.
 					To make this simpler, I thought of using the space between executions to communicate the state of
-					the test at each moment so that the user would not need to remember anything.</p>
+					the test at each moment, so that the user would not need to remember anything.</p>
 				<a class="fancybox" rel="group" title="Emphasized state transitions with the knob colors replicated onto the line" href="img/test_history/3.png"><img class="borderless_image gallery1" id="test_history_3" src="img/test_history/3.3.png" alt="" /></a>
 
-				<p>I was getting close but still could not tell at a glace where were the state transitions. The colors
-					were there but the effect needed to be enhanced so I decided to use more space by thickening the
+				<p>I was getting close, but still could not tell at a glace where were the state transitions. The colors
+					were there, but the effect needed to be enhanced so I decided to use more color by thickening the
 					line.
-					The color of the knobs was not needed anymore because it was clear what was the status for any point
+					The color of the knobs was not needed anymore, because it was clear what was the status for any point
 					in time.</p>
 				<a class="fancybox" rel="group" title="Thicker line that communicates the test results even better" href="img/test_history/4.png"><img class="borderless_image gallery1" id="test_history_4" src="img/test_history/4.4.png" alt="" /></a>
 
 				<p>There was one more thing I was not happy about. I wanted to provide a more accurate assessment for the
-					health status of the system. Of course you can only know it for sure at the time of the execution
-					but when you get a test failure that doesn't mean the system started to behave badly at that point.
+					health status of the system. Of course you can only know it for sure at the time of the execution,
+					but when you get a test failure, that doesn't mean the system started to behave badly exactly at that point.
 					It probably started somewhere in between the previous and the current execution dates. I wanted the
 					visualization to reflect this and I made the transitions smoother by using gradients.</p>
 				<a class="fancybox" rel="group" title="State transitions happen between test executions, this is a more accurate representation" href="img/test_history/5.png"><img class="borderless_image gallery1" id="test_history_5" src="img/test_history/5.5.png" alt="" /></a>
 
-				<p>I was pretty happy at that time with the widget but as time went by and test executions started to
-					add up, there was a need to see only parts of the time line and there was no way of specifying the
+				<p>I was pretty happy with the widget at that time, but as time went by and test executions started to
+					add up, there was a need to see only parts of the time line, and there was no way of specifying the
 					start and end point of the axis. I looked around a bit at some other visualizations and I particularly
-					liked what Google Finance did for their stock price charts so I did the same.</p>
+					liked what Google Finance did for their stock price charts, so I did the same.</p>
 				<a class="fancybox" rel="group" title="Time span selector added to the top" href="img/test_history/6.png"><img class="borderless_image gallery1" id="test_history_6" src="img/test_history/6.png" alt="" /></a>
 
 
-				<p>Unfortunately, the time span selection was not very flexible are there were parts of the visualization
+				<p>Unfortunately, the time span selection was not very flexible and there were parts of the visualization
 					that could not be explored. More than that, as test executions started to pile up, the overall view
 					became cluttered and you could not longer tell at a glance what happened with the system.
 					Points were also overlapping and it became hard to select a specific point from a group.</p>
 				<a class="fancybox" rel="group" title="The widget became unusable after a while" href="img/test_history/7.png"><img class="borderless_image gallery1" id="test_history_7" src="img/test_history/7.png" alt="" /></a>
 
 				<p>Even though the widget became unusable after a while, I still believed there were some good ideas in
-					the design and it should not be thrown away but rather improved.</p>
+					the design and it should not be thrown away, but rather improved.</p>
 
 				<h2>SECOND ITERATION</h2>
 
 				<p>One of the problems of the previous version was the lack of flexibility in selecting the time
-					interval to be displayed on the chart. Adding a free entry text box or a date chooser would solve
-					the problem but that would require the user to click multiple times or type in data and both choices
-					would hurt the usability of the widget.
-					Instead, I used a resizable horizontal scroll bar that only requires one or two clicks. This idea is
+					interval to be displayed on the chart. Adding a free entry text box, or a date chooser, would solve
+					the problem, but that would require the user to click multiple times, or type in data, and both
+					choices would hurt the usability of the widget.</p>
+
+				<p>Instead, I used a resizable horizontal scroll bar that only requires one or two clicks. This idea is
 					also inspired by the Google Finance charts and works perfectly. To make things even better, I also
-					implemented zoom in and zoom out actions on the scroll of the mouse, mouse drag to shift the
-					view port and added some shortcuts on top of the chart for the most used actions.
-					Clicking on the links would resize and position the chart so that the desired execution is in the
-					middle of the view port, in the selected state. Doing all this, gives the user the maximum
+					implemented zoom in and zoom out actions on the scroll of the mouse, mouse drag, to shift the
+					view port, and added some shortcuts on top of the chart for the most used actions.</p>
+
+				<p>Clicking on the links would resize and position the chart, so that the desired execution is in the
+					middle of the view port, in selected state. Doing all this, gives the user the maximum
 					flexibility in selecting the time span and also very few steps to achieve that.</p>
 				<a class="fancybox" rel="group" title="Flexible horizontal scroll bar for a better selection of the time span" href="img/test_history/8.png"><img class="borderless_image gallery1" id="test_history_8" src="img/test_history/8.png" alt="" /></a>
 
 				<p>Another big problem was the cluttered view when test executions were too close and started to
-					overlap. In order to solve this, I chose to treat those executions as a group and display them in a
+					overlap. In order to solve this, I chose to treat those executions as a group, and display them in a
 					dotted rectangle.
-					Clicking on the dotted rectangle would expand that grouping to the full length of the view port so
-					that it can be further explored. This is the same data displayed in the last figure of the previous
+					Clicking on the dotted rectangle would expand that grouping to the full length of the view port, so
+					that it could be further explored. This is the same data used in the last figure of the previous
 					version.</p>
 				<a class="fancybox" rel="group" title="The dotted rectangles are clusters of executions that can be expanded by clicking them" href="img/test_history/9.png"><img class="borderless_image gallery1" id="test_history_9" src="img/test_history/9.png" alt="" /></a>
 
 				<p>Clicking on the last exception link would bring the widget in the following state, where the last
-					exception is selected and the position and zoom level of the chart are computed so that the selected
+					exception is selected and the position and zoom level of the chart are computed, so that the selected
 					item is not hidden inside a group.</p>
 				<a class="fancybox" rel="group" title="The blue bar is a selected test execution" href="img/test_history/10.png"><img class="borderless_image gallery1" id="test_history_10" src="img/test_history/10.png" alt="" /></a>
 
@@ -208,14 +220,14 @@
 					doing multiple iterations can improve the design. After two iterations, most of the questions from
 					the description can be answered with ease.</p>
 
-				<p>There are still a couple of things that can be done to make this widget even better and will probably
-					be implemented in the future. The first of them is to de clutter the chart even more by making the
+				<p>There are still a couple of things that can be done to make this widget even better, and will probably
+					be implemented in the future. The first of them is to de clutter the chart even more, by making the
 					data points less visible.</p>
 				<a class="fancybox" rel="group" title="More subtle data points as a future improvement" href="img/test_history/11.png"><img class="borderless_image gallery1" id="test_history_11" src="img/test_history/11.png" alt="" /></a>
 
 				<p>Hovering over the chart would reveal the vertical rectangles so that they can be clicked. There is a
-					good reason to consider this a good change because in order to see the overall health state of the
-					system you don't need to click the data points. The data points need to be click-able only when you
+					good reason to consider this a good change, because in order to see the overall health state of the
+					system, you don't need to click the data points. The data points need to be click-able only when you
 					want to select a test execution.</p>
 				<a class="fancybox" rel="group" title="The points would become fully visible on mouse over" href="img/test_history/12.png"><img class="borderless_image gallery1" id="test_history_12" src="img/test_history/12.png" alt="" /></a>
 
@@ -224,10 +236,10 @@
 				<a class="fancybox" rel="group" title="Time divisions in tune with the zoom level" href="img/test_history/13.png"><img class="borderless_image gallery1" id="test_history_13" src="img/test_history/13.png" alt="" /></a>
 
 				<p>Maybe one of the most important lessons I learned during this project was to test the design with
-					real data before starting to implement it. Even though the prototypes were looking great for a hand
-					picked scenario, the widget was practically unusable with real data.</p>
+					real data before starting to implement it. Even though the prototypes were looking great for a few hand
+					picked scenarios, the widget was practically unusable with real data.</p>
 
-				<p>Not throwing away a good idea just because the first iteration was a failure is also a thing I
+				<p>Not throwing away a good idea, just because the first iteration was a failure, is also a thing I
 					learned during this time.</p>
 			</div>
 
