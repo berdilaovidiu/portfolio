@@ -15,6 +15,7 @@
 	<body>
         <script>
             $(document).ready(function () {
+                $("#top_menu").load("top_menu.html");
                 $("#side_menu").load("side_menu.html", function () {
                             var menuItemId = "#menu_contact";
                             var itemLinkId = menuItemId + " a";
@@ -26,6 +27,7 @@
             });
         </script>
 
+        <div id="top_menu"></div>
 		<div id="side_menu"></div>
 		<div id="right_panel">
 			<table>

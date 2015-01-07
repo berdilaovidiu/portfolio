@@ -5,6 +5,34 @@ body{
 	margin : 0;
 }
 
+@media screen and (min-width: 768px) {
+    #top_menu {
+        display: none;
+    }
+
+    #side_menu {
+        display: visible;
+    }
+
+    #right_panel {
+        margin-left : 400px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #top_menu {
+        display: visible;
+    }
+
+    #side_menu {
+        display: none;
+    }
+
+    #right_panel {
+        margin-left : 0px;
+    }
+}
+
 #photo_container{
 	position : relative;
 	width:100%;
@@ -50,19 +78,29 @@ body{
 	color : white;
 }
 
+#top_menu {
+    box-sizing : border-box;
+    position : fixed;
+    top : 0px;
+    width : 100%;
+    height : 50px;
+    min-height : 30px;
+    background-color : rgb(150, 0, 132);
+    color : white;
+}
+
+#mobile_title {
+    color:white;
+}
+
 #right_panel{
 	box-sizing : border-box;
-	//position : absolute;
-	margin-left : 400px;
+
 	top : 0px;
 	bottom : 0px;
-	width : calc(100% - 400px);
 
-	//background-color : cyan;
-	//border : 1px solid red;
-	//min-width : calc(100% - 220px);
-
-
+    width : calc(100% - 400px);
+	min-width : 46em;
 }
 
 #right_panel a{
@@ -90,4 +128,18 @@ body{
 #menu div a{
 	text-decoration: none;
 	color : grey;
+}
+
+#top_menu {
+    text-align: center;
+}
+
+#top_menu #hamburger_menu {
+    position: absolute;
+    left : 10px;
+}
+
+#top_menu #mobile_title {
+   margin-left : auto;
+   margin-right : auto;
 }
