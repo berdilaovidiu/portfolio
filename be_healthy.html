@@ -58,20 +58,13 @@
 					margin : [20, 60, 20, 60] // Increase left/right margin
 				});
 			});
+
+            $(document).ready(function () {
+                $("#side_menu").load("side_menu.html");
+            });
 		</script>
 
-		<div id="left_panel">
-			<div id="photo_container">
-				<img id="profile_photo" src="img/profile_photo.png"/>
-				<div id="summary"><span id="name">Ovidiu Berdila</span><br><span id="statement">I like to design simple and elegant solutions for complex problems.</span></div>
-			</div>
-			<div id="menu">
-				<div><a href="index.html">About</a></div>
-				<div><a href="projects.html">Projects</a></div>
-				<div><a href="education.html">Education</a></div>
-				<div><a href="contact.html">Contact</a></div>	
-			</div>
-		</div>
+		<div id="side_menu"></div>
 		<div id="right_panel">
 
 

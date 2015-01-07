@@ -47,22 +47,25 @@
 						}
 				},
 				width : '1000',
-				height : '800',
+				height : '800'
 			});
+
+
+            $(document).ready(function () {
+                $("#side_menu").load("side_menu.html", function () {
+                            var menuItemId = "#menu_education";
+                            var itemLinkId = menuItemId + " a";
+                            var menuItemText = $(itemLinkId).text();
+                            $(itemLinkId).remove();
+                            $(menuItemId).text(menuItemText);
+                        }
+                );
+            });
+
 		</script>
 
-		<div id="left_panel">
-			<div id="photo_container">
-				<img id="profile_photo" src="img/profile_photo.png"/>
-				<div id="summary"><span id="name">Ovidiu Berdila</span><br><span id="statement">I like to design simple and elegant solutions for complex problems.</span></div>
-			</div>
-			<div id="menu">
-				<div><a href="index.html">About</a></div>
-				<div><a href="projects.html">Projects</a></div>
-				<div>Education</div>
-				<div><a href="contact.html">Contact</a></div>	
-			</div>
-		</div>
+		<div id="side_menu"/></div>
+
 		<div id="right_panel">
 			<div id="introduction">
 				<p>I have spent the last ten years of my life developing an education around the computer industry. It was a childhood dream to become a computer programmer and I was fortunate to have the chance to study in a big city with lots of universities like <a href="http://en.wikipedia.org/wiki/Cluj-Napoca" target="-blank">Cluj Napoca</a>.</p>

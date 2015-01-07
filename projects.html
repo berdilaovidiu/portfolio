@@ -17,37 +17,20 @@
 		<title>Ovidiu Berdila - Projects</title>
 	</head>
 	<body>
-		<div id="grid">
-			<div class = "column"></div>
-			<div class = "column"></div>
-			<div class = "column"></div>
-			<div class = "column"></div>
-			<div class = "column"></div>
-			<div class = "column"></div>
-			<div class = "column"></div>
-			<div class = "column"></div>
-			<div class = "column"></div>
-			<div class = "column"></div>
-			<div class = "column"></div>
-			<div class = "column"></div>
-			<div class = "column"></div>
-			<div class = "column"></div>
-			<div class = "column"></div>
-			<div class = "column"></div>
-		</div>
+		<script>
+            $(document).ready(function () {
+                $("#side_menu").load("side_menu.html", function () {
+                            var menuItemId = "#menu_projects";
+                            var itemLinkId = menuItemId + " a";
+                            var menuItemText = $(itemLinkId).text();
+                            $(itemLinkId).remove();
+                            $(menuItemId).text(menuItemText);
+                        }
+                );
+            });
+		</script>
 	
-		<div id="left_panel">
-			<div id="photo_container">
-				<img id="profile_photo" src="img/profile_photo.png"/>
-				<div id="summary"><span id="name">Ovidiu Berdila</span><br><span id="statement">I like to design simple and elegant solutions for complex problems.</span></div>
-			</div>
-			<div id="menu">
-				<div><a href="index.html">About</a></div>
-				<div>Projects</div>
-				<div><a href="education.html">Education</a></div>
-				<div><a href="contact.html">Contact</a></div>	
-			</div>
-		</div>
+		<div id="side_menu"></div>
 		<div id="right_panel">
 			<div id="about_projects">
 				<p>These are a part of the projects I have been working on. You can read the whole story for each project, where there is a lengthy text will all the design steps in detail, or just click on the pictures and go through the slide shows.

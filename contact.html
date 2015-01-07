@@ -6,21 +6,27 @@
 		<link rel="stylesheet" href="style/contact.css"/>
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'/>
 		<meta charset="utf-8"/>
+
+        <!-- Add jQuery library -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+
 		<title>Ovidiu Berdila - Education</title>
 	</head>
 	<body>
-		<div id="left_panel">
-			<div id="photo_container">
-				<img id="profile_photo" src="img/profile_photo.png"/>
-				<div id="summary"><span id="name">Ovidiu Berdila</span><br><span id="statement">I like to design simple and elegant solutions for complex problems.</span></div>
-			</div>
-			<div id="menu">
-				<div><a href="index.html">About</a></div>
-				<div><a href="projects.html">Projects</a></div>
-				<div><a href="education.html">Education</a></div>
-				<div>Contact</div>	
-			</div>
-		</div>
+        <script>
+            $(document).ready(function () {
+                $("#side_menu").load("side_menu.html", function () {
+                            var menuItemId = "#menu_contact";
+                            var itemLinkId = menuItemId + " a";
+                            var menuItemText = $(itemLinkId).text();
+                            $(itemLinkId).remove();
+                            $(menuItemId).text(menuItemText);
+                        }
+                );
+            });
+        </script>
+
+		<div id="side_menu"></div>
 		<div id="right_panel">
 			<table>
 				<tr>
