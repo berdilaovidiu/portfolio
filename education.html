@@ -28,8 +28,9 @@
 		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
 
 		<link rel="stylesheet" href="style/fancybox_styling.css"/>
-		
-	</head>
+
+        <script type="text/javascript" src="js/menu_utils.js"></script>
+    </head>
 	<body>
 	
 		<script type="text/javascript">
@@ -52,7 +53,7 @@
 
 
             $(document).ready(function () {
-                $("#top_menu").load("top_menu.html");
+                $("#top_menu").load("top_menu.html", initTopMenuActions);
                 $("#side_menu").load("side_menu.html", function () {
                             var menuItemId = "#menu_education";
                             var itemLinkId = menuItemId + " a";

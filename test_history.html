@@ -36,7 +36,9 @@
 
 		<link rel="stylesheet" href="style/fancybox_styling.css"/>
 
-	</head>
+        <script type="text/javascript" src="js/menu_utils.js"></script>
+
+    </head>
 	<body>
 	<script type="text/javascript">
 		$(document).ready(function () {
@@ -62,7 +64,7 @@
 		});
 
         $(document).ready(function () {
-            $("#top_menu").load("top_menu.html");
+            $("#top_menu").load("top_menu.html", initTopMenuActions);
             $("#side_menu").load("side_menu.html");
         });
 	</script>

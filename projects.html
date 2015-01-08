@@ -11,15 +11,15 @@
 		
 		<!-- Add jQuery library -->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
-		
-		
-		
-		<title>Ovidiu Berdila - Projects</title>
+
+        <script type="text/javascript" src="js/menu_utils.js"></script>
+
+        <title>Ovidiu Berdila - Projects</title>
 	</head>
 	<body>
 		<script>
             $(document).ready(function () {
-                $("#top_menu").load("top_menu.html");
+                $("#top_menu").load("top_menu.html", initTopMenuActions);
 
                 $("#side_menu").load("side_menu.html", function () {
                             var menuItemId = "#menu_projects";

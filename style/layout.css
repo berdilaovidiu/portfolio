@@ -76,6 +76,7 @@ body{
 	min-width : 220px;
 	background-color : rgb(150, 0, 132);
 	color : white;
+    z-index: 1;
 }
 
 #right_panel{
@@ -123,6 +124,7 @@ body{
     height : 50px;
     min-height : 30px;
     background-color : rgb(150, 0, 132);
+    z-index: 1;
 }
 
 
