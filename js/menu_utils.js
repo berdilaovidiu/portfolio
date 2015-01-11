@@ -15,7 +15,7 @@ var initTopMenuActions = function () {
     mobileMenu.css("position", "absolute");
     mobileMenu.css("top", topMenuHeight);
     mobileMenu.css("width", "100%");
-    mobileMenu.css("height", "100%");
+    mobileMenu.css("height", "calc(100% - " + topMenuHeight + ")");
     mobileMenu.css("background-color", topMenuColor);
     mobileMenu.hide();
 
@@ -23,11 +23,13 @@ var initTopMenuActions = function () {
 
     $("#top_menu #hamburger_menu").click(function () {
         if (!mobileMenuVisible) {
-            mobileMenu.show();
+            mobileMenu.slideDown();
             mobileMenuVisible = true;
+            $("#right_panel").hide();
         } else {
-            mobileMenu.hide();
+            mobileMenu.slideUp();
             mobileMenuVisible = false;
+            $("#right_panel").show();
         }
     });
 }
