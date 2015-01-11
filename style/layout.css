@@ -65,21 +65,21 @@ body {
   font-style: italic;
   color: black;
 }
-#side_menu #menu {
+#menu {
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
   width: 200px;
 }
-#side_menu #menu div {
+#menu div {
   height: 50px;
   text-align: center;
   color: black;
   font-size: 20pt;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
-#side_menu #menu div a {
+#menu div a {
   text-decoration: none;
   color: white;
   font-weight: 200;

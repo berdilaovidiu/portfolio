@@ -4,19 +4,30 @@
  * Time: 12:40 PM
  */
 
-var initTopMenuActions = function(){
-    var sideMenuVisible = false;
-    $("#top_menu #hamburger_menu").click(function(){
-        $("#top_menu").hide();
-        $("#side_menu").show();
-        sideMenuVisible = true;
-    });
+var initTopMenuActions = function () {
+    var mobileMenuVisible = false;
+    var topMenuHeight = $("#top_menu").css("height");
+    var topMenuColor = $("#top_menu").css("background-color");
 
-    $("#right_panel").click(function(){
-        if (sideMenuVisible){
-            $("#top_menu").show();
-            $("#side_menu").hide();
-            sideMenuVisible = false;
+    var mobileMenu = $("<div></div>");
+    mobileMenu.attr("id", "mobile_menu");
+    mobileMenu.load("side_menu.html #menu");
+    mobileMenu.css("position", "absolute");
+    mobileMenu.css("top", topMenuHeight);
+    mobileMenu.css("width", "100%");
+    mobileMenu.css("height", "100%");
+    mobileMenu.css("background-color", topMenuColor);
+    mobileMenu.hide();
+
+    $("body").append(mobileMenu);
+
+    $("#top_menu #hamburger_menu").click(function () {
+        if (!mobileMenuVisible) {
+            mobileMenu.show();
+            mobileMenuVisible = true;
+        } else {
+            mobileMenu.hide();
+            mobileMenuVisible = false;
         }
     });
 }
