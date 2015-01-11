@@ -1,9 +1,12 @@
+@import 'global';
+
 h1 {
   font-size: 24pt;
   line-height: 38px;
   font-weight: 300;
   font-family: 'Raleway', sans-serif;
 }
+
 h2 {
   font-size: 14pt;
   line-height: 57px;
@@ -11,17 +14,20 @@ h2 {
   font-variant: small-caps;
   letter-spacing: .12em;
   font-weight: 600;
-  color: #960084;
+  color: rgb(150, 0, 132);
 }
+
 h3 {
   font-size: 14pt;
   line-height: 28px;
   font-weight: 400;
-  color: #969696;
+  color: rgb(150, 150, 150);
   font-family: 'Raleway', sans-serif;
   line-height: 38px;
 }
+
 .content {
+
   color: black;
   font-family: "Open Sans", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 100%;
@@ -29,80 +35,97 @@ h3 {
   font-size: 12pt;
   margin-top: 37px;
   margin-bottom: 100px;
+
   width: 46em;
   margin-left: auto;
   margin-right: auto;
 }
+
 .gallery4 {
   width: 11.3em;
   margin-bottom: 19px;
 }
+
 .gallery3 {
   width: 15.1em;
   margin-bottom: 19px;
 }
+
 .gallery2 {
   width: 22.8em;
   margin-bottom: 19px;
 }
+
 .gallery1 {
   width: 46em;
   margin-bottom: 19px;
 }
+
 .borderless_image {
-  border: 1px #e2e2e2 solid;
+  border : 1px rgb(226, 226, 226) solid;
 }
+
 p {
   font-size: 1em;
   line-height: 19px;
   margin-bottom: 19px;
   font-weight: 400;
   text-align: left;
-  color: #464646;
+  color: rgb(70, 70, 70);
+
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
+
   -moz-font-feature-settings: "liga=1, dlig=1";
   -ms-font-feature-settings: "liga", "dlig";
   -webkit-font-feature-settings: "liga", "dlig";
   -o-font-feature-settings: "liga", "dlig";
   font-feature-settings: "liga", "dlig";
 }
+
 .article_list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.article_list li {
+
+.article_list li{
   font-size: 1em;
   line-height: 19px;
   font-weight: 400;
-  color: #464646;
+  color: rgb(70, 70, 70);
+
   font-family: "Open Sans", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
   padding-left: 1em;
-  text-indent: -0.7em;
+  text-indent: -.7em;
 }
+
 .article_list li:before {
   content: "\002022  ";
   color: grey;
 }
-.definitions {
+
+.definitions{
   font-size: 10pt;
-  color: #464646;
+  color: rgb(70, 70, 70);
   margin-bottom: 19px;
 }
-table.definitions td {
+
+table.definitions td{
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #e4e4e4;
 }
-table.definitions .key {
+
+table.definitions .key{
   padding-left: 1em;
   color: #000000;
   text-align: left;
   font-weight: 600;
 }
-table.definitions .value {
+table.definitions .value{
   text-align: left;
   padding-left: 20px;
 }

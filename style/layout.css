@@ -110,11 +110,17 @@ body {
   line-height: 10mm;
 }
 #right_panel {
+  position: relative;
   box-sizing: border-box;
+  padding: 100px;
   top: 0px;
   bottom: 0px;
   width: calc(-300%);
   min-width: 46em;
+  font-family: "Open Sans", Arial, sans-serif;
+  color: black;
+  font-size: 12pt;
+  line-height: 19px;
 }
 #right_panel a {
   text-decoration: none;
