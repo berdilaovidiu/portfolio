@@ -14,21 +14,46 @@ p {
   margin-bottom: 19px;
 }
 #introduction {
-  width: 1200px;
+  max-width: 1200px;
   margin-bottom: 19px;
 }
 #schools_panel,
 #books_panel {
   display: inline-block;
   vertical-align: top;
-  width: 600px;
+  max-width: 600px;
 }
 #schools {
   border-left: 1px solid grey;
 }
-#books_panel {
-  margin-left: 100px;
-  width: 500px;
+#schools .school {
+  margin-top: 19px;
+  margin-bottom: 19px;
+  position: relative;
+  padding-left: 10px;
+}
+#schools .school .circle {
+  display: inline-block;
+  position: absolute;
+  left: calc(-0.5em - 1px);
+  background: white;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 1px solid grey;
+}
+#schools .school .time {
+  font-size: 10pt;
+  color: grey;
+  -webkit-font-variant-numeric: onum;
+  -moz-font-variant-numeric: onum;
+  -moz-font-feature-settings: "onum=1";
+}
+@media screen and (min-width: 768px) {
+  #books_panel {
+    margin-left: 100px;
+    max-width: 500px;
+  }
 }
 #books_panel #books {
   margin-top: 19px;
@@ -54,29 +79,6 @@ p {
 }
 .details .description {
   margin-top: 19px;
-}
-.school {
-  margin-top: 19px;
-  margin-bottom: 19px;
-  position: relative;
-  padding-left: 10px;
-}
-.school .circle {
-  display: inline-block;
-  position: absolute;
-  left: calc(-0.5em - 1px);
-  background: white;
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  border: 1px solid grey;
-}
-.school .time {
-  font-size: 10pt;
-  color: grey;
-  -webkit-font-variant-numeric: onum;
-  -moz-font-variant-numeric: onum;
-  -moz-font-feature-settings: "onum=1";
 }
 .degree,
 .author {
