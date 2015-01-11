@@ -1,152 +1,122 @@
-body{
-	width : 100%;
-	height : 100%;
-	box-sizing : border-box;
-	margin : 0;
+body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
 }
-
 @media screen and (min-width: 768px) {
-    #top_menu {
-        display: none;
-    }
-
-    #side_menu {
-        display: visible;
-    }
-
-    #right_panel {
-        margin-left : 400px;
-    }
+  #top_menu {
+    display: none;
+  }
+  #side_menu {
+    display: block;
+  }
+  #right_panel {
+    margin-left: 400px;
+  }
 }
-
-@media screen and (max-width: 767px) {
-    #top_menu {
-        display: visible;
-    }
-
-    #side_menu {
-        display: none;
-    }
-
-    #right_panel {
-        margin-left : 0px;
-    }
+@media screen and (max-width: 768px) {
+  #top_menu {
+    display: block;
+  }
+  #side_menu {
+    display: none;
+  }
+  #right_panel {
+    margin-left: 0px;
+  }
 }
-
-#photo_container{
-	position : relative;
-	width:100%;
-	height : 300px;
-}
-
-#profile_photo{
-	position : relative;
-	width : 200px;
-	display : block;
-	margin-left : auto;
-	margin-right : auto;
-	margin-top : 100px;
-	margin-bottom : 10px;
-}
-
-#summary{
-	width : 200px;
-	margin-left : auto;
-	margin-right : auto;
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
-	color : black;
-	text-align : center;
-	line-height : 1.5em;
-}
-
-#name{
-	font-size : 16pt;
-}
-
-#statement{
-	font-style : italic;
-}
-
 #side_menu {
-	box-sizing : border-box;
-	position : fixed;
-	top : 0px;
-	width : 400px;
-	height : 100%;
-	min-width : 220px;
-	background-color : rgb(150, 0, 132);
-	color : white;
-    z-index: 1;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0px;
+  width: 400px;
+  height: 100%;
+  background-color: #960084;
+  z-index: 1;
 }
-
-#right_panel{
-	box-sizing : border-box;
-
-	top : 0px;
-	bottom : 0px;
-
-    width : calc(100% - 400px);
-	min-width : 46em;
+#side_menu #photo_container {
+  position: relative;
+  width: 100%;
+  height: 300px;
 }
-
-#right_panel a{
-	text-decoration : none;
-	color : rgb(150, 0, 132);
+#side_menu #photo_container #profile_photo {
+  position: relative;
+  width: 200px;
+  display: block;
+  margin: 100px auto 10px;
 }
-
-#menu{
-	margin-top : 50px;
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
-	width: 200px;
+#side_menu #photo_container #summary {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  text-align: center;
+  line-height: 1.5em;
 }
-
-#menu div{
-	height : 50px;
-	text-align : center;
-	color : black;
-	font-size : 20pt;
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
-	font-weight : 200;
+#side_menu #photo_container #summary #name {
+  font-size: 16pt;
+  color: white;
 }
-
-#menu div a{
-	text-decoration: none;
-	color : grey;
+#side_menu #photo_container #summary #statement {
+  font-style: italic;
+  color: black;
 }
-
+#side_menu #menu {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 200px;
+}
+#side_menu #menu div {
+  height: 50px;
+  text-align: center;
+  color: black;
+  font-size: 20pt;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+#side_menu #menu div a {
+  text-decoration: none;
+  color: white;
+  font-weight: 200;
+}
 #top_menu {
-    box-sizing : border-box;
-    position : fixed;
-    top : 0px;
-    width : 100%;
-    height : 10mm;
-    min-height : 30px;
-    background-color : rgb(150, 0, 132);
-    z-index: 1;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 10mm;
+  min-height: 30px;
+  background-color: #960084;
+  z-index: 1;
 }
-
-
 #top_menu #hamburger_menu {
-    position: absolute;
-    left : 10px;
+  position: absolute;
+  left: 10px;
 }
-
-#hamburger_menu img {
-    height: 10mm;
+#top_menu #hamburger_menu img {
+  height: 10mm;
 }
-
 #top_menu #mobile_title {
-    width: 100%;
-    height: 100%;
-
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
-    font-size : 16pt;
-    color:black;
-
-    text-align: center;
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 10mm;
+  width: 100%;
+  height: 100%;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 16pt;
+  color: black;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 10mm;
+}
+#right_panel {
+  box-sizing: border-box;
+  top: 0px;
+  bottom: 0px;
+  width: calc(-300%);
+  min-width: 46em;
+}
+#right_panel a {
+  text-decoration: none;
+  color: #960084;
 }
