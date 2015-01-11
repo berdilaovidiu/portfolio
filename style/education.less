@@ -36,14 +36,14 @@ p {
 #books_panel {
   margin-left: 100px;
   width: 500px;
-}
 
-#books {
-  margin-top: 19px;
-}
+  #books {
+    margin-top: 19px;
 
-#schools, #books {
-  //margin-left: 1em;
+    .book {
+      margin-bottom: 19px;
+    }
+  }
 }
 
 .details, .timeframe {
@@ -56,17 +56,16 @@ p {
   width: 140px;
 }
 
-.title .title {
+.title {
   font-weight: 400;
   color: @primary-color;
 }
 
 .details {
   width: 441px;
-}
-
-.details .description {
-  margin-top: 19px;
+  .description {
+    margin-top: 19px;
+  }
 }
 
 .school {
@@ -79,7 +78,7 @@ p {
   .circle {
     display: inline-block;
     position: absolute;
-    left: calc(-0.5em - 1px);
+    left: ~"calc(-0.5em - 1px)";
     background: white;
     width: 1em;
     height: 1em;
@@ -103,8 +102,4 @@ p {
 .degree, .author {
   color: grey;
   font-style: italic;
-}
-
-.book {
-  margin-bottom: 19px;
 }
