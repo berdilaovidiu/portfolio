@@ -18,6 +18,7 @@ body {
 
   #right_panel {
     margin-left: @side-menu-width;
+    padding: @padding-web;
   }
 }
 
@@ -32,6 +33,7 @@ body {
 
   #right_panel {
     margin-left: 0px;
+    padding: @padding-mobile;
   }
 }
 
@@ -132,12 +134,10 @@ body {
   position: relative;
 
   box-sizing: border-box;
-  padding: 100px;
   top: 0px;
   bottom: 0px;
 
   width: calc(100% - @side-menu-width);
-  min-width: @max-article-text-width;
 
   font-family: "Open Sans", Arial, sans-serif;
   color: black;
