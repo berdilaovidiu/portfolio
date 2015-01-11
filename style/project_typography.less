@@ -27,18 +27,13 @@ h3 {
 }
 
 .content {
-
   color: black;
   font-family: "Open Sans", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 100%;
   height: 100%;
   font-size: 12pt;
-  margin-top: 37px;
-  margin-bottom: 100px;
-
   width: 46em;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 37px auto 100px;
 }
 
 .gallery4 {
@@ -62,7 +57,7 @@ h3 {
 }
 
 .borderless_image {
-  border : 1px rgb(226, 226, 226) solid;
+  border: 1px rgb(226, 226, 226) solid;
 }
 
 p {
@@ -88,44 +83,44 @@ p {
   list-style: none;
   padding: 0;
   margin: 0;
+
+  li {
+    &:before {
+      content: "\002022  ";
+      color: grey;
+    }
+
+    font-size: 1em;
+    line-height: 19px;
+    font-weight: 400;
+    color: rgb(70, 70, 70);
+
+    font-family: "Open Sans", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    padding-left: 1em;
+    text-indent: -.7em;
+  }
 }
 
-.article_list li{
-  font-size: 1em;
-  line-height: 19px;
-  font-weight: 400;
-  color: rgb(70, 70, 70);
-
-  font-family: "Open Sans", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-  padding-left: 1em;
-  text-indent: -.7em;
-}
-
-.article_list li:before {
-  content: "\002022  ";
-  color: grey;
-}
-
-.definitions{
+.definitions {
   font-size: 10pt;
   color: rgb(70, 70, 70);
   margin-bottom: 19px;
-}
 
-table.definitions td{
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #e4e4e4;
-}
+  td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e4e4e4;
+  }
 
-table.definitions .key{
-  padding-left: 1em;
-  color: #000000;
-  text-align: left;
-  font-weight: 600;
-}
-table.definitions .value{
-  text-align: left;
-  padding-left: 20px;
+  .key {
+    padding-left: 1em;
+    color: #000000;
+    text-align: left;
+    font-weight: 600;
+  }
+  .value {
+    text-align: left;
+    padding-left: 20px;
+  }
 }
