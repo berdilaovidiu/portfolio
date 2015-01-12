@@ -42,7 +42,21 @@ p {
   border-radius: 50%;
   border: 1px solid grey;
 }
-#schools .school .time {
+#schools .school .timeframe {
+  margin-left: 3px;
+  width: 140px;
+  margin-bottom: 19px;
+}
+@media screen and (max-width: 768px) {
+  #schools .school .timeframe {
+    width: 250px;
+  }
+  #schools .school .timeframe .institution,
+  #schools .school .timeframe .time {
+    display: inline-block;
+  }
+}
+#schools .school .timeframe .time {
   font-size: 10pt;
   color: grey;
   -webkit-font-variant-numeric: onum;
@@ -66,16 +80,12 @@ p {
   display: inline-block;
   vertical-align: top;
 }
-.timeframe {
-  margin-left: 3px;
-  width: 140px;
-}
 .title {
   font-weight: 400;
   color: #960084;
 }
 .details {
-  width: 441px;
+  max-width: 441px;
 }
 .details .description {
   margin-top: 19px;

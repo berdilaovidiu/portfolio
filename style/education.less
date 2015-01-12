@@ -54,12 +54,29 @@ p {
 
     }
 
-    .time {
-      font-size: 10pt;
-      color: grey;
-      -webkit-font-variant-numeric: onum;
-      -moz-font-variant-numeric: onum;
-      -moz-font-feature-settings: "onum=1";
+    .timeframe {
+      margin-left: 3px;
+      width: 140px;
+      margin-bottom: 19px;
+
+      @media screen and (max-width: @responsive-threshold) {
+        width: 250px;
+        .institution, .time {
+          display: inline-block;
+        }
+      }
+
+      .institution {
+
+      }
+
+      .time {
+        font-size: 10pt;
+        color: grey;
+        -webkit-font-variant-numeric: onum;
+        -moz-font-variant-numeric: onum;
+        -moz-font-feature-settings: "onum=1";
+      }
     }
   }
 }
@@ -84,18 +101,13 @@ p {
   vertical-align: top;
 }
 
-.timeframe {
-  margin-left: 3px;
-  width: 140px;
-}
-
 .title {
   font-weight: 400;
   color: @primary-color;
 }
 
 .details {
-  width: 441px;
+  max-width: 441px;
   .description {
     margin-top: 19px;
   }
