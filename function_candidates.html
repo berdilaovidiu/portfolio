@@ -88,8 +88,9 @@
 				<p>Unfortunately, this had to be done manually, a few thousand times, and this motivated me to try to
 					make the task as easy as possible.</p>
 
-
-				<a class="fancybox" rel="group" title="Original version with unsorted list of suggestions" href="img/function_candidates/1.png"><img class="gallery1" id="function_candidates_1" src="img/function_candidates/1.png" alt="" /></a>
+                <div class="gallery">
+				    <a class="fancybox" rel="group" title="Original version with unsorted list of suggestions" href="img/function_candidates/1.png"><img class="gallery1" id="function_candidates_1" src="img/function_candidates/1.png" alt="" /></a>
+                </div>
 
 				<p>At this stage, the user is presented with a list of suggestions that need to be read, and pick the
 					suggestion that makes the most sense. As you can tell, this is no easy task because it relies a lot
@@ -98,9 +99,12 @@
 
 				<p>We can make this easier just by sorting the suggestions using a similarity metric between two
 					names, so that the user only needs to focus on the first several items before making a decision.</p>
-				<a class="fancybox" rel="group" title="Sorted list of suggestions, based on the similarity of the names" href="img/function_candidates/2.png"><img class="gallery1" id="function_candidates_2" src="img/function_candidates/2.png" alt="" /></a>
 
-				<p>This is a great improvement in usability, but there is still a lot of room for improvement in the
+                <div class="gallery">
+                    <a class="fancybox" rel="group" title="Sorted list of suggestions, based on the similarity of the names" href="img/function_candidates/2.png"><img class="gallery1" id="function_candidates_2" src="img/function_candidates/2.png" alt="" /></a>
+                </div>
+
+                <p>This is a great improvement in usability, but there is still a lot of room for improvement in the
 					visual department.</p>
 
 				<h2>VISUAL SEPARATION</h2>
@@ -112,22 +116,34 @@
 					term sits on a separate row and it is easily recognizable. Knowing the fact that the final
 					spreadsheet will have a few thousands sections, vertical space becomes important and instead of
 					having a single column, I decided to go for a two columns list.</p>
-				<a class="fancybox" rel="group" title="Vertical alignment of the suggestions in two columns to improve visual separation" href="img/function_candidates/3.png"><img class="gallery1" id="function_candidates_3" src="img/function_candidates/3.png" alt="" /></a>
+
+                <div class="gallery">
+                    <a class="fancybox" rel="group" title="Vertical alignment of the suggestions in two columns to improve visual separation" href="img/function_candidates/3.png"><img class="gallery1" id="function_candidates_3" src="img/function_candidates/3.png" alt="" /></a>
+                </div>
 
 				<p>The next step was to add some more vertical space between the sections, since the grey lines of the
 					spreadsheet were not enough to make a clear distinction between these tall rows with a lot of
 					content.</p>
-				<a class="fancybox" rel="group" title="Space added to improve separation of the rows" href="img/function_candidates/4.png"><img class="gallery1" id="function_candidates_4" src="img/function_candidates/4.png" alt="" /></a>
+
+                <div class="gallery">
+                    <a class="fancybox" rel="group" title="Space added to improve separation of the rows" href="img/function_candidates/4.png"><img class="gallery1" id="function_candidates_4" src="img/function_candidates/4.png" alt="" /></a>
+                </div>
 
 				<p>Now the problem becomes the order of reading inside the two columns list. Just to make sure the user
 					doesn't get confused between reading from left to right or going down the first column and continuing to
 					the next one, I added indices for each item.</p>
-				<a class="fancybox" rel="group" title="Indices added to emphasize the order" href="img/function_candidates/5.png"><img class="gallery1" id="function_candidates_5" src="img/function_candidates/5.png" alt="" /></a>
+
+                <div class="gallery">
+                    <a class="fancybox" rel="group" title="Indices added to emphasize the order" href="img/function_candidates/5.png"><img class="gallery1" id="function_candidates_5" src="img/function_candidates/5.png" alt="" /></a>
+                </div>
 
 				<p>There is not much left to do in the separation department, except aligning the first column, since the
 					last item is slightly shifted to the right due to the larger size of the index, and this is breaking
 					the vertical flow of the information.</p>
-				<a class="fancybox" rel="group" title="Shifted the first nine items to the right to improve the vertical alignment" href="img/function_candidates/6.png"><img class="gallery1" id="function_candidates_6" src="img/function_candidates/6.png" alt="" /></a>
+
+                <div class="gallery">
+                    <a class="fancybox" rel="group" title="Shifted the first nine items to the right to improve the vertical alignment" href="img/function_candidates/6.png"><img class="gallery1" id="function_candidates_6" src="img/function_candidates/6.png" alt="" /></a>
+                </div>
 
 				<h2>LAYERS OF INFORMATION</h2>
 
@@ -140,7 +156,10 @@
 					the user, the actual name of the function. The ID is also important, but only in a following
 					step where the user has to fill in more information, and not here, where he has to pick
 					the best name from the list.</p>
-				<a class="fancybox" rel="group" title="Made indices and IDs less noticeable to emphasize the important information" href="img/function_candidates/7.png"><img class="gallery1" id="function_candidates_7" src="img/function_candidates/7.png" alt="" /></a>
+
+                <div class="gallery">
+                    <a class="fancybox" rel="group" title="Made indices and IDs less noticeable to emphasize the important information" href="img/function_candidates/7.png"><img class="gallery1" id="function_candidates_7" src="img/function_candidates/7.png" alt="" /></a>
+                </div>
 
 				<p>At this point I thought the job was done and that there was nothing else I could do to improve the
 					usability. I did run through the whole scenario again, to see how easy it is to execute the task, and
@@ -150,7 +169,10 @@
 
 				<p>It was that moment I realized I can use the already computed similarities in a visual way, to
 					convey to the user the reason behind that specific order of the suggestions.</p>
-				<a class="fancybox" rel="group" title="Highlighted matching sequences to support the decision making process" href="img/function_candidates/8.png"><img class="gallery1" id="function_candidates_8" src="img/function_candidates/8.png"/></a>
+
+                <div class="gallery">
+                    <a class="fancybox" rel="group" title="Highlighted matching sequences to support the decision making process" href="img/function_candidates/8.png"><img class="gallery1" id="function_candidates_8" src="img/function_candidates/8.png"/></a>
+                </div>
 
 				<h2>CONCLUSION</h2>
 

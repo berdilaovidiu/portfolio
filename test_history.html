@@ -135,47 +135,67 @@
 					well known in the software world.
 					The markers also needed to be click-able and selectable, so I made them look like knobs. Clicking on
 					a knob would display details about the test execution in a separate panel.</p>
-				<a class="fancybox" rel="group" title="Horizontal line with test executions" href="img/test_history/1.png"><img class="borderless_image gallery1" id="test_history_1" src="img/test_history/1.1.png" alt="" /></a>
+
+                <div class="gallery">
+                    <a class="fancybox" rel="group" title="Horizontal line with test executions" href="img/test_history/1.png"><img class="borderless_image gallery1" id="test_history_1" src="img/test_history/1.1.png" alt="" /></a>
+                </div>
 
 				<p>To make this look more like a time line, I decorated it with a starting delimiter and an arrow that
 					communicates the direction of the time flow, from left to right. To give it a sense of magnitude, I
 					added labels for the start and end of the line. This is nothing new, I just reused a well
 					established representation of the time.</p>
-				<a class="fancybox" rel="group" title="Time line with an arrow to indicate the direction of the time flow and labels to describe the moments in time" href="img/test_history/2.png"><img class="borderless_image gallery1" id="test_history_2" src="img/test_history/2.2.png" alt="" /></a>
+
+                <div class="gallery">
+                    <a class="fancybox" rel="group" title="Time line with an arrow to indicate the direction of the time flow and labels to describe the moments in time" href="img/test_history/2.png"><img class="borderless_image gallery1" id="test_history_2" src="img/test_history/2.2.png" alt="" /></a>
+                </div>
 
 				<p>This is pretty good so far, but there are still questions that are not easy to answer using this
 					representation. It was hard to tell when where the transitions from one state to another, because you
 					would have to follow the line and keep in mind what was the last visited state.
 					To make this simpler, I thought of using the space between executions to communicate the state of
 					the test at each moment, so that the user would not need to remember anything.</p>
-				<a class="fancybox" rel="group" title="Emphasized state transitions with the knob colors replicated onto the line" href="img/test_history/3.png"><img class="borderless_image gallery1" id="test_history_3" src="img/test_history/3.3.png" alt="" /></a>
+
+                <div class="gallery">
+                    <a class="fancybox" rel="group" title="Emphasized state transitions with the knob colors replicated onto the line" href="img/test_history/3.png"><img class="borderless_image gallery1" id="test_history_3" src="img/test_history/3.3.png" alt="" /></a>
+                </div>
 
 				<p>I was getting close, but still could not tell at a glace where were the state transitions. The colors
 					were there, but the effect needed to be enhanced so I decided to use more color by thickening the
 					line.
 					The color of the knobs was not needed anymore, because it was clear what was the status for any point
 					in time.</p>
-				<a class="fancybox" rel="group" title="Thicker line that communicates the test results even better" href="img/test_history/4.png"><img class="borderless_image gallery1" id="test_history_4" src="img/test_history/4.4.png" alt="" /></a>
+
+                <div class="gallery">
+                    <a class="fancybox" rel="group" title="Thicker line that communicates the test results even better" href="img/test_history/4.png"><img class="borderless_image gallery1" id="test_history_4" src="img/test_history/4.4.png" alt="" /></a>
+                </div>
 
 				<p>There was one more thing I was not happy about. I wanted to provide a more accurate assessment for the
 					health status of the system. Of course you can only know it for sure at the time of the execution,
 					but when you get a test failure, that doesn't mean the system started to behave badly exactly at that point.
 					It probably started somewhere in between the previous and the current execution dates. I wanted the
 					visualization to reflect this and I made the transitions smoother by using gradients.</p>
-				<a class="fancybox" rel="group" title="State transitions happen between test executions, this is a more accurate representation" href="img/test_history/5.png"><img class="borderless_image gallery1" id="test_history_5" src="img/test_history/5.5.png" alt="" /></a>
+
+                <div class="gallery">
+                    <a class="fancybox" rel="group" title="State transitions happen between test executions, this is a more accurate representation" href="img/test_history/5.png"><img class="borderless_image gallery1" id="test_history_5" src="img/test_history/5.5.png" alt="" /></a>
+                </div>
 
 				<p>I was pretty happy with the widget at that time, but as time went by and test executions started to
 					add up, there was a need to see only parts of the time line, and there was no way of specifying the
 					start and end point of the axis. I looked around a bit at some other visualizations and I particularly
 					liked what Google Finance did for their stock price charts, so I did the same.</p>
-				<a class="fancybox" rel="group" title="Time span selector added to the top" href="img/test_history/6.png"><img class="borderless_image gallery1" id="test_history_6" src="img/test_history/6.png" alt="" /></a>
 
+                <div class="gallery">
+                    <a class="fancybox" rel="group" title="Time span selector added to the top" href="img/test_history/6.png"><img class="borderless_image gallery1" id="test_history_6" src="img/test_history/6.png" alt="" /></a>
+                </div>
 
 				<p>Unfortunately, the time span selection was not very flexible and there were parts of the visualization
 					that could not be explored. More than that, as test executions started to pile up, the overall view
 					became cluttered and you could not longer tell at a glance what happened with the system.
 					Points were also overlapping and it became hard to select a specific point from a group.</p>
-				<a class="fancybox" rel="group" title="The widget became unusable after a while" href="img/test_history/7.png"><img class="borderless_image gallery1" id="test_history_7" src="img/test_history/7.png" alt="" /></a>
+
+                <div class="gallery">
+                    <a class="fancybox" rel="group" title="The widget became unusable after a while" href="img/test_history/7.png"><img class="borderless_image gallery1" id="test_history_7" src="img/test_history/7.png" alt="" /></a>
+                </div>
 
 				<p>Even though the widget became unusable after a while, I still believed there were some good ideas in
 					the design and it should not be thrown away, but rather improved.</p>
@@ -195,7 +215,10 @@
 				<p>Clicking on the links would resize and position the chart, so that the desired execution is in the
 					middle of the view port, in selected state. Doing all this, gives the user the maximum
 					flexibility in selecting the time span and also very few steps to achieve that.</p>
-				<a class="fancybox" rel="group" title="Flexible horizontal scroll bar for a better selection of the time span" href="img/test_history/8.png"><img class="borderless_image gallery1" id="test_history_8" src="img/test_history/8.png" alt="" /></a>
+
+                <div class="gallery">
+                    <a class="fancybox" rel="group" title="Flexible horizontal scroll bar for a better selection of the time span" href="img/test_history/8.png"><img class="borderless_image gallery1" id="test_history_8" src="img/test_history/8.png" alt="" /></a>
+                </div>
 
 				<p>Another big problem was the cluttered view when test executions were too close and started to
 					overlap. In order to solve this, I chose to treat those executions as a group, and display them in a
@@ -203,12 +226,18 @@
 					Clicking on the dotted rectangle would expand that grouping to the full length of the view port, so
 					that it could be further explored. This is the same data used in the last figure of the previous
 					version.</p>
-				<a class="fancybox" rel="group" title="The dotted rectangles are clusters of executions that can be expanded by clicking them" href="img/test_history/9.png"><img class="borderless_image gallery1" id="test_history_9" src="img/test_history/9.png" alt="" /></a>
+
+                <div class="gallery">
+                    <a class="fancybox" rel="group" title="The dotted rectangles are clusters of executions that can be expanded by clicking them" href="img/test_history/9.png"><img class="borderless_image gallery1" id="test_history_9" src="img/test_history/9.png" alt="" /></a>
+                </div>
 
 				<p>Clicking on the last exception link would bring the widget in the following state, where the last
 					exception is selected and the position and zoom level of the chart are computed, so that the selected
 					item is not hidden inside a group.</p>
-				<a class="fancybox" rel="group" title="The blue bar is a selected test execution" href="img/test_history/10.png"><img class="borderless_image gallery1" id="test_history_10" src="img/test_history/10.png" alt="" /></a>
+
+                <div class="gallery">
+                    <a class="fancybox" rel="group" title="The blue bar is a selected test execution" href="img/test_history/10.png"><img class="borderless_image gallery1" id="test_history_10" src="img/test_history/10.png" alt="" /></a>
+                </div>
 
 				<p>This is the version used now in production and I am proud to say I did not only designed the widget,
 					I was also the one who wrote the code to bring it to life.</p>
@@ -222,17 +251,26 @@
 				<p>There are still a couple of things that can be done to make this widget even better, and will probably
 					be implemented in the future. The first of them is to de clutter the chart even more, by making the
 					data points less visible.</p>
-				<a class="fancybox" rel="group" title="More subtle data points as a future improvement" href="img/test_history/11.png"><img class="borderless_image gallery1" id="test_history_11" src="img/test_history/11.png" alt="" /></a>
+
+                <div class="gallery">
+                    <a class="fancybox" rel="group" title="More subtle data points as a future improvement" href="img/test_history/11.png"><img class="borderless_image gallery1" id="test_history_11" src="img/test_history/11.png" alt="" /></a>
+                </div>
 
 				<p>Hovering over the chart would reveal the vertical rectangles so that they can be clicked. There is a
 					good reason to consider this a good change, because in order to see the overall health state of the
 					system, you don't need to click the data points. The data points need to be click-able only when you
 					want to select a test execution.</p>
-				<a class="fancybox" rel="group" title="The points would become fully visible on mouse over" href="img/test_history/12.png"><img class="borderless_image gallery1" id="test_history_12" src="img/test_history/12.png" alt="" /></a>
+
+                <div class="gallery">
+                    <a class="fancybox" rel="group" title="The points would become fully visible on mouse over" href="img/test_history/12.png"><img class="borderless_image gallery1" id="test_history_12" src="img/test_history/12.png" alt="" /></a>
+                </div>
 
 				<p>Another improvement is in the way time is displayed on the scroll bar. Years and months are not enough
 					when you zoom in a lot, days and hours are more suited for that kind of scenario.</p>
-				<a class="fancybox" rel="group" title="Time divisions in tune with the zoom level" href="img/test_history/13.png"><img class="borderless_image gallery1" id="test_history_13" src="img/test_history/13.png" alt="" /></a>
+
+                <div class="gallery">
+                    <a class="fancybox" rel="group" title="Time divisions in tune with the zoom level" href="img/test_history/13.png"><img class="borderless_image gallery1" id="test_history_13" src="img/test_history/13.png" alt="" /></a>
+                </div>
 
 				<p>Maybe one of the most important lessons I learned during this project was to test the design with
 					real data before starting to implement it. Even though the prototypes were looking great for a few hand
