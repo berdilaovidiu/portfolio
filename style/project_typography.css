@@ -30,21 +30,21 @@ h3 {
   max-width: 46em;
   margin: 37px auto 100px;
 }
-.gallery4 {
-  width: 23.5%;
+.gallery {
+  font-size: 0pt;
   margin-bottom: 19px;
 }
-.gallery3 {
-  width: 32%;
-  margin-bottom: 19px;
-}
-.gallery2 {
-  width: 49%;
-  margin-bottom: 19px;
-}
-.gallery1 {
+.gallery .gallery1 {
   width: 100%;
-  margin-bottom: 19px;
+}
+.gallery .gallery2 {
+  width: 50%;
+}
+.gallery .gallery3 {
+  width: 33.3%;
+}
+.gallery .gallery4 {
+  width: 25%;
 }
 .borderless_image {
   border: 1px #e2e2e2 solid;
