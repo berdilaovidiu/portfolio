@@ -4,7 +4,7 @@ body {
   box-sizing: border-box;
   margin: 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1000px) {
   #top_menu {
     display: none;
   }
@@ -15,8 +15,11 @@ body {
     margin-left: 400px;
     padding: 100px;
   }
+  #right_panel.project {
+    padding: 0px;
+  }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   #top_menu {
     display: block;
   }

@@ -47,7 +47,7 @@ p {
   width: 140px;
   margin-bottom: 19px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   #schools .school .timeframe {
     width: 250px;
   }
@@ -63,7 +63,7 @@ p {
   -moz-font-variant-numeric: onum;
   -moz-font-feature-settings: "onum=1";
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1000px) {
   #books_panel {
     margin-left: 100px;
     max-width: 500px;
