@@ -80,35 +80,64 @@
 
 				<h2>PROBLEM TO SOLVE</h2>
 
-				<p>Bla Bla Bla</p>
+				<p>Networks used in biology are most of the times big, with a lot of overlapping nodes, edges, text and a lot of colors.
+                    They tend to look like hairballs and making sense of a hairball is most of the times a challenging task.</p>
 
+				<p>One way to improve the process is to emphasize the relevant information and hide the rest. This is nothing new, most of the interactive networks implementations do it.</p>
+				<p>There was something specific to this case though, I was not allowed to override the colors of the network's elements.
+                    I was only allowed to use transparency and additional colors, as long as the original information was still visible.</p>
 
+                <p>Another requirement was to come up with a solution that would scale up to multiple adjacent levels and convey the information hierarchy.
+                    This translates to emphasizing gradually, in a decreasing order, the nodes of interest, their closest neighbours, the more distant neighbours,
+                    and blend the rest of the network in an almost invisible layer, in the background.</p>
 
-				<p>This is how the tool looked like before the redesign:</p>
+                <h2>PROPOSED SOLUTIONS</h2>
+
+                <p>The no brainer was to fade out anything that is not in the region of interest, emphasizing interesting information this way.
+                    The solution preservers the colors and is also scalable by using different levels of transparencies for the adjacent elements.</p>
 
                 <div class="gallery">
 				    <a class="fancybox" rel="proposal" title="" href="img/network_highlight/fade_default.png"><img class="gallery2" id="proposal_1" src="img/network_highlight/fade_default.png" alt=""/></a>
 				    <a class="fancybox" rel="proposal" title="" href="img/network_highlight/fade_highlight.png"><img class="gallery2" id="proposal_2" src="img/network_highlight/fade_highlight.png" alt=""/></a>
                 </div>
 
+                <p>The second solution is just an enhanced version of the previous one. Instead of changing the transparency abruptly from level to level,
+                    I changed it gradually. This still preserves the hierarchy and also creates a 3D effect, lifting up the nodes of interest from the rest of the network</p>
 				<div class="gallery">
 				    <a class="fancybox" rel="proposal" title="" href="img/network_highlight/gradual_default.png"><img class="gallery2" id="proposal_3" src="img/network_highlight/gradual_default.png" alt=""/></a>
 				    <a class="fancybox" rel="proposal" title="" href="img/network_highlight/gradual_highlight.png"><img class="gallery2" id="proposal_4" src="img/network_highlight/gradual_highlight.png" alt=""/></a>
                 </div>
 
+                <p>The third solution is quite different and it involves surrounding the elements of interest with a yellow glow.
+                    Adding more color to an already dense visualization was not helping my case. I fixed it by taking out some of the "chart junk", as Edward Tufte would call it.</p>
 				<div class="gallery">
 				    <a class="fancybox" rel="proposal" title="" href="img/network_highlight/thin_default.PNG"><img class="gallery2" id="proposal_5" src="img/network_highlight/thin_default.PNG" alt=""/></a>
 				    <a class="fancybox" rel="proposal" title="" href="img/network_highlight/thin_highlight.PNG"><img class="gallery2" id="proposal_6" src="img/network_highlight/thin_highlight.PNG" alt=""/></a>
                 </div>
 
+                <p>Edges are important, but they use a lot of ink. I reduced the ink usage by taking away some of the color from
+                    the middle of the edges and kept the meaning by leveraging the <i>closure</i> and <i>good continuation principles</i> from the Gestalt psychology.</p>
 
 				<h2>RESULT</h2>
+
+                <b>I tested all the proposed solutions with real data and in the end we decided to implement the simplest one. There are two levels of transparency,
+                    the elements of interest are opaque and the rest of the network fades away in the background.</b>
 
 				<div class="gallery">
 					<a class="fancybox" rel="result" title="" href="img/network_highlight/before_default.PNG"><img class="gallery3" id="result_1" src="img/network_highlight/before_default.PNG" alt=""/></a>
 					<a class="fancybox" rel="result" title="" href="img/network_highlight/before_highlight.png"><img class="gallery3" id="result_2" src="img/network_highlight/before_highlight.png" alt=""/></a>
 					<a class="fancybox" rel="result" title="" href="img/network_highlight/after_highlight.png"><img class="gallery3" id="result_3" src="img/network_highlight/after_highlight.png" alt=""/></a>
 				</div>
+
+                <p>Unfortunately, I did not hear any feedback from the application users, but the feedback I got from the product team and beta testers was great.</p>
+
+                <h2>CONCLUSIONS</h2>
+
+                <p>This was the first step of series of improvements made to the networks in the application.
+                    Following changes were related to improving the legibility of the text and offering multiple layout choices, some of them sensible to node selections.</p>
+
+                <p>The changes were rolled out during multiple releases and this was a perfect way to deliver since networks
+                    are the core part of the application and are used by the vast majority of the users.</p>
 
 			</div>
 		</div>
