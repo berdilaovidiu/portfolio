@@ -34,6 +34,11 @@ h3 {
   font-size: 0pt;
   margin-bottom: 19px;
 }
+.gallery .gallery1center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .gallery .gallery1 {
   width: 100%;
 }

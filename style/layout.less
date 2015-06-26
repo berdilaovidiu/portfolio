@@ -17,6 +17,10 @@ body {
   }
 
   #right_panel {
+    width: ~"calc(100% - @{side-menu-width})";
+    width: ~"-webkit-calc(100% - @{side-menu-width})";
+    width: ~"-moz-calc(100% - @{side-menu-width})";
+
     margin-left: @side-menu-width;
     padding: @padding-web;
   }
@@ -35,6 +39,7 @@ body {
   }
 
   #right_panel {
+    width : 100%;
     margin-top : @top-menu-height;
     margin-left: 0px;
     padding: @padding-mobile;
@@ -151,10 +156,6 @@ body {
   box-sizing: border-box;
   top: 0px;
   bottom: 0px;
-
-  width: calc(100% - @side-menu-width);
-  width: -webkit-calc(100% - @side-menu-width);
-  width: -moz-calc(100% - @side-menu-width);
 
   font-family: "Open Sans", Arial, sans-serif;
   color: black;
