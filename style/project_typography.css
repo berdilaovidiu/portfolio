@@ -77,8 +77,8 @@ p {
   font-feature-settings: "liga", "dlig";
 }
 .article_list {
-  list-style: none;
-  padding: 0;
+  list-style: disc outside;
+  padding-left: 2em;
   margin: 0;
 }
 .article_list li {
@@ -87,12 +87,7 @@ p {
   font-weight: 400;
   color: #464646;
   font-family: "Open Sans", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding-left: 1em;
-  text-indent: -0.7em;
-}
-.article_list li:before {
-  content: "\002022  ";
-  color: grey;
+  margin-bottom: 0.5em;
 }
 .definitions {
   font-size: 10pt;
@@ -113,4 +108,15 @@ p {
 .definitions .value {
   text-align: left;
   padding-left: 20px;
+}
+
+.pullquote-wide{
+    font-family: Georgia,Georgia,serif;
+    font-style: italic;
+    line-height: 1.4em;
+    float: right;
+    margin-bottom: 19px;
+    margin-left: 1em;
+    padding-left: 1em;
+    border-left: 3px solid #ccc;
 }

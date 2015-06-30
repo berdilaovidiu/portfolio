@@ -93,25 +93,17 @@ p {
 }
 
 .article_list {
-  list-style: none;
-  padding: 0;
+  list-style: disc outside;
+  padding-left: 2em;
   margin: 0;
 
   li {
-    &:before {
-      content: "\002022  ";
-      color: grey;
-    }
-
     font-size: 1em;
     line-height: 19px;
     font-weight: 400;
     color: rgb(70, 70, 70);
-
     font-family: "Open Sans", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-    padding-left: 1em;
-    text-indent: -.7em;
+    margin-bottom: 0.5em;
   }
 }
 
@@ -136,4 +128,15 @@ p {
     text-align: left;
     padding-left: 20px;
   }
+}
+
+.pullquote-wide{
+  font-family: Georgia,Georgia,serif;
+  font-style: italic;
+  line-height: 1.4em;
+  float: right;
+  margin-bottom: 19px;
+  margin-left: 1em;
+  padding-left: 1em;
+  border-left: 3px solid #ccc;
 }
