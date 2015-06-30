@@ -109,14 +109,13 @@ p {
   text-align: left;
   padding-left: 20px;
 }
-
-.pullquote-wide{
-    font-family: Georgia,Georgia,serif;
-    font-style: italic;
-    line-height: 1.4em;
-    float: right;
-    margin-bottom: 19px;
-    margin-left: 1em;
-    padding-left: 1em;
-    border-left: 3px solid #ccc;
+.pullquote-wide {
+  font-family: Georgia,Georgia,serif;
+  font-style: italic;
+  line-height: 1.4em;
+  float: right;
+  margin-bottom: 19px;
+  margin-left: 1em;
+  padding-left: 1em;
+  border-left: 3px solid #ccc;
 }
