@@ -13,7 +13,7 @@
         <meta name="viewport" content="width=device-width">
 		<meta charset="utf-8"/>
 
-		<title>Quesee - Test automation tool</title>
+		<title>P Value Chart Design</title>
 
 		<!-- Add jQuery library -->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
@@ -82,42 +82,56 @@
 
 				<h2>PROBLEM TO SOLVE</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>The idea of creating a visualization for p-values came while redesigning a dashboard with biological data.
+                    It started with my curiosity to understand what the values meant and continued with taking on the challenge of making them easier to read and understand.</p>
+
+                <p>There are actually two types of columns, one with single values and one with ranges of multiple values, represented by the start and end points of the interval.</p>
 
                 <div class="gallery">
                     <a class="fancybox" rel="problem" title="BLA BLA" href="img/pvalue_chart/before.png"><img class="gallery1center" id="before1" src="img/pvalue_chart/before.png" alt="" /></a>
                 </div>
 
-                <p>The goals are to :
-                <ul>
+                <p>The goals were to:
+                <ul class="article_list">
                     <li>give some meaning to the numbers</li>
                     <li>make them easy to compare</li>
-                    <li>accommodate individual values as well as intervals</li>
+                    <li>accommodate individual values as well as ranges of values</li>
                     <li>display it into a widget 100 px wide so it can be used in tables and lists</li>
                 </ul>
                 </p>
 
-                <h2>THE MENTAL MODEL</h2>
+                <h2>FINDING THE MENTAL MODEL</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Knowing very little about p-values, I did a little research to understand what they meant and how they are used.</p>
+                <p>The p-value is defined as the probability, under the assumption of hypothesis H, of obtaining a result equal to or more extreme than what was actually observed.</p>
+
+                <p>The smaller the p-value, the larger the significance because it tells the investigator that the hypothesis under consideration
+                    may not adequately explain the observation. The hypothesis H is rejected if any of these probabilities is less than or equal to a small,
+                    fixed but arbitrarily pre-defined threshold value &#x03B1, which is referred to as the level of significance.</p>
+
+                <p>The probabilities fall under a gaussian distribution and values to the right or left of the level of significance are considered interesting.
+                    There are actually three levels of significance used in practice : 0.05, 0.01 and 0.001.</p>
 
                 <div class="gallery">
                     <a class="fancybox" rel="theory" title="BLA BLA" href="img/pvalue_chart/1.png"><img class="gallery1center" id="theory_1" src="img/pvalue_chart/1.png" alt="" /></a>
                 </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Starting from this graphical representation that is used in all the literature and probably familiar to most users, I began to get rid of the chart junk and keep only the essential information.</p>
+
+                <p>Given that the chart is symmetrical, I only kept the right side. I chose the right side because the importance of the values grows from left to right and thus made use of a commonly known convention.</p>
 
                 <div class="gallery">
                     <a class="fancybox" rel="theory" title="BLA BLA" href="img/pvalue_chart/2.png"><img class="gallery1center" id="theory_2" src="img/pvalue_chart/2.png" alt="" /></a>
                 </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>The next step was to reduce it to a one dimensional representation since the values can be placed on a single axis.</p>
 
                 <div class="gallery">
                     <a class="fancybox" rel="theory" title="BLA BLA" href="img/pvalue_chart/3.png"><img class="gallery1center" id="theory_3" src="img/pvalue_chart/3.png" alt="" /></a>
                 </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>So good so far, but this line could not accommodate a wide range of values and also fit into a 100 pixel wide area. In order to fix this, I used a nonlinear scale, a logarithmic scale.
+                The idea came actually after consulting with one of the scientists from the office that helped me understand the whole p-value concept.</p>
 
                 <div class="gallery">
                     <a class="fancybox" rel="theory" title="BLA BLA" href="img/pvalue_chart/4.png"><img class="gallery1center" id="theory_4" src="img/pvalue_chart/4.png" alt="" /></a>
