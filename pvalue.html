@@ -137,69 +137,100 @@
                     <a class="fancybox" rel="theory" title="BLA BLA" href="img/pvalue_chart/4.png"><img class="gallery1center" id="theory_4" src="img/pvalue_chart/4.png" alt="" /></a>
                 </div>
 
+                <p>Even by using a logarithmic scale, the interval is limited to the right side. I chose 1E-10 as a small enough value, considering that smaller values don't need comparing.</p>
+
+                <p>It now comes down to see weather the values are located to the left or right of the significance markers and how far away from them.</p>
+
 
                 <h2>THE FIRST PROPOSAL</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>It was now time to place some values onto the scale and see how it looks. I decided to use a less visible
+                    scale in order to make the values stand out and tested with values inside the range, as well as outside the range.</p>
 
                 <div class="gallery">
                     <a class="fancybox" rel="firstProposal" title="BLA BLA" href="img/pvalue_chart/5.png"><img class="gallery1center" id="firstProposal_1" src="img/pvalue_chart/5.png" alt="" /></a>
                 </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>This is how the very first visualization looked like, for both singular and interval values:</p>
 
                 <div class="gallery">
                     <a class="fancybox" rel="firstProposal" title="BLA BLA" href="img/pvalue_chart/6.png"><img class="gallery1center" id="firstProposal_2" src="img/pvalue_chart/6.png" alt="" /></a>
                 </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Most of the goals were reached, except the significance levels were sometimes covered by the values.
+                    I fixed this by moving the markers outside the line and increasing the contrast by using orange.</p>
 
                 <div class="gallery">
                     <a class="fancybox" rel="firstProposal" title="BLA BLA" href="img/pvalue_chart/7.png"><img class="gallery1center" id="firstProposal_3" src="img/pvalue_chart/7.png" alt="" /></a>
                 </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
                 <div class="gallery">
                     <a class="fancybox" rel="firstProposal" title="BLA BLA" href="img/pvalue_chart/8.png"><img class="gallery1center" id="firstProposal_4" src="img/pvalue_chart/8.png" alt="" /></a>
                 </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>The one thing I was not happy about wast that there was no indication that the scale is not linear and
+                    that bad values sit to the left of the markers and good values to right. This had great importance because
+                    values are exponentially better going to the right and the users must be aware of this in order to judge the results.</p>
+
+                <p>The simplest solution was to annotate the scale but there was no room for that since the reel estate was limited so I decided to use the scale to convey the meaning.</p>
+
+                <p>Using segments of different sizes was an option I considered but there was just not enough room to do it.
+                    More than that, segments around the significance thresholds were too small and that is the most important area since it is the border between good and bad values.</p>
+
+                <p>I decided to use different intensities of red and green instead:</p>
 
                 <div class="gallery">
                     <a class="fancybox" rel="firstProposal" title="BLA BLA" href="img/pvalue_chart/9.png"><img class="gallery1center" id="firstProposal_5" src="img/pvalue_chart/9.png" alt="" /></a>
                 </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>This was the point where all the goals were achieved but there was an inconvenience.
+                    The chart was used inside an information dashboard and was stealing too much attention from the rest of the page,
+                    so I had to calm it down a bit by using different shades of grey instead.</p>
 
                 <div class="gallery">
                     <a class="fancybox" rel="firstProposal" title="BLA BLA" href="img/pvalue_chart/10.png"><img class="gallery1center" id="firstProposal_6" src="img/pvalue_chart/10.png" alt="" /></a>
                 </div>
 
+                <p>After presenting the concept to the product team, I got the green light to go ahead and implement it in the product.</p>
+
 				<h2>THE SECOND VERSION</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>After a while, the Product Manager got involved more in the design process and came up with some great ideas.
+                    The major change he proposed was to put the emphasis on values distribution density inside the intervals because this was more important than displaying just the endpoints.</p>
+
+                <p>Another great idea was to move the scale to the bottom and reduce the chart junk. More than that, there is now space to annotate the scale and get rid of the gradient.
+                    This was something I was not considering because I was too caught up in the implementation details.</p>
+
+                <p>His first proposal was a reversed box plot that conveyed where most of the values sit inside the interval.</p>
 
                 <div class="gallery">
                     <a class="fancybox" rel="finalProposal" title="BLA BLA" href="img/pvalue_chart/stuarts_proposal1.png"><img class="gallery2" id="stuart1" src="img/pvalue_chart/stuarts_proposal1.png" alt="" /></a>
                     <a class="fancybox" rel="finalProposal" title="BLA BLA" href="img/pvalue_chart/stuarts_proposal2.png"><img class="gallery2" id="stuart2" src="img/pvalue_chart/stuarts_proposal2.png" alt="" /></a>
                 </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>An even better set of mockups followed, a version where the box plot was replaced by individual values.
+                    This is better because it allows answering more specific distribution questions and is easier to understand since there is no convention to remember.</p>
 
                 <div class="gallery">
                     <a class="fancybox" rel="finalProposal" title="BLA BLA" href="img/pvalue_chart/stuarts_proposal3.png"><img class="gallery1center" id="stuart3" src="img/pvalue_chart/stuarts_proposal3.png" alt="" /></a>
                 </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Even though moving the scale at the bottom had great benefits, there was also a downside to it.
+                    It was now harder to visually match the values from the first two rows to the annotations of the scale.
+                    The solution was to add a visual aid to help the eye travel easier along those vertical lines,
+                    by either reverting some of the scale redundancy or by showing a vertical line next to the mouse cursor.</p>
 
                 <div class="gallery">
                     <a class="fancybox" rel="finalProposal" title="BLA BLA" href="img/pvalue_chart/stuarts_proposal4.png"><img class="gallery1center" id="stuart4" src="img/pvalue_chart/stuarts_proposal4.png" alt="" /></a>
                 </div>
 
+                <p>We decided to go for the interactive line next to the cursor.</p>
+
 				<h2>RELEASE VERSION</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>The version that got released is a combination of ideas from both versions.
+                    I added some transparency to the dots so that areas with greater density become more visible and
+                    the visualization shows off the chart values to convey that there are more values to the right.</p>
 
                 <div class="gallery">
                     <a class="fancybox" rel="release" title="BLA BLA" href="img/pvalue_chart/final.png"><img class="gallery1" id="final" src="img/pvalue_chart/final.png" alt="" /></a>
@@ -207,7 +238,13 @@
 
                 <h2>CONCLUSION</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>This was a great design exercise that allowed me to take input from both scientists and product people and
+                    come up with multiple iterations to deliver the optimum solution.</p>
+
+                <p>There were a lot of back and forth discussions with the Product Manager about the right limit of the scale,
+                    the order of the values, the placement of the chart with regard to the text and so on, but we reached common ground without much effort.</p>
+
+                <p>I haven't heard user feedback for this particular visualization but the dashboard where this is used was kindly received by everyone.</p>
 
 
 			</div>
