@@ -90,8 +90,14 @@ p {
 .details .description {
   margin-top: 19px;
 }
+.annotation::before {
+  content: " - ";
+}
 .degree,
 .author {
   color: grey;
-  font-style: italic;
+  font-style: normal;
+  font-variant: small-caps;
+  font-size: 16pt;
+  text-transform: lowercase;
 }
