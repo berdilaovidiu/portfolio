@@ -23,11 +23,11 @@ var initTopMenuActions = function () {
 
     $("#top_menu #hamburger_menu").click(function () {
         if (!mobileMenuVisible) {
-            mobileMenu.slideDown();
+            mobileMenu.slideDown(200);
             mobileMenuVisible = true;
             $("#right_panel").hide();
         } else {
-            mobileMenu.slideUp();
+            mobileMenu.slideUp(200);
             mobileMenuVisible = false;
             $("#right_panel").show();
         }
