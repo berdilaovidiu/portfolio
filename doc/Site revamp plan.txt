@@ -1,6 +1,7 @@
 Current version improvments:
 
 - Typeface is really heavy, look at adding more weights for clear heirachy between titles and content   PARTIALLY DONE
+- Use a type face with diacritics and modify last name
 - navigation links don't change color on hover/active
 - improve link color contrast, the current colors are not working on all screens
 - change hamburger menu icon to a more condensed version        DONE
@@ -10,7 +11,7 @@ Current version improvments:
 - There is a lot of text in the right pane and attention span of individuals these days is not much. Picture speaks a thousand words. So try making homepage richer by screenshots and videos etc.
 - fix the content with an english teacher, the composition is a little bit childish
 - write more articles with the latest designs : parking plus
-- The mobile menu height animation is a little janky, also highly unnecessary for 4 items, maybe add profile picture in the menu
+- The mobile menu height animation is a little janky, also highly unnecessary for 4 items, maybe keep menu and picture at the top NOT SURE I WILL DO IT
 - change profile picture to a more professional and friendly photo      DONE
 - rescan some of the old pen and paper mockups, the photos with the phone are not good enough
 - add link to CV
