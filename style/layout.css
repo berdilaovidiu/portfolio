@@ -31,7 +31,7 @@ body {
   }
   #right_panel {
     width: 100%;
-    margin-top: 10mm;
+    margin-top: 48px;
     margin-left: 0px;
     padding: 20px;
   }
@@ -96,17 +96,17 @@ body {
   position: fixed;
   top: 0px;
   width: 100%;
-  height: 10mm;
+  height: 48px;
   min-height: 30px;
   background-color: #960084;
   z-index: 1;
 }
 #top_menu #hamburger_menu {
   position: absolute;
-  left: 10px;
 }
 #top_menu #hamburger_menu img {
-  height: 10mm;
+  height: 24px;
+  padding: 12px;
 }
 #top_menu #mobile_title {
   width: 100%;
@@ -114,7 +114,7 @@ body {
   text-align: center;
   display: inline-block;
   vertical-align: baseline;
-  line-height: 10mm;
+  line-height: 48px;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 #top_menu #mobile_title .name {
@@ -122,8 +122,8 @@ body {
   color: white;
 }
 #top_menu #mobile_title .title {
-  font-size: 10pt;
-  color: black;
+  font-size: 12pt;
+  color: #B9B9B9;
 }
 #right_panel {
   position: relative;
