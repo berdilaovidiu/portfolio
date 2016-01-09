@@ -11,7 +11,7 @@ Current version improvments:
 - fix the content with an english teacher, the composition is a little bit childish
 - write more articles with the latest designs : parking plus
 - The mobile menu height animation is a little janky, also highly unnecessary for 4 items, maybe add profile picture in the menu
-- change profile picture to a more professional and friendly photo
+- change profile picture to a more professional and friendly photo      DONE
 - rescan some of the old pen and paper mockups, the photos with the phone are not good enough
 - add link to CV
 
