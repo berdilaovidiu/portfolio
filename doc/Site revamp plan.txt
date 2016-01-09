@@ -1,9 +1,9 @@
 Current version improvments:
 
-- Typeface is really heavy, look at adding more weights for clear heirachy between titles and content
+- Typeface is really heavy, look at adding more weights for clear heirachy between titles and content   PARTIALLY DONE
 - navigation links don't change color on hover/active
 - improve link color contrast, the current colors are not working on all screens
-- change hamburger menu icon to a more condensed version
+- change hamburger menu icon to a more condensed version        DONE
 - make the default entry to your project page, Grab the attention using your project page. I'm really not interested about reading someone's bio until I am impressed
 - Apply your process on top of your project page. UX is big on process and strategy. consider having another page about the design process.
 - Don't mention you're a part-time designer. Make it a full-time (at least state that). Also, why Java UI? Are you targeting java-based apps? If not, I would remove it.
@@ -16,7 +16,7 @@ Current version improvments:
 - add link to CV
 
 - font rendering does not look crisp, change font and test on multiple devices
-- Optimise that profile photo its 1.7mb 1700px square, you should easily get that down to ~150kb max
+- Optimise that profile photo its 1.7mb 1700px square, you should easily get that down to ~150kb max DONE
 - Combine the CSS files to lower the amount of network requests made
 - test responsiveness thoroughly
 
