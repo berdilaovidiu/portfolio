@@ -1,0 +1,64 @@
+First, awesome job on putting together a portfolio; I know how daunting of a task this can be!
+
+Second, your font rendering does not look crisp.
+
+Third, your design is pretty, standard. That is to say, for a designer, you can/should be more creative.
+
+Fourth, zero interactivity. These can simple and add a lot of value. Transitions! Use them. Another example, you could have a hover over your profile shot that shows a whacky image. Many startups do this; serious standard, goofy on hover!
+
+Fifth, I love the detail per project. Perhaps you should consider writing articles about the UX research/design process!
+
+Sixth, your navigation links don't change color on hover/active.
+
+Seventh, your responsive navigation triple bars, look, too spread out IMHO. I would go for small, more condensed bars.
+
+Eighth, visit the StackOverflow, Dribbble and Behance networks, they are communities specifically for designers!
+
+
+-------------------------------------------------------
+
+Since this is about UX and not UI, I am not gonna talk about the site design.
+
+Here are my thoughts.
+
+Make the default entry to your project page.
+Grab the attention using your project page. I'm really not interested about reading someone's bio until I am impressed.
+Apply your process on top of your project page. UX is big on process and strategy. In fact, I think you should make an entire page talking about how you approach a design (ex: Context & Req. / High-Level Design / Prototype / Pilot Testing / Roll out)
+Don't mention you're a part-time designer. Make it a full-time (at least state that). Also, why Java UI? Are you targeting java-based apps? If not, I would remove it.
+
+I'm short on time but overall, it's not bad at all. Good luck and keep improving.
+
+-----------------------------------------------------------
+
+First of all good luck :-). I opened this webpage on a mobile device and Here are my suggestions:
+
+1. The black font used in the left pane is less visible. Consider changing it to white.
+
+2. There is a lot of text in the right pane and attention span of individuals these days is not much. Picture speaks a thousand words. So try making homepage richer by screenshots and videos etc.
+
+
+Adam Meyer 1 vote by Ovidiu Berdila
+I completely agree with number 2. You want to grab people's attention. Make people interested and wanting to read everything you have. Right now it feels very bland and doesn't make me want to know more.
+------------------------------------------------------------
+
+
+Adam Meyer 1 vote by Ovidiu Berdila
+Find someone who has a really command of the english language and have them edit your text. The text is very comma heavy.
+
+------------------------------------------------------------
+
+It's a simple site with good promise, some key thing I think you should address:
+
+Optimise that profile photo its 1.7mb 1700px square, you should easily get that down to ~150kb max
+Typeface is really heavy, look at adding more weights for clear heirachy between titles and content
+Use tags not tags to wrap blocks of copy
+Combine the CSS files to lower the amount of network requests made
+The links should have more contrast to make it obvious they are links, the purple and black type color with the bold font make it difficult to distinguish between links and normal text
+I would suggest not using JQuery load in the top_menu and side_menu, if you are avoiding repeating blocks of html in your pages you should look into a way to template that isn't on the client side (Javascript) for example PHP includes
+The mobile menu height animation is a little janky, also highly unnecessary for 4 items, maybe look into another design solution for this, you could easily keep your profile shot and navigation at the top of each page on mobile.
+Remove the empty tags in the
+
+It's a great first effort. Good luck with the updates.
+----------------------------------------------------------------
+
+
