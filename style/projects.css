@@ -1,6 +1,6 @@
 @media screen and (min-width: 1000px) {
   #about_projects {
-    height: 210px;
+    min-height: 210px;
   }
 }
 #about_projects p {

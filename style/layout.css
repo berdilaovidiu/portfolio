@@ -48,13 +48,24 @@ body {
 #side_menu #photo_container {
   position: relative;
   width: 100%;
-  height: 300px;
+  margin: 100px auto 10px;
+}
+@media screen and (min-height: 650px) {
+  #side_menu #photo_container {
+    height: 300px;
+  }
 }
 #side_menu #photo_container #profile_photo {
   position: relative;
   width: 200px;
   display: block;
-  margin: 100px auto 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-height: 650px) {
+  #side_menu #photo_container #profile_photo {
+    display: none;
+  }
 }
 #side_menu #photo_container #summary {
   width: 200px;

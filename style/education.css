@@ -63,10 +63,9 @@ p {
   -moz-font-variant-numeric: onum;
   -moz-font-feature-settings: "onum=1";
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1700px) {
   #books_panel {
     margin-left: 100px;
-    max-width: 500px;
   }
 }
 #books_panel #books {
