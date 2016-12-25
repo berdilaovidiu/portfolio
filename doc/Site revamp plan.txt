@@ -1,6 +1,6 @@
 Current version improvments:
 
-- Typeface is really heavy, look at adding more weights for clear heirachy between titles and content   PARTIALLY DONE
+- Typeface is really heavy, look at adding more weights for clear hierarchy between titles and content   PARTIALLY DONE
 - Use a type face with diacritics and modify last name   DONE
 - navigation links don't change color on hover/active
 - improve link color contrast, the current colors are not working on all screens
