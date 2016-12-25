@@ -151,3 +151,6 @@ body {
   text-decoration: none;
   color: #960084;
 }
+#disqus_thread {
+  margin-top: 76px;
+}
