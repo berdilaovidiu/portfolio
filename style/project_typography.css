@@ -34,6 +34,19 @@ h3 {
   font-size: 0pt;
   margin-bottom: 19px;
 }
+.gallery .left_image {
+  margin-right: calc(10px / 2);
+}
+.gallery .center_image {
+  margin-right: calc(10px / 2);
+  margin-left: calc(10px / 2);
+}
+.gallery .right_image {
+  margin-left: calc(10px / 2);
+}
+.gallery .with_border {
+  border: 1px solid lightgrey;
+}
 .gallery .gallery1center {
   display: block;
   margin-left: auto;
@@ -43,8 +56,7 @@ h3 {
   width: 100%;
 }
 .gallery .gallery2 {
-  width: 50%;
-  border: 4px solid white;
+  width: calc(50% - 10px);
   box-sizing: border-box;
 }
 .gallery .gallery3 {

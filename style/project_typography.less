@@ -40,6 +40,23 @@ h3 {
   font-size: 0pt;
   margin-bottom: 19px;
 
+  .left_image{
+    margin-right: ~"calc(@{gallery-gap} / 2)";
+  }
+
+  .center_image{
+    margin-right: ~"calc(@{gallery-gap} / 2)";
+    margin-left: ~"calc(@{gallery-gap} / 2)";
+  }
+
+  .right_image{
+    margin-left: ~"calc(@{gallery-gap} / 2)";
+  }
+
+  .with_border{
+    border: 1px solid lightgrey;
+  }
+
   .gallery1center {
     display: block;
     margin-left : auto;
@@ -51,8 +68,7 @@ h3 {
   }
 
   .gallery2 {
-    width: 50%;
-    border: 4px solid white;
+    width: ~"calc(50% - @{gallery-gap})";
     box-sizing: border-box;
   }
 
