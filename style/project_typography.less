@@ -68,25 +68,23 @@ h3 {
   }
 
   .gallery2 {
-    width: ~"calc(50% - @{gallery-gap})";
+    width: ~"calc((100% - @{gallery-gap}) / 2)";
     box-sizing: border-box;
   }
 
   .gallery3 {
-    width: 33.3%;
-    border: 3px solid white;
+    width: ~"calc((100% - (2 * @{gallery-gap})) / 3)";
     box-sizing: border-box;
   }
 
   .gallery4 {
-    width: 25%;
-    border: 2px solid white;
+    width: ~"calc((100% - (3 * @{gallery-gap})) / 4)";
     box-sizing: border-box;
   }
 }
 
-.borderless_image {
-  border: 1px rgb(226, 226, 226) solid;
+.gallery_separator{
+  height: @gallery-gap;
 }
 
 p {
