@@ -101,24 +101,35 @@
 
 				<h2>THE CONTEXT</h2>
 
-				<p>Talk about the progress of the project when I joined</p>
-				<p>Talk about the needs and challenges, why is this needed and why it tries to accomplish
-                - emphasize patterns (people don't know the patterns coming in)
-                    , overlay colors
+				<p>The feature is part of a large bio informatics desktop application used by researchers to find meaning
+					in their genomic data. A lot of the work has to do with interpreting gene expression measurements
+					from biological experiments in the context of a large manually curated knowledge base of relationships
+					found in published scientific papers.</p>
 
-                    analyze > emphasize(visualize) > publish
 
-                    maximum of 8 measurements, 20 observations
-                    start with a good default configuration and allow editing to make the tool less scary
-                    export table plus graph to publish in a paper
+				<p>When I joined the project, the product owner and the technical lead already had a pretty good idea of
+                    what the final result might look like. So I had to play a little ketch up and understand what was
+					the context around the new feature, who needs it and why.</p>
 
-                    find interesting connections between genes and pathways and activation, phosphorylation, putting it
-                    all together in this uber visualization, try to tell a story, try to explain the hypothesis in a visual way
-                </p>
+				<div class="gallery">
+					<a class="fancybox" rel="group" title="Original mockup" href="img/network_overlay/1.original_proposal.png"><img class="gallery1" id="network_overlay_1" src="img/network_overlay/1.original_proposal.png" alt="" /></a>
+				</div>
 
-                <div class="gallery">
-				    <a class="fancybox" rel="group" title="Original mockup" href="img/network_overlay/1.original_proposal.png"><img class="gallery1" id="network_overlay_1" src="img/network_overlay/1.original_proposal.png" alt="" /></a>
-                </div>
+				<p>The problem came down to helping users find interesting patterns in their complex data coming from
+					experiments with up to 20 observations, where they recorded up to 8 different measurements.
+					The goal was to find interesting connections between genes, pathways and activation, phosphorylation,
+					putting it all together in this uber visualization, and to tell a visual story to explain the hypothesis.</p>
+
+				<p>The workflow followed three separate steps:</p>
+				<ul class="article_list">
+					<li>analyze large amounts of data</li>
+					<li>emphasize interesting findings in a visual way</li>
+					<li>publish the results in scientific papers</li>
+				</ul>
+
+				<p>So the design needed to support the workflow and to do that in a way that was compatible with an
+					already complex color overlaying mechanism that was used in multiple other features.</p>
+
 
 				<h2>IDEATION</h2>
 
