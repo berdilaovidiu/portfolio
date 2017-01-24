@@ -151,6 +151,28 @@ body {
   text-decoration: none;
   color: #960084;
 }
+.video_overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: 72px 72px;
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
+  background-origin: initial;
+  background-clip: initial;
+}
+.overlay_play {
+  background-image: url("../img/play.svg");
+  background-color: rgba(0, 0, 0, 0.498039);
+}
+.overlay_pause {
+  background-image: url("../img/pause.svg");
+  background-color: rgba(0, 0, 0, 0.498039);
+}
 #disqus_thread {
   margin-top: 76px;
 }

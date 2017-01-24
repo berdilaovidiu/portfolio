@@ -15,6 +15,8 @@
 
 		<title>Parking Plus</title>
 
+		<script type="text/javascript" src="js/video.js"></script>
+
 		<!-- Add jQuery library -->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 
@@ -141,28 +143,48 @@
 					Sed leo erat, euismod sed elementum eget, volutpat nec lectus.</p>
 
 				<div class="gallery">
-					<video preload="metadata" controls class="gallery2 left_image with_border">
-						<source src="img/parkingplus/video/1.map-interactions.mp4" type="video/mp4">
-					</video>
+					<div class="gallery2 left_image with_border">
+						<video id="interaction1" preload="metadata" width="100%">
+							<source src="img/parkingplus/video/1.map-interactions.mp4" type="video/mp4">
+						</video>
 
-					<video preload="metadata" controls class="gallery2 right_image with_border">
-						<source src="img/parkingplus/video/3.map%20interactions%20-%20private%20area%20busy%20waiting.mp4" type="video/mp4">
-					</video>
+						<script type="text/javascript">
+							addVideoControls($("#interaction1"));
+						</script>
+					</div>
+
+					<div class="gallery2 right_image with_border">
+						<video id="interaction2" preload="metadata" width="100%">
+							<source src="img/parkingplus/video/3.map%20interactions%20-%20private%20area%20busy%20waiting.mp4" type="video/mp4">
+						</video>
+
+						<script type="text/javascript">
+							addVideoControls($("#interaction2"));
+						</script>
+					</div>
 				</div>
 
 				<div class="gallery">
-					<video preload="metadata" controls class="gallery2 left_image with_border">
-						<source src="img/parkingplus/video/6.parking%20suggestions.mp4" type="video/mp4">
-					</video>
+					<div class="gallery2 left_image with_border">
+						<video id="interaction3" preload="metadata" width="100%">
+							<source src="img/parkingplus/video/6.parking%20suggestions.mp4" type="video/mp4">
+						</video>
 
-					<video preload="metadata" controls class="gallery2 right_image with_border">
-						<source src="img/parkingplus/video/7.find%20my%20car.avi.mp4" type="video/mp4">
-					</video>
+						<script type="text/javascript">
+							addVideoControls($("#interaction3"));
+						</script>
+					</div>
+
+					<div class="gallery2 right_image with_border">
+						<video id="interaction4" preload="metadata" width="100%">
+							<source src="img/parkingplus/video/7.find%20my%20car.avi.mp4" type="video/mp4">
+						</video>
+
+						<script type="text/javascript">
+							addVideoControls($("#interaction4"));
+						</script>
+					</div>
 				</div>
-
-				<!--<div class="gallery">-->
-				<!--<a class="fancybox" rel="group" title="Original version with unsorted list of suggestions" href="img/function_candidates/1.png"><img class="gallery1" id="function_candidates_1" src="img/function_candidates/1.png" alt="" /></a>-->
-				<!--</div>-->
 
 				<h2>THE ADMIN WEBSITE</h2>
 
