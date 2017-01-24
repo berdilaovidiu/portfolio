@@ -2,11 +2,16 @@
  * Created by Ovidiu on 1/22/2017.
  */
 
-var addVideoControls = function(video){
+var addVideoControls = function(video, title){
 
     var overlay= $("<div>");
     overlay.addClass("video_overlay");
     overlay.addClass("overlay_play");
+
+    var caption = $("<p>");
+    caption.html(title);
+    caption.addClass("overlay_caption");
+    overlay.append(caption);
 
     video.parent().css("position", "relative");
     video.parent().css("display", "inline-block");

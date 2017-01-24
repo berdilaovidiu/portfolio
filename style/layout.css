@@ -173,6 +173,19 @@ body {
   background-image: url("../img/pause.svg");
   background-color: rgba(0, 0, 0, 0.498039);
 }
+.overlay_caption {
+  position: absolute;
+  width: calc(100% - 20px);
+  bottom: 10px;
+  right: 10px;
+  left: 10px;
+  text-align: center;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-variant: small-caps;
+  font-size: 14pt;
+  line-height: 19px;
+  color: white;
+}
 #disqus_thread {
   margin-top: 76px;
 }
