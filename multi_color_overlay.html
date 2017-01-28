@@ -151,7 +151,7 @@
 				</div>
 
                 <p>We threw away a lot of ideas, but some of them survived and were tested in the context of a network
-					of nodes to see how well they meet the original goals.</p>
+					to see how well they meet the original goals.</p>
 
 				<p>The vertical bars and the parallel coordinates were the most popular and did not disappoint during
 					test either, although the last one needed more simplification since it was very heavy on the eye.</p>
@@ -176,47 +176,47 @@
 
 				<h2>MOVING AWAY FROM THE NETWORK</h2>
 
-				<p>help online and multiple talks we decided to move away from the overlay</p>
-				<p>mockups with side panels and tables</p>
+				<p>Even though I was able to simplify the overlay representation quite a bit, the network turned out to
+					be the wrong place for the kind of data analysis needed. In order to enhance the pattern finding experience,
+				the values need to be sorted, filtered and the visualizations aligned vertically, to facilitate visual comparisons.</p>
 
-				<p>filters mockups </p>
+				<p>A table was much more suitable for the task at hand and we decided to explore with a table of all
+					the molecules measured during the experiments.</p>
 
                 <div class="gallery">
                     <a class="fancybox" rel="group" title="bla bla bla" href="img/network_overlay/8.table_sparkline_variations.png"><img class="gallery1" id="network_overlay_2" src="img/network_overlay/8.table_sparkline_variations.png" alt="" /></a>
                 </div>
 
-				<p>filters need </p>
+				<p>One of the most frequent issues with data analysis is the amount of data. We were expecting datasets
+					with up to 5000 molecules and it was obvious that we have to guide the users by suggesting
+					some automatically discovered patterns of interest. That was done by way of smart filtering.</p>
 
 				<div class="gallery">
                     <a class="fancybox" rel="group" title="bla bla bla" href="img/network_overlay/10.molecules_table_filters.png"><img class="gallery1" id="network_overlay_2" src="img/network_overlay/10.molecules_table_filters.png" alt="" /></a>
                 </div>
 
-				<p>lore ipsum</p>
+				<p>The dataset picker had also an important role in the design because it allowed selection of multiple
+					observations and displayed some metadata for each of them. More than that, since the order and
+					grouping of the observations was important for the analysis, we allowed moving datasets up and down.
+					Those operations affected the visualizations from the table and network.</p>
 
 				<div class="gallery">
                     <a class="fancybox" rel="group" title="bla bla bla" href="img/network_overlay/9.dataset_picker.png"><img class="gallery1center" id="network_overlay_2" src="img/network_overlay/9.dataset_picker.png" alt="" /></a>
                 </div>
 
-				<!--<div class="gallery">-->
-				<!--<a class="fancybox" rel="group" title="Original version with unsorted list of suggestions" href="img/function_candidates/1.png"><img class="gallery1" id="function_candidates_1" src="img/function_candidates/1.png" alt="" /></a>-->
-				<!--</div>-->
-
 				<h2>NETWORK OVERLAY</h2>
 
-				<p>why we did it still</p>
+				<p>While the data analysis did not make sense in the context of the network, once the interesting molecules
+					were spotted, it made sense to emphasize them on the network, to enrich the hypothesis with interactions and
+				to allow publishing by simply exporting the view.</p>
 
 				<div class="gallery">
 					<a class="fancybox" rel="group" title="bla bla bla" href="img/network_overlay/11.chart.png"><img class="gallery1" id="network_overlay_2" src="img/network_overlay/11.chart.png" alt="" /></a>
 				</div>
 
-
-				<p>development iterations</p>
-
-				<!--<div class="gallery">-->
-				<!--<a class="fancybox" rel="group" title="Original version with unsorted list of suggestions" href="img/function_candidates/1.png"><img class="gallery1" id="function_candidates_1" src="img/function_candidates/1.png" alt="" /></a>-->
-				<!--</div>-->
-
-
+				<p>The node charts came with some layout challenges since they needed to accommodate up to 20 bars. Since
+				they were so big, we offered a minimized view that could be expanded to see more information, all on a
+					semi transparent background so that the network was still perceivable.</p>
 
 				<h2>CONCLUSIONS</h2>
 
