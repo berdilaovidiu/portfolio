@@ -1,25 +1,25 @@
 h1 {
-  font-size: 24pt;
-  line-height: 38px;
+  font-size: 30pt;
+  line-height: 52px;
+  padding-bottom: 38px;
   font-weight: 300;
   font-family: 'Raleway', sans-serif;
 }
 h2 {
-  font-size: 14pt;
+  font-size: 1.5em;
   line-height: 57px;
   padding-top: 19px;
-  font-variant: small-caps;
-  letter-spacing: .12em;
-  font-weight: 600;
+  padding-bottom: 19px;
   color: #960084;
+  font-family: 'Raleway', sans-serif;
 }
 h3 {
-  font-size: 14pt;
-  line-height: 28px;
-  font-weight: 400;
-  color: #969696;
+  font-size: 1em;
+  color: #960084;
+  line-height: 22px;
+  padding-top: 19px;
+  padding-bottom: 19px;
   font-family: 'Raleway', sans-serif;
-  line-height: 38px;
 }
 .content {
   color: black;
