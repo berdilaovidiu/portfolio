@@ -21,3 +21,14 @@
 - fix education page statement size										DONE
 - make sure navigation works on all pages								DONE
 - make sure menu looks the same on all pages							DONE
+
+
+- finalize content for the remaining articles
+- integrate with a better image viewer library
+- write caption for images
+- improve video captions
+- clean all images
+- test and improve performance
+- review typography
+- review all content
+- group projects better
