@@ -27,7 +27,7 @@
 - integrate with a better image viewer library
 - write caption for images
 - improve video captions
-- clean all images
+- clean all scanned images                                              DONE
 - test and improve performance
 - review typography
 - review all content
