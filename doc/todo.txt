@@ -23,7 +23,7 @@
 - make sure menu looks the same on all pages							DONE
 
 
-- finalize content for the remaining articles
+- finalize content for the remaining articles                           DONE
 - integrate with a better image viewer library
 - write caption for images
 - improve video captions
