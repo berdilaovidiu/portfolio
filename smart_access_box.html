@@ -21,9 +21,9 @@
 		<!-- Add mousewheel plugin (this is optional) -->
 		<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
 
-		<!-- Add fancyBox -->
-		<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-		<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+
 
 		<!-- Optionally add helpers - button, thumbnail and/or media -->
 		<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
@@ -67,23 +67,15 @@
 		<script type="text/javascript">
 			$(document).ready(function() {
 				console.log( "ready!" );
-				$(".fancybox").fancybox({
-					helpers : {
-						title: {
-							type: 'outside',
-							position: 'bottom'
-						},
-						overlay : {
-							css : {
-								'background' : 'rgba(70, 70, 70, 0.90)'
-							}
-						}
-					},
-					nextEffect: 'fade',
-					prevEffect: 'fade',
-					padding : 0,
-					margin : [20, 60, 20, 60] // Increase left/right margin
-				});
+                $("[data-fancybox]").fancybox({
+                    margin : [44, 0],
+
+                    slideShow  : false,
+                    fullScreen : true,
+                    thumbs     : false,
+                    closeBtn   : true,
+
+                });
 			});
 
             $(document).ready(function () {
@@ -122,9 +114,19 @@
 					easy to understand how the service could be used.</p>
 
 				<div class="gallery">
-					<a class="fancybox" rel="group" title="Original version with unsorted list of suggestions" href="img/sab/storyboard1.png"><img class="gallery1" id="function_candidates_1" src="img/sab/storyboard1.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="storyboards"
+					   title="Charlie drives to work on a Monday morning."
+					   href="img/sab/storyboard1.png">
+						<img class="gallery1" id="function_candidates_1" src="img/sab/storyboard1.png" alt=""/>
+					</a>
+
 					<p class="gallery_separator"></p>
-					<a class="fancybox" rel="group" title="Original version with unsorted list of suggestions" href="img/sab/storyboard2.png"><img class="gallery1" id="function_candidates_1" src="img/sab/storyboard2.png" alt="" /></a>
+
+					<a class="fancybox" data-fancybox="storyboards"
+					   title="Charlie, the new employee, requests permission to use the office parking."
+					   href="img/sab/storyboard2.png">
+						<img class="gallery1" id="function_candidates_1" src="img/sab/storyboard2.png" alt=""/>
+					</a>
 				</div>
 
 
@@ -139,8 +141,8 @@
 					solution, simple and clean copy and social proof.</p>
 
 				<div class="gallery">
-					<a class="fancybox" rel="group" title="Original version with unsorted list of suggestions" href="img/sab/A4%204x8%20grid%20landing%20page.png"><img class="gallery2 left_image with_border" id="function_candidates_1" src="img/sab/A4%204x8%20grid%20landing%20page.png" alt="" /></a>
-					<a class="fancybox" rel="group" title="Original version with unsorted list of suggestions" href="img/sab/A4%204x8%20grid%20gallery.png"><img class="gallery2 right_image with_border" id="function_candidates_1" src="img/sab/A4%204x8%20grid%20gallery.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="Original version with unsorted list of suggestions" href="img/sab/A4%204x8%20grid%20landing%20page.png"><img class="gallery2 left_image with_border" id="function_candidates_1" src="img/sab/A4%204x8%20grid%20landing%20page.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="Original version with unsorted list of suggestions" href="img/sab/A4%204x8%20grid%20gallery.png"><img class="gallery2 right_image with_border" id="function_candidates_1" src="img/sab/A4%204x8%20grid%20gallery.png" alt="" /></a>
 				</div>
 
 				<p>I worked closely with the visual designer on multiple iterations of the design. The images bellow only
@@ -149,9 +151,9 @@
 					designer was remote.</p>
 
 				<div class="gallery">
-					<a class="fancybox" rel="group" title="Original version with unsorted list of suggestions" href="img/sab/landing%20page%201.jpg"><img style="vertical-align: top;" class="gallery3 left_image with_border" id="function_candidates_1" src="img/sab/landing%20page%201.jpg" alt="" /></a>
-					<a class="fancybox" rel="group" title="Original version with unsorted list of suggestions" href="img/sab/landing%20page%202.jpg"><img style="vertical-align: top;" class="gallery3 center_image with_border" id="function_candidates_1" src="img/sab/landing%20page%202.jpg" alt="" /></a>
-					<a class="fancybox" rel="group" title="Original version with unsorted list of suggestions" href="img/sab/landing%20page%203.jpg"><img style="vertical-align: top;" class="gallery3 right_image with_border" id="function_candidates_1" src="img/sab/landing%20page%203.jpg" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="Original version with unsorted list of suggestions" href="img/sab/landing%20page%201.jpg"><img style="vertical-align: top;" class="gallery3 left_image with_border" id="function_candidates_1" src="img/sab/landing%20page%201.jpg" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="Original version with unsorted list of suggestions" href="img/sab/landing%20page%202.jpg"><img style="vertical-align: top;" class="gallery3 center_image with_border" id="function_candidates_1" src="img/sab/landing%20page%202.jpg" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="Original version with unsorted list of suggestions" href="img/sab/landing%20page%203.jpg"><img style="vertical-align: top;" class="gallery3 right_image with_border" id="function_candidates_1" src="img/sab/landing%20page%203.jpg" alt="" /></a>
 				</div>
 
 				<div style="margin-bottom: 19px;">
@@ -187,23 +189,23 @@
 				</ul>
 
 				<div class="gallery">
-					<a class="fancybox" rel="group" title="Original " href="img/sab/mockup1.png"><img class="gallery4 left_image " id="function_candidates_1" src="img/sab/mockup1.png" alt="" /></a>
-					<a class="fancybox" rel="group" title="Original " href="img/sab/mockup2.png"><img class="gallery4 center_image " id="function_candidates_1" src="img/sab/mockup2.png" alt="" /></a>
-					<a class="fancybox" rel="group" title="Original " href="img/sab/mockup3.png"><img class="gallery4 center_image " id="function_candidates_1" src="img/sab/mockup3.png" alt="" /></a>
-					<a class="fancybox" rel="group" title="Original " href="img/sab/mockup4.png"><img class="gallery4 right_image " id="function_candidates_1" src="img/sab/mockup4.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="Original " href="img/sab/mockup1.png"><img class="gallery4 left_image " id="function_candidates_1" src="img/sab/mockup1.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="Original " href="img/sab/mockup2.png"><img class="gallery4 center_image " id="function_candidates_1" src="img/sab/mockup2.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="Original " href="img/sab/mockup3.png"><img class="gallery4 center_image " id="function_candidates_1" src="img/sab/mockup3.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="Original " href="img/sab/mockup4.png"><img class="gallery4 right_image " id="function_candidates_1" src="img/sab/mockup4.png" alt="" /></a>
 				</div>
 
 				<div class="gallery">
-					<a class="fancybox" rel="group" title="Original " href="img/sab/mockup5.png"><img class="gallery4 left_image " id="function_candidates_1" src="img/sab/mockup5.png" alt="" /></a>
-					<a class="fancybox" rel="group" title="Original " href="img/sab/mockup6.png"><img class="gallery4 center_image " id="function_candidates_1" src="img/sab/mockup6.png" alt="" /></a>
-					<a class="fancybox" rel="group" title="Original " href="img/sab/mockup7.png"><img class="gallery4 center_image " id="function_candidates_1" src="img/sab/mockup7.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="Original " href="img/sab/mockup5.png"><img class="gallery4 left_image " id="function_candidates_1" src="img/sab/mockup5.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="Original " href="img/sab/mockup6.png"><img class="gallery4 center_image " id="function_candidates_1" src="img/sab/mockup6.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="Original " href="img/sab/mockup7.png"><img class="gallery4 center_image " id="function_candidates_1" src="img/sab/mockup7.png" alt="" /></a>
 				</div>
 
 				<div class="gallery">
-					<a class="fancybox" rel="group" title="Original " href="img/sab/mockup8.png"><img class="gallery4 left_image " id="function_candidates_1" src="img/sab/mockup8.png" alt="" /></a>
-					<a class="fancybox" rel="group" title="Original " href="img/sab/mockup9.png"><img class="gallery4 center_image " id="function_candidates_1" src="img/sab/mockup9.png" alt="" /></a>
-					<a class="fancybox" rel="group" title="Original " href="img/sab/mockup10.png"><img class="gallery4 center_image " id="function_candidates_1" src="img/sab/mockup10.png" alt="" /></a>
-					<a class="fancybox" rel="group" title="Original " href="img/sab/mockup11.png"><img class="gallery4 right_image " id="function_candidates_1" src="img/sab/mockup11.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="Original " href="img/sab/mockup8.png"><img class="gallery4 left_image " id="function_candidates_1" src="img/sab/mockup8.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="Original " href="img/sab/mockup9.png"><img class="gallery4 center_image " id="function_candidates_1" src="img/sab/mockup9.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="Original " href="img/sab/mockup10.png"><img class="gallery4 center_image " id="function_candidates_1" src="img/sab/mockup10.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="Original " href="img/sab/mockup11.png"><img class="gallery4 right_image " id="function_candidates_1" src="img/sab/mockup11.png" alt="" /></a>
 				</div>
 
 				<p>At the time we needed the visual design ready, we were in the process of looking for a new visual designer,
@@ -211,13 +213,13 @@
 					navigation, layout, typography and icons.</p>
 
 				<div class="gallery">
-					<a class="fancybox" rel="group" title="sadfasdf" href="img/sab/0.splashscreen.png"><img class="gallery3 left_image with_border" id="function_candidates_1" src="img/sab/0.splashscreen.png" alt="" /></a>
-					<a class="fancybox" rel="group" title="sadfasdf" href="img/sab/1.home%20screen%20-%20in%20range.png"><img class="gallery3 center_image with_border" id="function_candidates_1" src="img/sab/1.home%20screen%20-%20in%20range.png" alt="" /></a>
-					<a class="fancybox" rel="group" title="sadfasdf" href="img/sab/2.home%20screen%20-%20all%20devices.png"><img class="gallery3 right_image with_border" id="function_candidates_1" src="img/sab/2.home%20screen%20-%20all%20devices.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="sadfasdf" href="img/sab/0.splashscreen.png"><img class="gallery3 left_image with_border" id="function_candidates_1" src="img/sab/0.splashscreen.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="sadfasdf" href="img/sab/1.home%20screen%20-%20in%20range.png"><img class="gallery3 center_image with_border" id="function_candidates_1" src="img/sab/1.home%20screen%20-%20in%20range.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="sadfasdf" href="img/sab/2.home%20screen%20-%20all%20devices.png"><img class="gallery3 right_image with_border" id="function_candidates_1" src="img/sab/2.home%20screen%20-%20all%20devices.png" alt="" /></a>
 					<div class="gallery_separator"></div>
-					<a class="fancybox" rel="group" title="sadfasdf" href="img/sab/4.side%20menu.png"><img class="gallery3 left_image with_border" id="function_candidates_1" src="img/sab/4.side%20menu.png" alt="" /></a>
-					<a class="fancybox" rel="group" title="sadfasdf" href="img/sab/5.my%20smart%20keys.png"><img class="gallery3 center_image with_border" id="function_candidates_1" src="img/sab/5.my%20smart%20keys.png" alt="" /></a>
-					<a class="fancybox" rel="group" title="sadfasdf" href="img/sab/6.my%20access%20points.png"><img class="gallery3 right_image with_border" id="function_candidates_1" src="img/sab/6.my%20access%20points.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="sadfasdf" href="img/sab/4.side%20menu.png"><img class="gallery3 left_image with_border" id="function_candidates_1" src="img/sab/4.side%20menu.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="sadfasdf" href="img/sab/5.my%20smart%20keys.png"><img class="gallery3 center_image with_border" id="function_candidates_1" src="img/sab/5.my%20smart%20keys.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="sadfasdf" href="img/sab/6.my%20access%20points.png"><img class="gallery3 right_image with_border" id="function_candidates_1" src="img/sab/6.my%20access%20points.png" alt="" /></a>
 				</div>
 
 				<p>The entire process, from the first sketches, to delivering the final specs was quite fast, mostly because
@@ -233,8 +235,8 @@
 					in terms of content and layout.</p>
 
 				<div class="gallery">
-					<a class="fancybox" rel="group" title="Original version with unsorted list of suggestions" href="img/sab/A4%204x8%20part%201.png"><img class="gallery2 left_image with_border" id="function_candidates_1" src="img/sab/A4%204x8%20part%201.png" alt="" /></a>
-					<a class="fancybox" rel="group" title="Original version with unsorted list of suggestions" href="img/sab/A4%204x8%20part%202.png"><img class="gallery2 right_image with_border" id="function_candidates_1" src="img/sab/A4%204x8%20part%202.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="Original version with unsorted list of suggestions" href="img/sab/A4%204x8%20part%201.png"><img class="gallery2 left_image with_border" id="function_candidates_1" src="img/sab/A4%204x8%20part%201.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="Original version with unsorted list of suggestions" href="img/sab/A4%204x8%20part%202.png"><img class="gallery2 right_image with_border" id="function_candidates_1" src="img/sab/A4%204x8%20part%202.png" alt="" /></a>
 				</div>
 
 				<p>After discussing the proposals, I worked closely with the graphic designer on the design that was going
@@ -244,14 +246,14 @@
 
 				<h3>THE CATALOG</h3>
 				<div class="gallery">
-					<a class="fancybox" rel="group" title="Original version with unsorted list of suggestions" href="img/sab/catalog%201.png"><img class="gallery3 left_image with_border" id="function_candidates_1" src="img/sab/catalog%201.png" alt="" /></a>
-					<a class="fancybox" rel="group" title="Original version with unsorted list of suggestions" href="img/sab/catalog%202.png"><img class="gallery3 center_image with_border" id="function_candidates_1" src="img/sab/catalog%202.png" alt="" /></a>
-					<a class="fancybox" rel="group" title="Original version with unsorted list of suggestions" href="img/sab/catalog%203.png"><img class="gallery3 right_image with_border" id="function_candidates_1" src="img/sab/catalog%203.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="Original version with unsorted list of suggestions" href="img/sab/catalog%201.png"><img class="gallery3 left_image with_border" id="function_candidates_1" src="img/sab/catalog%201.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="Original version with unsorted list of suggestions" href="img/sab/catalog%202.png"><img class="gallery3 center_image with_border" id="function_candidates_1" src="img/sab/catalog%202.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="Original version with unsorted list of suggestions" href="img/sab/catalog%203.png"><img class="gallery3 right_image with_border" id="function_candidates_1" src="img/sab/catalog%203.png" alt="" /></a>
 				</div>
 
 				<h3>THE BROCHURE</h3>
 				<div class="gallery">
-					<a class="fancybox" rel="group" title="Original version with unsorted list of suggestions" href="img/sab/flyer.png"><img class="gallery1 with_border" id="function_candidates_1" src="img/sab/flyer.png" alt="" /></a>
+					<a class="fancybox" data-fancybox="group" title="Original version with unsorted list of suggestions" href="img/sab/flyer.png"><img class="gallery1 with_border" id="function_candidates_1" src="img/sab/flyer.png" alt="" /></a>
 				</div>
 
 
