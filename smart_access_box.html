@@ -18,23 +18,12 @@
 		<!-- Add jQuery library -->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 
-		<!-- Add mousewheel plugin (this is optional) -->
-		<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
-
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
 
-
-		<!-- Optionally add helpers - button, thumbnail and/or media -->
-		<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
-		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-
-		<link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
-		<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
-
 		<link rel="stylesheet" href="style/fancybox_styling.css"/>
 
+        <script type="text/javascript" src="js/global.js"></script>
         <script type="text/javascript" src="js/menu_utils.js"></script>
 
 		<!-- Hotjar Tracking Code for http://berdilaovidiu.github.io/portfolio/ -->
@@ -66,19 +55,10 @@
 
 		<script type="text/javascript">
 			$(document).ready(function() {
-				console.log( "ready!" );
-                $("[data-fancybox]").fancybox({
-                    margin : [44, 0],
+				//apply fancybox options
+			    $("[data-fancybox]").fancybox(fancyboxOptions);
 
-                    slideShow  : false,
-                    fullScreen : true,
-                    thumbs     : false,
-                    closeBtn   : true,
-
-                });
-			});
-
-            $(document).ready(function () {
+			    //init navigation framework
                 $("#top_menu").load("top_menu.html", initTopMenuActions);
                 $("#side_menu").load("side_menu.html");
             });
@@ -114,18 +94,18 @@
 					easy to understand how the service could be used.</p>
 
 				<div class="gallery">
-					<a class="fancybox" data-fancybox="storyboards"
-					   title="Charlie drives to work on a Monday morning."
+					<a data-fancybox="storyboards"
+					   data-caption="Charlie drives to work on a Monday morning."
 					   href="img/sab/storyboard1.png">
-						<img class="gallery1" id="function_candidates_1" src="img/sab/storyboard1.png" alt=""/>
+						<img class="gallery1" src="img/sab/storyboard1.png"/>
 					</a>
 
 					<p class="gallery_separator"></p>
 
-					<a class="fancybox" data-fancybox="storyboards"
+					<a data-fancybox="storyboards"
 					   title="Charlie, the new employee, requests permission to use the office parking."
 					   href="img/sab/storyboard2.png">
-						<img class="gallery1" id="function_candidates_1" src="img/sab/storyboard2.png" alt=""/>
+						<img class="gallery1" src="img/sab/storyboard2.png"/>
 					</a>
 				</div>
 
@@ -141,8 +121,16 @@
 					solution, simple and clean copy and social proof.</p>
 
 				<div class="gallery">
-					<a class="fancybox" data-fancybox="group" title="Original version with unsorted list of suggestions" href="img/sab/A4%204x8%20grid%20landing%20page.png"><img class="gallery2 left_image with_border" id="function_candidates_1" src="img/sab/A4%204x8%20grid%20landing%20page.png" alt="" /></a>
-					<a class="fancybox" data-fancybox="group" title="Original version with unsorted list of suggestions" href="img/sab/A4%204x8%20grid%20gallery.png"><img class="gallery2 right_image with_border" id="function_candidates_1" src="img/sab/A4%204x8%20grid%20gallery.png" alt="" /></a>
+					<a data-fancybox="website" class="needsBorder"
+					   data-caption="Sketches for the landing page, web and mobile layouts."
+					   href="img/sab/A4%204x8%20grid%20landing%20page.png">
+						<img class="gallery2 left_image with_border" src="img/sab/A4%204x8%20grid%20landing%20page.png"/>
+					</a>
+					<a data-fancybox="website" class="needsBorder"
+					   data-caption="Usage scenarios to be shown in the image gallery."
+					   href="img/sab/A4%204x8%20grid%20gallery.png">
+						<img class="gallery2 right_image with_border" src="img/sab/A4%204x8%20grid%20gallery.png"/>
+					</a>
 				</div>
 
 				<p>I worked closely with the visual designer on multiple iterations of the design. The images bellow only
@@ -151,9 +139,21 @@
 					designer was remote.</p>
 
 				<div class="gallery">
-					<a class="fancybox" data-fancybox="group" title="Original version with unsorted list of suggestions" href="img/sab/landing%20page%201.jpg"><img style="vertical-align: top;" class="gallery3 left_image with_border" id="function_candidates_1" src="img/sab/landing%20page%201.jpg" alt="" /></a>
-					<a class="fancybox" data-fancybox="group" title="Original version with unsorted list of suggestions" href="img/sab/landing%20page%202.jpg"><img style="vertical-align: top;" class="gallery3 center_image with_border" id="function_candidates_1" src="img/sab/landing%20page%202.jpg" alt="" /></a>
-					<a class="fancybox" data-fancybox="group" title="Original version with unsorted list of suggestions" href="img/sab/landing%20page%203.jpg"><img style="vertical-align: top;" class="gallery3 right_image with_border" id="function_candidates_1" src="img/sab/landing%20page%203.jpg" alt="" /></a>
+					<a data-fancybox="website"
+					   data-caption="First visual design proposal."
+					   href="img/sab/landing%20page%201.jpg">
+						<img style="vertical-align: top;" class="gallery3 left_image with_border" src="img/sab/landing%20page%201.jpg"/>
+					</a>
+					<a data-fancybox="website"
+					   data-caption="Several iterations later, the version that was tested with users."
+					   href="img/sab/landing%20page%202.jpg">
+						<img style="vertical-align: top;" class="gallery3 center_image with_border" src="img/sab/landing%20page%202.jpg"/>
+					</a>
+					<a data-fancybox="website"
+					   data-caption="Final design, after the usability issues were fixed."
+					   href="img/sab/landing%20page%203.jpg">
+						<img style="vertical-align: top;" class="gallery3 right_image with_border" src="img/sab/landing%20page%203.jpg"/>
+					</a>
 				</div>
 
 				<div style="margin-bottom: 19px;">
@@ -189,23 +189,67 @@
 				</ul>
 
 				<div class="gallery">
-					<a class="fancybox" data-fancybox="group" title="Original " href="img/sab/mockup1.png"><img class="gallery4 left_image " id="function_candidates_1" src="img/sab/mockup1.png" alt="" /></a>
-					<a class="fancybox" data-fancybox="group" title="Original " href="img/sab/mockup2.png"><img class="gallery4 center_image " id="function_candidates_1" src="img/sab/mockup2.png" alt="" /></a>
-					<a class="fancybox" data-fancybox="group" title="Original " href="img/sab/mockup3.png"><img class="gallery4 center_image " id="function_candidates_1" src="img/sab/mockup3.png" alt="" /></a>
-					<a class="fancybox" data-fancybox="group" title="Original " href="img/sab/mockup4.png"><img class="gallery4 right_image " id="function_candidates_1" src="img/sab/mockup4.png" alt="" /></a>
+					<a data-fancybox="mobile"
+					   data-caption="Login screen with application logo and authentication controls."
+					   href="img/sab/mockup1.png">
+						<img class="gallery4 left_image" src="img/sab/mockup1.png"/>
+					</a>
+					<a data-fancybox="mobile"
+					   data-caption="Home screen showing public access points that are in range. If the user owns virtual keys to any of them, a button to open the door is shown."
+					   href="img/sab/mockup2.png">
+						<img class="gallery4 center_image" src="img/sab/mockup2.png"/>
+					</a>
+					<a data-fancybox="mobile"
+					   data-caption="A list with all public access points. The user can search for and request access."
+					   href="img/sab/mockup3.png">
+						<img class="gallery4 center_image" src="img/sab/mockup3.png"/>
+					</a>
+					<a data-fancybox="mobile"
+					   data-caption="The way to issue an access request to a public access point."
+					   href="img/sab/mockup4.png">
+						<img class="gallery4 right_image" src="img/sab/mockup4.png"/>
+					</a>
 				</div>
 
 				<div class="gallery">
-					<a class="fancybox" data-fancybox="group" title="Original " href="img/sab/mockup5.png"><img class="gallery4 left_image " id="function_candidates_1" src="img/sab/mockup5.png" alt="" /></a>
-					<a class="fancybox" data-fancybox="group" title="Original " href="img/sab/mockup6.png"><img class="gallery4 center_image " id="function_candidates_1" src="img/sab/mockup6.png" alt="" /></a>
-					<a class="fancybox" data-fancybox="group" title="Original " href="img/sab/mockup7.png"><img class="gallery4 center_image " id="function_candidates_1" src="img/sab/mockup7.png" alt="" /></a>
+					<a data-fancybox="mobile"
+					   data-caption="Administration screen for users who own access points."
+					   href="img/sab/mockup5.png">
+						<img class="gallery4 left_image" src="img/sab/mockup5.png"/>
+					</a>
+					<a data-fancybox="mobile"
+					   data-caption="Description of an access point with the option of creating new virtual keys."
+					   href="img/sab/mockup6.png">
+						<img class="gallery4 center_image" src="img/sab/mockup6.png"/>
+					</a>
+					<a data-fancybox="mobile"
+					   data-caption="Screen for defining and sharing a new virtual key."
+					   href="img/sab/mockup7.png">
+						<img class="gallery4 center_image" src="img/sab/mockup7.png"/>
+					</a>
 				</div>
 
 				<div class="gallery">
-					<a class="fancybox" data-fancybox="group" title="Original " href="img/sab/mockup8.png"><img class="gallery4 left_image " id="function_candidates_1" src="img/sab/mockup8.png" alt="" /></a>
-					<a class="fancybox" data-fancybox="group" title="Original " href="img/sab/mockup9.png"><img class="gallery4 center_image " id="function_candidates_1" src="img/sab/mockup9.png" alt="" /></a>
-					<a class="fancybox" data-fancybox="group" title="Original " href="img/sab/mockup10.png"><img class="gallery4 center_image " id="function_candidates_1" src="img/sab/mockup10.png" alt="" /></a>
-					<a class="fancybox" data-fancybox="group" title="Original " href="img/sab/mockup11.png"><img class="gallery4 right_image " id="function_candidates_1" src="img/sab/mockup11.png" alt="" /></a>
+					<a data-fancybox="mobile"
+					   data-caption="Access request notification - home screen"
+					   href="img/sab/mockup8.png">
+						<img class="gallery4 left_image " src="img/sab/mockup8.png"/>
+					</a>
+					<a data-fancybox="mobile"
+					   data-caption="Access request notification - navigation drawer"
+					   href="img/sab/mockup9.png">
+						<img class="gallery4 center_image " src="img/sab/mockup9.png"/>
+					</a>
+					<a data-fancybox="mobile"
+					   data-caption="Access request notification - list of access points owned"
+					   href="img/sab/mockup10.png">
+						<img class="gallery4 center_image " src="img/sab/mockup10.png"/>
+					</a>
+					<a data-fancybox="mobile"
+					   data-caption="Access request notification - details and call to action buttons"
+					   href="img/sab/mockup11.png">
+						<img class="gallery4 right_image " src="img/sab/mockup11.png"/>
+					</a>
 				</div>
 
 				<p>At the time we needed the visual design ready, we were in the process of looking for a new visual designer,
@@ -213,13 +257,39 @@
 					navigation, layout, typography and icons.</p>
 
 				<div class="gallery">
-					<a class="fancybox" data-fancybox="group" title="sadfasdf" href="img/sab/0.splashscreen.png"><img class="gallery3 left_image with_border" id="function_candidates_1" src="img/sab/0.splashscreen.png" alt="" /></a>
-					<a class="fancybox" data-fancybox="group" title="sadfasdf" href="img/sab/1.home%20screen%20-%20in%20range.png"><img class="gallery3 center_image with_border" id="function_candidates_1" src="img/sab/1.home%20screen%20-%20in%20range.png" alt="" /></a>
-					<a class="fancybox" data-fancybox="group" title="sadfasdf" href="img/sab/2.home%20screen%20-%20all%20devices.png"><img class="gallery3 right_image with_border" id="function_candidates_1" src="img/sab/2.home%20screen%20-%20all%20devices.png" alt="" /></a>
+					<a data-fancybox="mobile" class="needsBorder"
+					   data-caption="Splash screen"
+					   href="img/sab/0.splashscreen.png">
+						<img class="gallery3 left_image with_border" src="img/sab/0.splashscreen.png"/>
+					</a>
+					<a data-fancybox="mobile" class="needsBorder"
+					   data-caption="Home screen showing public access points that are in range. If the user owns virtual keys to any of them, a button to open the door is shown."
+					   href="img/sab/1.home%20screen%20-%20in%20range.png">
+						<img class="gallery3 center_image with_border" src="img/sab/1.home%20screen%20-%20in%20range.png"/>
+					</a>
+					<a data-fancybox="mobile" class="needsBorder"
+					   data-caption="A list with all public access points. The user can search for and request access."
+					   href="img/sab/2.home%20screen%20-%20all%20devices.png">
+						<img class="gallery3 right_image with_border" src="img/sab/2.home%20screen%20-%20all%20devices.png"/>
+					</a>
+
 					<div class="gallery_separator"></div>
-					<a class="fancybox" data-fancybox="group" title="sadfasdf" href="img/sab/4.side%20menu.png"><img class="gallery3 left_image with_border" id="function_candidates_1" src="img/sab/4.side%20menu.png" alt="" /></a>
-					<a class="fancybox" data-fancybox="group" title="sadfasdf" href="img/sab/5.my%20smart%20keys.png"><img class="gallery3 center_image with_border" id="function_candidates_1" src="img/sab/5.my%20smart%20keys.png" alt="" /></a>
-					<a class="fancybox" data-fancybox="group" title="sadfasdf" href="img/sab/6.my%20access%20points.png"><img class="gallery3 right_image with_border" id="function_candidates_1" src="img/sab/6.my%20access%20points.png" alt="" /></a>
+
+					<a data-fancybox="mobile" class="needsBorder"
+					   data-caption="Navigation drawer"
+					   href="img/sab/4.side%20menu.png">
+						<img class="gallery3 left_image with_border" src="img/sab/4.side%20menu.png"/>
+					</a>
+					<a data-fancybox="mobile" class="needsBorder"
+					   data-caption="List of virtual keys owned by the user."
+					   href="img/sab/5.my%20smart%20keys.png">
+						<img class="gallery3 center_image with_border" src="img/sab/5.my%20smart%20keys.png"/>
+					</a>
+					<a data-fancybox="mobile" class="needsBorder"
+					   data-caption="Administration screen for users who own access points."
+					   href="img/sab/6.my%20access%20points.png">
+						<img class="gallery3 right_image with_border" src="img/sab/6.my%20access%20points.png"/>
+					</a>
 				</div>
 
 				<p>The entire process, from the first sketches, to delivering the final specs was quite fast, mostly because
@@ -235,8 +305,16 @@
 					in terms of content and layout.</p>
 
 				<div class="gallery">
-					<a class="fancybox" data-fancybox="group" title="Original version with unsorted list of suggestions" href="img/sab/A4%204x8%20part%201.png"><img class="gallery2 left_image with_border" id="function_candidates_1" src="img/sab/A4%204x8%20part%201.png" alt="" /></a>
-					<a class="fancybox" data-fancybox="group" title="Original version with unsorted list of suggestions" href="img/sab/A4%204x8%20part%202.png"><img class="gallery2 right_image with_border" id="function_candidates_1" src="img/sab/A4%204x8%20part%202.png" alt="" /></a>
+					<a data-fancybox="marketing" class="needsBorder"
+					   data-caption="Sketches for a catalog and a brochure."
+					   href="img/sab/A4%204x8%20part%201.png">
+						<img class="gallery2 left_image with_border" src="img/sab/A4%204x8%20part%201.png"/>
+					</a>
+					<a data-fancybox="marketing" class="needsBorder"
+					   data-caption="Sketches for a catalog and a brochure."
+					   href="img/sab/A4%204x8%20part%202.png">
+						<img class="gallery2 right_image with_border" src="img/sab/A4%204x8%20part%202.png"/>
+					</a>
 				</div>
 
 				<p>After discussing the proposals, I worked closely with the graphic designer on the design that was going
@@ -246,14 +324,30 @@
 
 				<h3>THE CATALOG</h3>
 				<div class="gallery">
-					<a class="fancybox" data-fancybox="group" title="Original version with unsorted list of suggestions" href="img/sab/catalog%201.png"><img class="gallery3 left_image with_border" id="function_candidates_1" src="img/sab/catalog%201.png" alt="" /></a>
-					<a class="fancybox" data-fancybox="group" title="Original version with unsorted list of suggestions" href="img/sab/catalog%202.png"><img class="gallery3 center_image with_border" id="function_candidates_1" src="img/sab/catalog%202.png" alt="" /></a>
-					<a class="fancybox" data-fancybox="group" title="Original version with unsorted list of suggestions" href="img/sab/catalog%203.png"><img class="gallery3 right_image with_border" id="function_candidates_1" src="img/sab/catalog%203.png" alt="" /></a>
+					<a data-fancybox="marketing" class="needsBorder"
+					   data-caption="Printed version of the catalog - part 1"
+					   href="img/sab/catalog%201.png">
+						<img class="gallery3 left_image with_border" src="img/sab/catalog%201.png"/>
+					</a>
+					<a data-fancybox="marketing" class="needsBorder"
+					   data-caption="Printed version of the catalog - part 2"
+					   href="img/sab/catalog%202.png">
+						<img class="gallery3 center_image with_border" src="img/sab/catalog%202.png"/>
+					</a>
+					<a data-fancybox="marketing" class="needsBorder"
+					   data-caption="Printed version of the catalog - part 3"
+					   href="img/sab/catalog%203.png">
+						<img class="gallery3 right_image with_border" src="img/sab/catalog%203.png"/>
+					</a>
 				</div>
 
 				<h3>THE BROCHURE</h3>
 				<div class="gallery">
-					<a class="fancybox" data-fancybox="group" title="Original version with unsorted list of suggestions" href="img/sab/flyer.png"><img class="gallery1 with_border" id="function_candidates_1" src="img/sab/flyer.png" alt="" /></a>
+					<a data-fancybox="marketing" class="needsBorder"
+					   data-caption="Printed version of the folding brochure."
+					   href="img/sab/flyer.png">
+						<img class="gallery1 with_border" src="img/sab/flyer.png"/>
+					</a>
 				</div>
 
 
@@ -263,7 +357,6 @@
 					had the chance of using the service in one of the secured locations and it was a nice and rewarding experience.
 					Since then, they have deployed in multiple locations from Romania and the Middle East.
 				</p>
-
 
 
 				<div id="disqus_thread"></div>

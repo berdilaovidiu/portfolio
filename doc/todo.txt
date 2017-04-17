@@ -24,8 +24,8 @@
 
 
 - finalize content for the remaining articles                           DONE
-- integrate with a better image viewer library
-- write caption for images
+- integrate with a better image viewer library                          PARTIALLY DONE
+- write caption for images                                              PARTIALLY DONE
 - improve video captions
 - clean all scanned images                                              DONE
 - test and improve performance
