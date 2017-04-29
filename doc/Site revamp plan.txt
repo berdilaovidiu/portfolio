@@ -32,3 +32,39 @@ Second version suggestions:
 - get inspiration from other ux portfolios, there are a ton out there                                       DONE
 - add some interactivity, transitions, animations                                                           DONE
 - think responsive design                                                                                   DONE
+
+
+Second version plans:
+- responsive design from the beginning
+- clean typographic style
+- short stories, but show the process
+- emphasize skills and passion
+- dataviz influence
+- progressive disclosure of information
+- more visual articles, starting with the final result
+- quality over quantity for articles
+- great ending to the stories, ROI, quantifiable results
+- my story, short and compelling
+- problem statement -> decision making -> solution framework (problem, limitations, solutions, my role, learned lessons)
+- my role, deliverables, work, tell the truth
+- tools used
+- nix mediocre work, 3-5 projects
+- adopt the posture of the expert
+- clarity in decision making
+- review text with someone else
+- user test the portfolio with other designers
+- current position and organization, location
+- links to the live products, ??? NDA, maybe password protected
+- check typos
+- real world work
+- involvement in the community
+
+like to travel
+like warm weather
+have a family and a cat
+always learning, self taught
+strong SWD background
+ambitious and passionate about switching careers
+love to work in a team
+can do it all but have preference for dataviz, research
+wife is architect
