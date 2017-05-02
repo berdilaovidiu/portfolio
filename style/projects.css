@@ -14,9 +14,11 @@
   margin-bottom: 19px;
 }
 #projects_list {
+  margin-top: 19px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-bottom: 19px;
 }
 #projects_list .project {
   position: relative;
@@ -41,7 +43,7 @@
   position: relative;
   width: 200px;
   height: 200px;
-  border: 1px solid #960084;
+  border: 1px solid lightgrey;
   box-sizing: border-box;
 }
 #projects_list .project .project_thumbnail a {
