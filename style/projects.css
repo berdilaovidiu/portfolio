@@ -14,7 +14,6 @@
   margin-bottom: 19px;
 }
 #projects_list {
-  margin-top: 19px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -23,7 +22,7 @@
 #projects_list .project {
   position: relative;
   width: 200px;
-  height: 300px;
+  height: 320px;
 }
 @media screen and (min-width: 1000px) {
   #projects_list .project {
@@ -57,6 +56,16 @@
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 12pt;
   line-height: 19px;
+}
+#projects_list .project .project_title .primary {
+  font-weight: 500;
+  font-size: 14pt;
+  margin-bottom: 8px;
+}
+#projects_list .project .project_title .secondary {
+  font-weight: 400;
+  font-size: 11pt;
+  color: gray;
 }
 .overlay {
   position: absolute;
@@ -93,4 +102,19 @@
   vertical-align: middle;
   width: 100%;
   position: static;
+}
+#separator {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #dddddd;
+  line-height: 0.1em;
+  margin: 10px 0 60px;
+}
+#separator_text {
+  color: #bebebe;
+  font-style: italic;
+  font-size: 10pt;
+  font-weight: 300;
+  background: #fff;
+  padding: 0 15px;
 }
