@@ -2,9 +2,11 @@
 <html lang="en">
 	<head>
 		<link rel="stylesheet" href="style/resets.css"/>
+		<link rel="stylesheet" href="style/global.css"/>
 		<link rel="stylesheet" href="style/layout.css"/>
 		<link rel="stylesheet" href="style/education.css"/>
-		<!--<link rel="stylesheet" href="style/customgrid.css"/>-->
+		<link rel="stylesheet" href="style/menu.css"/>
+
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'/>
 
         <meta name="viewport" content="width=device-width">
@@ -45,6 +47,25 @@
 				a.appendChild(r);
 			})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 		</script>
+
+		<!-- FullStory Tracking Code for http://berdilaovidiu.github.io/portfolio/ -->
+		<script>
+            window['_fs_debug'] = false;
+            window['_fs_host'] = 'fullstory.com';
+            window['_fs_org'] = 'BNK0F';
+            window['_fs_namespace'] = 'FS';
+            (function(m,n,e,t,l,o,g,y){
+                if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+                g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+                o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+                y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+                g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+                y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+                y="consent";g[y]=function(a){g(y,!arguments.length||a)};
+                g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+                g.clearUserCookie=function(){};
+            })(window,document,window['_fs_namespace'],'script','user');
+		</script>
     </head>
 	<body>
 
@@ -77,45 +98,46 @@
 				height : '800'
 			});
 
-
             $(document).ready(function () {
-                $("#top_menu").load("top_menu.html", initTopMenuActions);
-                $("#side_menu").load("side_menu.html", function () {
-                            var menuItemId = "#menu_education";
-                            var itemLinkId = menuItemId + " a";
-                            var menuItemText = $(itemLinkId).text();
-                            $(itemLinkId).remove();
-                            $(menuItemId).text(menuItemText);
-                        }
+
+                $("#menu").load("menu.html", function () {
+                        var menuItemId = "#menu_education";
+                        var itemLinkId = menuItemId + " a";
+                        var menuItemText = $(itemLinkId).text();
+                        $(itemLinkId).remove();
+                        $(menuItemId).text(menuItemText);
+                    	initTopMenuActions("body_panel");
+                    }
                 );
             });
-
 		</script>
 
-        <div id="top_menu"></div>
-		<div id="side_menu"/></div>
+		<div id="menu"></div>
 
-		<div id="right_panel">
-			<div id="introduction">
-				<p>I have been developing an education around computer science for as long as I can remember. It was a
-					childhood dream to become a computer programmer and I was fortunate enough to have the chance of studying in
-					a big student city like
-					<a href="http://en.wikipedia.org/wiki/Cluj-Napoca" target="-blank">Cluj Napoca</a>.</p>
-
-				<p>After college and a few years of professional programming, I fell in love with User Centered Design.
-					It happened when I met <a href="http://www.didi.com/" target="_blank">Bradford Paley</a> at a seminar
-					held on site by the company I was working for at that time. Since then, I read anything I could put
-					my hands on related to UI and UX design and built as many skills as I could to make the transition
-					to professional designing.</p>
-
-				<p>My formal education in design consists mostly in seminars, online classes and a lot of interesting
-					books that cover a large variety of topics, from human cognition and psychology, to data visualization,
-					color theory and typography.</p>
-			</div>
+		<div id="body_panel">
 
 			<div id="schools_panel">	
-				<h1>formal education</h1>
+				<h1>Formal education</h1>
 				<div id="schools">
+
+					<div class="school">
+						<div class="circle"></div>
+						<div class="timeframe">
+							<div class="institution"><a target="_blank" href="https://www.uie.com/">Jared Spool</a></div>
+							<div class="time">Oct 2017</div>
+						</div>
+						<div class="details">
+							<div class="title">
+								<span class="title">Design for Delight</span>
+								<span class="annotation degree">seminar</span>
+							</div>
+							<p class="description">
+								One day seminar, part of a three days trip to <a target="_blank" href="http://2017.uxbucharest.com/">UX Bucharest 2017</a>.
+								Jared Spool and Dana Chisnell introduced me to a framework that brings users and customers pleasure, flow and meaning. I also got to meet
+								speakers and designers from renowned companies like Google, Adobe and Vox Media, just to name a few.
+							</p>
+						</div>
+					</div>
 
 					<div class="school">
 						<div class="circle"></div>
@@ -128,12 +150,13 @@
 								<span class="title"><a href="https://www.coursera.org/specializations/interaction-design" target="_blank">Interaction Design Specialization</a></span>
 								<span class="annotation degree">online class</span>
 							</div>
-							<div class="description">
+							<p class="description">
 								8-course specialization that teaches how to design technologies that bring people joy, rather than frustration.
-								</br>I learned how to generate design ideas, techniques for quickly prototyping them, and how to use prototypes to get feedback from other stakeholders like teammates, clients, and users.
-								</br>I also learned principles of visual design, perception, and cognition that inform effective interaction design.
-								</br>The specialization concluded with a <a href="https://www.coursera.org/account/accomplishments/specialization/B3QGGNXQ3M9L" target="_blank">certificate</a> from the
-								<a href="https://ucsd.edu/"  target="_blank">University of California, San Diego</a>.</div>
+								I learned how to generate design ideas, techniques for quickly prototyping them, and how to use prototypes to get feedback from other stakeholders like teammates, clients, and users.
+								I also learned principles of visual design, perception, and cognition that inform effective interaction design.
+								The specialization concluded with a <a href="https://www.coursera.org/account/accomplishments/specialization/B3QGGNXQ3M9L" target="_blank">certificate</a> from the
+								<a href="https://ucsd.edu/"  target="_blank">University of California, San Diego</a>.
+							</p>
 						</div>
 					</div>
 
@@ -148,10 +171,11 @@
 								<span class="title"><a href="https://www.coursera.org/course/datavisualization" target="_blank">Data Visualization</a></span>
 								<span class="annotation degree">online class</span>
 							</div>
-							<div class="description">
+							<p class="description">
 								Intense class that teaches the basics of data visualization, from human perception, representing quantitative, hierarchical and relationship data to visualizing large amounts of data of any kind.
-								</br>This was a great learning experience that spread across four weeks and culminated with a <a href="https://www.coursera.org/account/accomplishments/records/LMzV7Z2w3pEb8RtQ" target="_blank">certificate</a> from the
-								<a href="http://illinois.edu/about/index.html"  target="_blank">University of Illinois at Urbana-Champaign</a>.</div>
+								This was a great learning experience that spread across four weeks and culminated with a <a href="https://www.coursera.org/account/accomplishments/records/LMzV7Z2w3pEb8RtQ" target="_blank">certificate</a> from the
+								<a href="http://illinois.edu/about/index.html"  target="_blank">University of Illinois at Urbana-Champaign</a>.
+							</p>
 						</div>
 					</div>
 					
@@ -166,24 +190,8 @@
 								<span class="title">Users, Experience and Beyond</span>
 								<span class="annotation degree">workshop</span>
 							</div>
-							<div class="description">One day workshop where I learned to put something as abstract as "user experience" into more practical, quantifiable, hands-on terms by using some simple and interesting tools.
-							</div>
-						</div>
-					</div>
-					
-					<div class="school">
-						<div class="circle"></div>
-						<div class="timeframe">
-							<div class="institution">Udacity</div>
-							<div class="time">Sept 2014</div>
-						</div>
-						<div class="details">
-							<div class="title">
-								<span class="title"><a href="https://www.udacity.com/course/ud849" target="_blank">UX Design for Mobile Developers</a></span>
-								<span class="annotation degree">online class</span>
-							</div>
-							<div class="description">Entry level course that teaches about the design constraints of a mobile platform with emphasis on Android and it's particularities. 
-							It is a nice introduction for someone starting to design and develop mobile apps.</div>
+							<p class="description">One day workshop where I learned to put something as abstract as "user experience" into more practical, quantifiable, hands-on terms by using some simple and interesting tools.
+							</p>
 						</div>
 					</div>
 					
@@ -198,10 +206,10 @@
 								<span class="title"><a href="https://www.coursera.org/course/hciucsd" target="_blank">Human-Computer Interaction</a></span>
 								<span class="annotation degree">online class</span>
 							</div>
-							<div class="description">Intense class that teaches a human centered design metodology. Besides watching the lessons, I also had to do a lot of practice, going through each step of the process in order to deliver a functional dynamic prototype. 
+							<p class="description">Intense class that teaches a human centered design metodology. Besides watching the lessons, I also had to do a lot of practice, going through each step of the process in order to deliver a functional dynamic prototype.
 							I had to do user observations and interviews, storyboards, multiple versions of wireframes, heuristic evaluation, user testing, dynamic hi-fi prototypes and to review and grade the assignments of my peers.<br>
 							This was a great learning experience that spread across three months of intensive study and practice. At the end, I was one of the less than 200 participants (from a total of more than 16000 attendants) 
-							who obtained a <a class="fancybox" data-fancybox-type="iframe" href="Coursera hciucsd 2014.pdf">Statement of Accomplishment</a>. The <a href="be_healthy.html">project</a> is displayed in the projects section of this portfolio.</div>
+							who obtained a <a class="fancybox" data-fancybox-type="iframe" href="Coursera hciucsd 2014.pdf">Statement of Accomplishment</a>. The <a href="be_healthy.html">project</a> is displayed in the projects section of this portfolio.</p>
 						</div>
 					</div>
 					
@@ -216,8 +224,8 @@
 								<span class="title"><a href="http://www.didi.com/docs/StepsTowardCognitiveEngineering_2011d.pdf" target="_blank">Steps toward a Discipline of Cognitive Engineering</a></span>
 								<span class="annotation degree">seminar</span>
 							</div>
-							<div class="description">It was during this class that I realized how much I enjoy designing solutions for human problems. Brad taught us the basics of a human-centered design methodology and more than that, 
-							he showed us some of his work with a passion that was contagious. After the seminar, the company hired him to redesign one of the products and I was part of the team that went to New York for a week to discuss the implementation of his ideas.</div>
+							<p class="description">It was during this class that I realized how much I enjoy designing solutions for human problems. Brad taught us the basics of a human-centered design methodology and more than that,
+							he showed us some of his work with a passion that was contagious. After the seminar, the company hired him to redesign one of the products and I was part of the team that went to New York for a week to discuss the implementation of his ideas.</p>
 						</div>
 					</div>
 
@@ -232,8 +240,8 @@
 								<span class="title">Artificial Intelligence and Vision</span>
 								<span class="annotation degree">Master of Science</span>
 							</div>
-							<div class="description">I studied in greater depth disciplines like Natural Language Processing, Image Processing, Machine Learning, Data Mining and User Interface Design. 
-							For my dissertation project I designed and tested an Intelligent Financial Information Retrieval system.</div>
+							<p class="description">I studied in greater depth disciplines like Natural Language Processing, Image Processing, Machine Learning, Data Mining and User Interface Design.
+							For my dissertation project I designed and tested an Intelligent Financial Information Retrieval system.</p>
 						</div>
 					</div>
 
@@ -248,16 +256,17 @@
 								<span class="title">Computer Science</span>
 								<span class="annotation degree">Bachelor of Science</span>
 							</div>
-							<div class="description">Learned a broad range of topics from mathematics, computer programming, artificial intelligence to networks and computer architecture. 
-							For my graduation project I developed an algorithm to recognize cars from traffic scenes.</div>
+							<p class="description">Learned a broad range of topics from mathematics, computer programming, artificial intelligence to networks and computer architecture.
+							For my graduation project I developed an algorithm to recognize cars from traffic scenes.</p>
 						</div>
 					</div>
 					
 				</div>
-			</div>
+			</div><!-- need to keep them close so it works side by side
 
-			<div id="books_panel">
-				<h1>i have read</h1>
+
+			--><div id="books_panel">
+				<h1>Readings</h1>
 				<div id="books">
 					<div class="book">
 						<span class="title"><a href ="http://www.amazon.com/Laws-Simplicity-Design-Technology-Business/dp/0262134721/ref=sr_1_1?s=books&ie=UTF8&qid=1413363276&sr=1-1&keywords=the+laws+of+simplicity" target="_blank">The Laws of Simplicity</a></span>
@@ -269,6 +278,10 @@
 					</div>
 					<div class="book">
 						<span class="title"><a href ="http://www.amazon.com/Things-That-Make-Smart-Attributes/dp/0201626950/ref=sr_1_1?s=books&ie=UTF8&qid=1413363434&sr=1-1&keywords=Things+That+Make+us+Smart" target="_blank">Things That Make us Smart</a></span>
+						<span class="annotation author">Don Norman</span>
+					</div>
+					<div class="book">
+						<span class="title"><a href ="hhttps://www.amazon.com/Emotional-Design-Love-Everyday-Things/dp/0465051367" target="_blank">Emotional Design</a></span>
 						<span class="annotation author">Don Norman</span>
 					</div>
 					<div class="book">

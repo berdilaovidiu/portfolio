@@ -2,8 +2,10 @@
 <html lang="en">
 	<head>
 		<link rel="stylesheet" href="style/resets.css"/>
+		<link rel="stylesheet" href="style/global.css"/>
 		<link rel="stylesheet" href="style/layout.css"/>
 		<link rel="stylesheet" href="style/project_typography.css"/>
+		<link rel="stylesheet" href="style/menu.css"/>
 
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'/>
 		<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'/>
@@ -38,6 +40,25 @@
 			})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 		</script>
 
+		<!-- FullStory Tracking Code for http://berdilaovidiu.github.io/portfolio/ -->
+		<script>
+            window['_fs_debug'] = false;
+            window['_fs_host'] = 'fullstory.com';
+            window['_fs_org'] = 'BNK0F';
+            window['_fs_namespace'] = 'FS';
+            (function(m,n,e,t,l,o,g,y){
+                if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+                g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+                o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+                y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+                g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+                y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+                y="consent";g[y]=function(a){g(y,!arguments.length||a)};
+                g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+                g.clearUserCookie=function(){};
+            })(window,document,window['_fs_namespace'],'script','user');
+		</script>
+
     </head>
 
 	<body>
@@ -58,18 +79,35 @@
 				//apply fancybox options
 			    $("[data-fancybox]").fancybox(fancyboxOptions);
 
-			    //init navigation framework
-                $("#top_menu").load("top_menu.html", initTopMenuActions);
-                $("#side_menu").load("side_menu.html");
+                //init navigation framework
+                $("#menu").load("menu.html", function(){
+                    initTopMenuActions("body_panel");
+                });
             });
 		</script>
 
-        <div id="top_menu"></div>
-		<div id="side_menu"></div>
-		<div id="right_panel" class="project">
+		<div id="menu"></div>
+		<div id="body_panel" class="project">
 
 			<div class="content">
-				<h1>SMART ACCESS BOX</h1>
+
+				<div class="date">June - December 2015</div>
+				<div class="title">Smart Access Box</div>
+				<div class="tagline">Digital keys for electric gates</div>
+
+				<div class="tags">
+					<span class="tag">BRANDING</span>
+					<span class="tag">WIREFRAMING</span>
+					<span class="tag">VISUAL DESIGN</span>
+					<span class="tag">USER TESTING</span>
+					<span class="tag">COPYWRITING</span>
+					<span class="tag">MARKETING</span>
+					<span class="tag">BALSAMIQ</span>
+					<span class="tag">PHOTOSHOP</span>
+					<span class="tag">WEB</span>
+					<span class="tag">MOBILE</span>
+					<span class="tag">PRINT</span>
+				</div>
 
 				<p>The need for smart and secured access was discovered while working on <a href="parking_plus.html" target="_blank">another product</a>.
 				It made more sense to build it as a separate product, since a flexible access control solution could be used
@@ -79,7 +117,7 @@
 					mobile app that communicates with the box via low energy bluetooth. The access was granted based on
 					flexible and shareable virtual keys.</p>
 
-				<h2>DESIGN AND IDENTITY CONCEPT</h2>
+				<div class="subtitle">Design and identity concept</div>
 
 				<p>Management wanted this to look and feel like a premium product, so I came up with a brand identity
 					proposal that included advice for all the customer facing elements of the service.</p>
@@ -110,7 +148,7 @@
 				</div>
 
 
-				<h2>THE LANDING PAGE</h2>
+				<div class="subtitle">The landing page</div>
 
 				<p>We started building the landing page even before we started talking about the mobile app. It's goal was to
 					present the product, get people excited, gather some comments and feedback and ultimately get some pre orders.</p>
@@ -170,19 +208,19 @@
 					other projects of the company and they were a little biased because they were aware of parking startup
 					I was part of, others were friends of mine who were kind enough to volunteer their time.</p>
 
-				<h2>THE MOBILE APP</h2>
+				<div class="subtitle">The mobile app</div>
 
 				<p>There were two types of users for the mobile app, the ones that manage the access to a secured location
 				and the ones that request or make use of the granted permissions.</p>
 
-				The consumers of the service had to be able to:
+				<span class="article_list">Consumers of the service had to be able to:</span>
 				<ul class="article_list">
 					<li>see the in range secured locations</li>
 					<li>make use of their permissions to open/close in range doors</li>
 					<li>request access for in and out of range locations</li>
 				</ul>
 
-				The administrators of the access points had to be able to:
+				<span class="article_list">The administrators of the access points had to be able to:</span>
 				<ul class="article_list">
 					<li>respond to an access request</li>
 					<li>define permissions to an user identified by his email address</li>
@@ -295,7 +333,7 @@
 				<p>The entire process, from the first sketches, to delivering the final specs was quite fast, mostly because
 					the functionality was straight forward and I already had some experience with material design from a previous project.</p>
 
-				<h2>MARKETING MATERIALS</h2>
+				<div class="subtitle">Marketing materials</div>
 
 				<p>We needed a brochure and a catalog in order to promote the project at various IT trades across Europe,
 					especially the Web Summit in Dublin where we were part of the Alpha program and had a presentation booth.</p>
@@ -322,7 +360,7 @@
 					images and part of the copy. Interestingly, we decided to use the storyboards to showcase the usage
 					scenarios, but my version was not good enough to be published, so they were redrawn by a more talented person.</p>
 
-				<h3>THE CATALOG</h3>
+				<div class="subtitle2">The catalog</div>
 				<div class="gallery">
 					<a data-fancybox="marketing" class="needsBorder"
 					   data-caption="Printed version of the catalog - part 1"
@@ -341,7 +379,7 @@
 					</a>
 				</div>
 
-				<h3>THE BROCHURE</h3>
+				<div class="subtitle2">The brochure</div>
 				<div class="gallery">
 					<a data-fancybox="marketing" class="needsBorder"
 					   data-caption="Printed version of the folding brochure."
@@ -351,7 +389,7 @@
 				</div>
 
 
-				<h2>FINAL THOUGHTS</h2>
+				<div class="subtitle">Final thoughts</div>
 
 				<p>At the time I left the company, they were in talks for doing the first two pilot deployments. I later
 					had the chance of using the service in one of the secured locations and it was a nice and rewarding experience.

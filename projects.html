@@ -2,8 +2,11 @@
 <html lang="en">
 	<head>
 		<link rel="stylesheet" href="style/resets.css"/>
+		<link rel="stylesheet" href="style/global.css"/>
 		<link rel="stylesheet" href="style/layout.css"/>
+		<link rel="stylesheet" href="style/project_typography.css"/>
 		<link rel="stylesheet" href="style/projects.css"/>
+		<link rel="stylesheet" href="style/menu.css"/>
 
         <meta name="viewport" content="width=device-width">
         <meta charset="utf-8"/>
@@ -27,6 +30,25 @@
 			})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 		</script>
 
+		<!-- FullStory Tracking Code for http://berdilaovidiu.github.io/portfolio/ -->
+		<script>
+            window['_fs_debug'] = false;
+            window['_fs_host'] = 'fullstory.com';
+            window['_fs_org'] = 'BNK0F';
+            window['_fs_namespace'] = 'FS';
+            (function(m,n,e,t,l,o,g,y){
+                if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+                g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+                o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+                y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+                g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+                y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+                y="consent";g[y]=function(a){g(y,!arguments.length||a)};
+                g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+                g.clearUserCookie=function(){};
+            })(window,document,window['_fs_namespace'],'script','user');
+		</script>
+
         <title>Ovidiu Berdila - Projects</title>
 	</head>
 	<body>
@@ -44,305 +66,158 @@
 
 		<script>
             $(document).ready(function () {
-                $("#top_menu").load("top_menu.html", initTopMenuActions);
 
-                $("#side_menu").load("side_menu.html", function () {
-                            var menuItemId = "#menu_projects";
-                            var itemLinkId = menuItemId + " a";
-                            var menuItemText = $(itemLinkId).text();
-                            $(itemLinkId).remove();
-                            $(menuItemId).text(menuItemText);
-                        }
+                $("#menu").load("menu.html", function () {
+                        var menuItemId = "#menu_projects";
+                        var itemLinkId = menuItemId + " a";
+                        var menuItemText = $(itemLinkId).text();
+                        $(itemLinkId).remove();
+                        $(menuItemId).text(menuItemText);
+                    	initTopMenuActions("body_panel");
+                    }
                 );
             });
 		</script>
 
-        <div id="top_menu"></div>
-		<div id="side_menu"></div>
-		<div id="right_panel">
+		<div id="menu"></div>
+
+		<div id="body_panel">
 
 			<div id="projects_list">
 
 				<div class="project">
-					<div class = "project_thumbnail" onmouseover="hover($(this));" onmouseout="unhover($(this));">
-						<a  class="bottom"href="flexi_meetup.html">
-							<img src="img/fleximeetup/thumbnail.png"/>
-						</a>
-						<div class="overlay">
-							<div class="overlay_inner">
-								<div class="topics">
-									<div class="topic">2016</div>
-									<div class="topic">MOBILE</div>
-									<div class="topic">WIREFRAMES</div>
-									<div class="topic">RESEARCH</div>
-									<div class="topic">USER TESTING</div>
-									<div class="topic">MATERIAL DESIGN</div>
-								</div>
-							</div>
+					<div class="content">
+						<div class="date">January - December 2015</div>
+						<div class="title" onmouseover="this.style.cursor='pointer'" onclick="location.href='parking_plus.html';">Parking Plus</div>
+						<div class="tagline">Enjoy driving in your city again</div>
+
+						<div class="tags">
+							<span class="tag">RESEARCH</span>
+							<span class="tag">WIREFRAMING</span>
+							<span class="tag">USER TESTING</span>
+							<span class="tag">ANIMATIONS</span>
+							<span class="tag">COPYWRITING</span>
+							<span class="tag">MARKETING</span>
+							<span class="tag">MOCKFLOW</span>
+							<span class="tag">PHOTOSHOP</span>
+							<span class="tag">PIXATE</span>
+							<span class="tag">WEB</span>
+							<span class="tag">MOBILE</span>
+							<span class="tag">PRINT</span>
+							<span class="tag">VIDEO</span>
 						</div>
-					</div>
-					<div class="project_title">
-						<div class="primary">FlexiMeetup</div>
-						<div class="secondary">Coursera HCI Specialization Capstone Project</div>
+
+						<p>Parking Plus is a service that saves time for drivers and optimizes revenue for parking operators.
+							It removes the pain of finding a parking by showing up-to-date availability on a map and guiding
+							drivers to the closest available spot, in the street or in a private garage. The experience is
+							further improved by integrating mobile payments and bookings.</p>
+
+						<a class="article_link" href="parking_plus.html">Read case study &rarr;</a>
 					</div>
 				</div>
 
 				<div class="project">
-					<div class = "project_thumbnail" onmouseover="hover($(this));" onmouseout="unhover($(this));">
-						<a  class="bottom"href="parking_plus.html">
-							<img src="img/parkingplus/thumbnail2.png"/>
-						</a>
-						<div class="overlay">
-							<div class="overlay_inner">
-								<div class="topics">
-									<div class="topic">2015</div>
-									<div class="topic">MOBILE</div>
-									<div class="topic">WIREFRAMES</div>
-									<div class="topic">ANIMATIONS</div>
-									<div class="topic">USER TESTING</div>
-									<div class="topic">STORYTELLING</div>
-								</div>
-							</div>
+					<div class="content">
+						<div class="date">June - December 2015</div>
+						<div class="title" onmouseover="this.style.cursor='pointer'" onclick="location.href='smart_access_box.html';">Smart Access Box</div>
+						<div class="tagline">Digital keys for electric gates</div>
+
+						<div class="tags">
+							<span class="tag">BRANDING</span>
+							<span class="tag">WIREFRAMING</span>
+							<span class="tag">VISUAL DESIGN</span>
+							<span class="tag">USER TESTING</span>
+							<span class="tag">COPYWRITING</span>
+							<span class="tag">MARKETING</span>
+							<span class="tag">BALSAMIQ</span>
+							<span class="tag">PHOTOSHOP</span>
+							<span class="tag">WEB</span>
+							<span class="tag">MOBILE</span>
+							<span class="tag">PRINT</span>
 						</div>
-					</div>
-					<div class="project_title">
-						<div class="primary">Parking Plus</div>
-						<div class="secondary">Enjoy driving in your city again</div>
+
+						<p>The need for smart and secured access was discovered while working on <a href="parking_plus.html" target="_blank">another product</a>.
+							It made more sense to build it as a separate product, since a flexible access control solution could be used
+							not only for parking lots, but also for offices, sports venues, homes, or any other area that has an electric locking mechanism.</p>
+						<a class="article_link" href="smart_access_box.html">Read case study &rarr;</a>
 					</div>
 				</div>
 
 				<div class="project">
-					<div class = "project_thumbnail" onmouseover="hover($(this));" onmouseout="unhover($(this));">
-						<a  class="bottom"href="smart_access_box.html">
-							<img src="img/sab/thumbnail.png"/>
-						</a>
-						<div class="overlay">
-							<div class="overlay_inner">
-								<div class="topics">
-									<div class="topic">2015</div>
-									<div class="topic">MOBILE</div>
-									<div class="topic">WIREFRAMES</div>
-									<div class="topic">VISUAL DESIGN</div>
-									<div class="topic">USER TESTING</div>
-									<div class="topic">STORYTELLING</div>
-									<div class="topic">BRANDING</div>
-								</div>
-							</div>
+					<div class="content">
+						<div class="date">September - November 2016</div>
+						<div class="title" onmouseover="this.style.cursor='pointer'" onclick="location.href='flexi_meetup.html';">Flexi Meetup</div>
+						<div class="tagline">An easier way to meet with friends and teams</div>
+
+						<div class="tags">
+							<span class="tag">RESEARCH</span>
+							<span class="tag">WIREFRAMING</span>
+							<span class="tag">USER TESTING</span>
+							<span class="tag">VISUAL DESIGN</span>
+							<span class="tag">BALSAMIQ</span>
+							<span class="tag">INVISION</span>
+							<span class="tag">PHOTOSHOP</span>
 						</div>
-					</div>
-					<div class="project_title">
-						<div class="primary">Smart Access Box</div>
-						<div class="secondary">Secure access control on your smartphone</div>
+
+						<p>18 months ago I enrolled in an online specialization offered by Coursera.org with the goal of sharpening
+							my design skills and obtaining a verifiable degree that would make it easier for me to get a full time
+							design job. After completing the seven classes, I had to work on a 10 week long capstone project that makes use of
+							all the knowledge aquired during the process and puts a cap on an 18 months effort.</p>
+						<a class="article_link" href="flexi_meetup.html">Read case study &rarr;</a>
 					</div>
 				</div>
 
 				<div class="project">
-					<div class = "project_thumbnail" onmouseover="hover($(this));" onmouseout="unhover($(this));">
-						<a  class="bottom"href="multi_color_overlay.html">
-							<img src="img/network_overlay/thumbnail.png"/>
-						</a>
-						<div class="overlay">
-							<div class="overlay_inner">
-								<div class="topics">
-									<div class="topic">2015</div>
-									<div class="topic">DATA VISUALISATION</div>
-									<div class="topic">CODE</div>
-									<div class="topic">VISUAL DESIGN</div>
-								</div>
-							</div>
+					<div class="content">
+						<div class="date">March 2016 - June 2016</div>
+						<div class="title" onmouseover="this.style.cursor='pointer'" onclick="location.href='isoprofiler.html';">Isoprofiler</div>
+						<div class="tagline">Making sense of gene isoforms</div>
+
+						<div class="tags">
+							<span class="tag">RESEARCH</span>
+							<span class="tag">WIREFRAMING</span>
+							<span class="tag">VISUAL DESIGN</span>
+							<span class="tag">DATA VISUALIZATION</span>
+							<span class="tag">SKETCH</span>
+							<span class="tag">CODE</span>
+							<span class="tag">DESKTOP</span>
 						</div>
-					</div>
-					<div class="project_title">
-						<div class="primary">Multi color overlay</div>
-						<div class="secondary">Overlaying multivariate data on a biological network</div>
+
+						<p>When I got involved in this project, a beta version had already been released and the feedback received
+							from the early adopters was not great, both in terms of functionality and usability.
+							The plan was to analyze the findings and come up with an improved design to take care of the shortcomings of
+							the first prototype.</p>
+						<a class="article_link" href="isoprofiler.html">Read case study &rarr;</a>
 					</div>
 				</div>
 
+
 				<div class="project">
-					<div class = "project_thumbnail" onmouseover="hover($(this));" onmouseout="unhover($(this));">
-						<a  class="bottom"href="isoprofiler.html">
-							<img src="img/isoprofiler/thumbnail.png"/>
-						</a>
-						<div class="overlay">
-							<div class="overlay_inner">
-								<div class="topics">
-									<div class="topic">2016</div>
-									<div class="topic">DATA VISUALISATION</div>
-									<div class="topic">CODE</div>
-									<div class="topic">VISUAL DESIGN</div>
-								</div>
-							</div>
+					<div class="content">
+						<div class="date">November 2015 - March 2016</div>
+						<div class="title" onmouseover="this.style.cursor='pointer'" onclick="location.href='multi_color_overlay.html';">Multi Color Overlay</div>
+						<div class="tagline">Multivariate Data Overlay on Cell Signaling Networks</div>
+
+						<div class="tags">
+							<span class="tag">WIREFRAMING</span>
+							<span class="tag">VISUAL DESIGN</span>
+							<span class="tag">DATA VISUALIZATION</span>
+							<span class="tag">SKETCH</span>
+							<span class="tag">CODE</span>
+							<span class="tag">DESKTOP</span>
 						</div>
+
+						<p>The feature is part of a large bio informatics desktop application used by researchers to find meaning
+							in their genomic data. A lot of the work has to do with interpreting gene expression measurements
+							from biological experiments in the context of a large manually curated knowledge base of relationships
+							found in published scientific papers.</p>
+						<a class="article_link" href="multi_color_overlay.html">Read case study &rarr;</a>
 					</div>
-					<div class="project_title">
-						<div class="primary">IsoProfiler</div>
-						<div class="secondary">Making sense of gene isoforms</div></div>
 				</div>
 
 			</div>
 
-			<h2 id="separator"><span id="separator_text">older work and pet projects</span></h2>
 
-			<div id="projects_list">
-
-                <div class="project">
-                    <div class = "project_thumbnail" onmouseover="hover($(this));" onmouseout="unhover($(this));">
-                        <a  class="bottom"href="quesee.html">
-                            <img src="img/quesee/thumbnail.png"/>
-                        </a>
-                        <div class="overlay">
-                            <div class="overlay_inner">
-                                <div class="topics">
-                                    <div class="topic">2013</div>
-                                    <div class="topic">CODE</div>
-                                    <div class="topic">WIREFRAMES</div>
-                                    <div class="topic">VISUAL DESIGN</div>
-                                    <div class="topic">USER TESTING</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project_title">Quesee - a different kind of Test Automation tool</div>
-                </div>
-
-				<div class="project">
-					<div class = "project_thumbnail" onmouseover="hover($(this));" onmouseout="unhover($(this));">
-						<a  class="bottom"href="curation.html">
-							<img src="img/curation/thumbnail.png"/>
-						</a>
-						<div class="overlay">
-							<div class="overlay_inner">
-								<div class="topics">
-									<div class="topic">2013</div>
-									<div class="topic">HUMAN CENTERED</div>
-									<div class="topic">USER OBSERVATION</div>
-									<div class="topic">WIREFRAMES</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="project_title">Redesigning a Biological Content Curation Tool</div>
-				</div>
-
-				
-				<div class="project">
-					<div class = "project_thumbnail" onmouseover="hover($(this));" onmouseout="unhover($(this));">
-						<a  class="bottom"href="test_history.html">
-							<img src="img/test_history/thumbnail2.png"/>
-						</a>
-						<div class="overlay"> 
-							<div class="overlay_inner"> 
-								<div class="topics">
-									<div class="topic">2014</div>
-									<div class="topic">HUMAN COGNITION</div>
-									<div class="topic">VISUALIZATION</div>
-									<div class="topic">INTERACTION DESIGN</div>
-									<div class="topic">VISUAL DESIGN</div>
-									<div class="topic">CODE</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="project_title">Designing an interactive QA widget</div>
-				</div>
-				
-				<div class="project">
-					<div class = "project_thumbnail" onmouseover="hover($(this));" onmouseout="unhover($(this));">
-						<a  class="bottom"href="be_healthy.html">
-							<img src="img/hci_project/thumbnail2.png"/>
-						</a>
-						<div class="overlay"> 
-							<div class="overlay_inner"> 
-								<div class="topics">
-									<div class="topic">2013</div>
-									<div class="topic">HUMAN CENTERED</div>
-									<div class="topic">USER OBSERVATION</div>
-									<div class="topic">STORYBOARDS</div>
-									<div class="topic">WIREFRAMES</div>
-									<div class="topic">VISUAL DESIGN</div>
-									<div class="topic">USER TESTING</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="project_title">Designing a health improvement service</div>
-				</div>
-
-				<div class="project">
-					<div class = "project_thumbnail" onmouseover="hover($(this));" onmouseout="unhover($(this));">
-						<a  class="bottom"href="network_highlight.html">
-							<img src="img/network_highlight/thumbnail2.png"/>
-						</a>
-						<div class="overlay">
-							<div class="overlay_inner">
-								<div class="topics">
-									<div class="topic">2014</div>
-									<div class="topic">DATA VISUALIZATION</div>
-									<div class="topic">VISUAL DESIGN</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="project_title">Layers of information in networks</div>
-				</div>
-
-				<div class="project">
-					<div class = "project_thumbnail" onmouseover="hover($(this));" onmouseout="unhover($(this));">
-						<a  class="bottom"href="pvalue.html">
-							<img src="img/pvalue_chart/thumbnail2.png"/>
-						</a>
-						<div class="overlay">
-							<div class="overlay_inner">
-								<div class="topics">
-									<div class="topic">2015</div>
-									<div class="topic">DATA VISUALIZATION</div>
-									<div class="topic">VISUAL DESIGN</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="project_title">P Value chart</div>
-				</div>
-
-				<div class="project">
-					<div class = "project_thumbnail" onmouseover="hover($(this));" onmouseout="unhover($(this));">
-						<a  class="bottom"href="analysis_summary.html">
-							<img src="img/analysis_summary/thumbnail.png"/>
-						</a>
-						<div class="overlay">
-							<div class="overlay_inner">
-								<div class="topics">
-									<div class="topic">2015</div>
-									<div class="topic">DATA VISUALIZATION</div>
-									<div class="topic">VISUAL DESIGN</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="project_title">Biological Dashboard Refresh</div>
-				</div>
-
-				<div class="project">
-					<div class = "project_thumbnail" onmouseover="hover($(this));" onmouseout="unhover($(this));">
-						<a class="bottom" href="function_candidates.html" >
-							<img src="img/function_candidates/thumbnail2.png"/>
-						</a>
-						<div class="overlay">
-							<div class="overlay_inner">
-								<div class="topics">
-									<div class="topic">2013</div>
-									<div class="topic">HUMAN COGNITION</div>
-									<div class="topic">VISUAL DESIGN</div>
-									<div class="topic">TYPOGRAPHY</div>
-									<div class="topic">CODE</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="project_title">Improving the usability of a spreadsheet</div>
-				</div>
-
-			</div>
 			
 			<script>
 				function hover(element) {

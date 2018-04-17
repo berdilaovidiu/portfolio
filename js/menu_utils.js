@@ -4,32 +4,70 @@
  * Time: 12:40 PM
  */
 
-var initTopMenuActions = function () {
+var initTopMenuActions = function (pageContentId) {
     var mobileMenuVisible = false;
-    var topMenuHeight = $("#top_menu").css("height");
-    var topMenuColor = $("#top_menu").css("background-color");
+    var tempKeylineVisible = false;
 
-    var mobileMenu = $("<div></div>");
-    mobileMenu.attr("id", "mobile_menu");
-    mobileMenu.load("side_menu.html #menu");
-    mobileMenu.css("position", "absolute");
-    mobileMenu.css("top", topMenuHeight);
-    mobileMenu.css("width", "100%");
-    mobileMenu.css("height", "calc(100% - " + topMenuHeight + ")");
-    mobileMenu.css("background-color", topMenuColor);
-    mobileMenu.hide();
+    var mobileDrawer = $("<div></div>");
+    mobileDrawer.attr("id", "mobile_drawer");
+    mobileDrawer.load("menu.html #menu_items_container");
+    mobileDrawer.hide();
 
-    $("body").append(mobileMenu);
+    $("body").append(mobileDrawer);
 
-    $("#top_menu #hamburger_menu").click(function () {
+
+    $("#hamburger_icon").click(function () {
+        $(this).toggleClass("open");
+        var pageContent = ($("#" + pageContentId));
+
         if (!mobileMenuVisible) {
-            mobileMenu.slideDown(200);
+            if(isKeylineVisible()){
+                tempKeylineVisible = true;
+                setKeylineVisible(false);
+            }else {
+                tempKeylineVisible = false;
+            }
+            pageContent.css("transition", "0.25s filter linear");
+            pageContent.css("filter", "blur(7px)");
+            $("body").css("overflow", "hidden");
+            mobileDrawer.fadeIn(300);
             mobileMenuVisible = true;
-            $("#right_panel").hide();
+
         } else {
-            mobileMenu.slideUp(200);
+            if (tempKeylineVisible){
+                setKeylineVisible(true);
+            }
+            pageContent.css("filter", "");
+            $("body").css("overflow", "auto");
+            mobileDrawer.fadeOut(100);
             mobileMenuVisible = false;
-            $("#right_panel").show();
+        }
+    });
+
+    var topMenuHeight = $("#menu").css("height");
+
+    window.addEventListener('scroll', function(e){
+        var distanceY = window.pageYOffset || document.documentElement.scrollTop;
+        var shrinkOn = 0.5 * parseInt(topMenuHeight, 10);
+        if (distanceY > shrinkOn) {
+            setKeylineVisible(true);
+        } else {
+            setKeylineVisible(false);
         }
     });
 }
+
+var setKeylineVisible = function(visible){
+    var menuMain = document.querySelector("#menu .main");
+    if (visible){
+        menuMain.classList.add("ontop");
+    } else{
+        menuMain.classList.remove("ontop");
+    }
+}
+
+var isKeylineVisible = function(){
+    var menuMain = document.querySelector("#menu .main");
+    return menuMain.classList.contains("ontop");
+}
+

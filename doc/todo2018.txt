@@ -1,0 +1,33 @@
+January
+
+February
+
+- improve copy for middle section for all articles                                                  IN PROGRESS
+- improve copy for conclusions
+- review entire articles
+- write copy for about page                                                                         IN PROGRESS
+- send all copy for review                                                                          IN PROGRESS
+
+
+March
+
+- update copy on the website
+- implement responsive about page
+- improve image captions (on the side and full screen)
+- add article navigation                                                                            TRIED, SAVED, BETTER FOR LATER
+- add gdrive links for all articles                                                                 TRIED, FOR ANOTHER TIME
+- design contact page
+- implement contact page
+- add above the fold images for all
+- add FullStory tracking                                                                            DONE
+- enable hotjar tracking
+- ask for feedback
+
+
+April
+
+- add hooks to the rest of the articles
+- implement affordable animations
+- improve performance for large artefacts                                                           IN PROGRESS
+- restructure website as a single page app
+- implement the rest of the animations

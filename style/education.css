@@ -1,102 +1,140 @@
 h1 {
-  font-size: 18pt;
-  line-height: 57px;
-  font-variant: small-caps;
-  letter-spacing: .12em;
+  font-size: 1.33rem;
+  letter-spacing: 0.02rem;
   font-weight: 600;
-  color: #960084;
-}
-p {
-  color: #464646;
-  font-size: 1em;
-  font-weight: 400;
-  text-align: left;
-  margin-bottom: 19px;
-}
-#introduction {
-  max-width: 1200px;
-  margin-bottom: 19px;
-}
-#schools_panel,
-#books_panel {
-  display: inline-block;
-  vertical-align: top;
-  max-width: 600px;
+  margin-top: 2.66rem;
+  margin-bottom: 2.66rem;
 }
 #schools {
-  border-left: 1px solid grey;
+  border-left: 1px solid #908F8F;
 }
 #schools .school {
-  margin-top: 19px;
-  margin-bottom: 19px;
+  margin-bottom: 1rem;
   position: relative;
-  padding-left: 10px;
+  padding-left: 1rem;
 }
 #schools .school .circle {
   display: inline-block;
   position: absolute;
-  left: calc(-0.5em - 1px);
+  top: calc(0.225rem);
+  left: calc(-0.5rem);
   background: white;
-  width: 1em;
-  height: 1em;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
-  border: 1px solid grey;
+  border: 1px solid #908F8F;
+  box-sizing: border-box;
+}
+#schools .school .details,
+#schools .school .timeframe {
+  display: inline-block;
+  vertical-align: top;
 }
 #schools .school .timeframe {
-  margin-left: 3px;
-  width: 140px;
-  margin-bottom: 19px;
+  margin-bottom: 1rem;
 }
-@media screen and (max-width: 1000px) {
-  #schools .school .timeframe {
-    width: 250px;
-  }
-  #schools .school .timeframe .institution,
-  #schools .school .timeframe .time {
-    display: inline-block;
-  }
+#schools .school .timeframe .institution,
+#schools .school .timeframe .time {
+  display: inline-block;
+}
+#schools .school .timeframe .institution {
+  margin-right: 0.5rem;
 }
 #schools .school .timeframe .time {
-  font-size: 10pt;
   color: grey;
   -webkit-font-variant-numeric: onum;
   -moz-font-variant-numeric: onum;
   -moz-font-feature-settings: "onum=1";
 }
-@media screen and (min-width: 1700px) {
-  #books_panel {
-    margin-left: 100px;
-  }
-}
-#books_panel #books {
-  margin-top: 19px;
+#schools .school .details .description {
+  margin-bottom: 1rem;
 }
 #books_panel #books .book {
-  margin-bottom: 19px;
-}
-.details,
-.timeframe {
-  display: inline-block;
-  vertical-align: top;
+  margin-bottom: 1rem;
 }
 .title {
   font-weight: 400;
-  color: #960084;
-}
-.details {
-  max-width: 441px;
-}
-.details .description {
-  margin-top: 19px;
+  color: #a227be;
+  margin-bottom: 1rem;
 }
 .annotation::before {
   content: " - ";
 }
 .degree,
 .author {
-  color: grey;
+  color: #908F8F;
   font-style: normal;
   font-variant: small-caps;
-  font-size: 14pt;
+  font-size: 1rem;
+  letter-spacing: 0.08rem;
   text-transform: lowercase;
+}
+@media screen and (min-width: 600px) {
+  #schools_panel,
+  #books_panel {
+    display: block;
+    width: 100%;
+  }
+  #schools_panel {
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #body_panel {
+    white-space: nowrap;
+  }
+  #schools_panel,
+  #books_panel {
+    display: inline-block;
+    width: 50%;
+    white-space: normal;
+    box-sizing: border-box;
+    vertical-align: top;
+  }
+  #schools_panel {
+    padding-right: 24px;
+  }
+  #schools_panel .school {
+    margin-bottom: 1.45rem;
+  }
+  #schools_panel .school .timeframe {
+    margin-bottom: 1.45rem;
+  }
+  #schools_panel .school .details .title {
+    margin-bottom: 1.45rem;
+  }
+  #schools_panel .school .details .description {
+    margin-bottom: 1.45rem;
+  }
+  #books_panel {
+    padding-left: calc(12px);
+  }
+  #books_panel #books .book {
+    margin-bottom: 1.45rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  #body_panel {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #schools .school .timeframe {
+    display: inline-block;
+    vertical-align: top;
+    width: 140px;
+  }
+  #schools .school .timeframe .institution,
+  #schools .school .timeframe .time {
+    display: block;
+  }
+  #schools .school .timeframe .time {
+    font-size: 0.8rem;
+  }
+  #schools .school .details {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 170px);
+    padding-left: 1rem;
+  }
 }

@@ -1,0 +1,17 @@
+html,
+body {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.45rem;
+  font-family: Helvetica, Verdana, Arial, sans-serif;
+  color: black;
+  text-align: left;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -webkit-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+}
+p {
+  margin-bottom: 1rem;
+}

@@ -1,4 +1,4 @@
-@import 'global';
+@import 'global_variables';
 
 body {
   width: 100%;
@@ -7,217 +7,45 @@ body {
   margin: 0;
 }
 
-@media screen and (min-width: @responsive-threshold) {
-  #top_menu {
-    display: none;
-  }
-
-  #side_menu {
-    display: block;
-  }
-
-  #right_panel {
-    width: ~"calc(100% - @{side-menu-width})";
-    width: ~"-webkit-calc(100% - @{side-menu-width})";
-    width: ~"-moz-calc(100% - @{side-menu-width})";
-
-    margin-left: @side-menu-width;
-    padding: @padding-web;
-  }
-  #right_panel.project{
-    padding: 0px;
-  }
-}
-
-@media screen and (max-width: @responsive-threshold) {
-  #top_menu {
-    display: block;
-  }
-
-  #side_menu {
-    display: none;
-  }
-
-  #right_panel {
-    width : 100%;
-    margin-top : @top-menu-height;
-    margin-left: 0px;
-    padding: @padding-mobile;
-  }
-}
-
-#side_menu {
-  box-sizing: border-box;
-  position: fixed;
-  top: 0px;
-  width: @side-menu-width;
-  height: 100%;
-  background-color: @primary-color;
-  z-index: 1;
-
-  #photo_container {
-    position: relative;
-    width: 100%;
-    @media screen and (min-height: 650px) {
-      height: 300px;
-    }
-    margin: 100px auto 10px;
-
-    #profile_photo {
-      position: relative;
-      width: 200px;
-      display: block;
-      @media screen and (max-height: 650px) {
-        display: none;
-      }
-
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    #summary {
-      width: 200px;
-      margin-left: auto;
-      margin-right: auto;
-      font-family: @summary-font;
-      text-align: center;
-      line-height: 1.5em;
-
-      #name {
-        font-size: 16pt;
-        font-family: @menu-font;
-        color: @name-text-color;
-      }
-
-      #statement {
-        font-style: italic;
-        color: @statement-text-color;
-      }
-    }
-  }
-}
-
-//this is reused in the top menu
-#menu {
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
+#body_panel {
   position: relative;
-  width: 200px;
-  div {
-    height: 50px;
-    text-align: center;
-    color: @menu-item-text-color-selected;
-    font-size: 18pt;
-    font-family: @menu-font;
-    a {
-      text-decoration: none;
-      color: @menu-item-text-color;
-      font-weight: 200;
-    }
-  }
-}
-
-#top_menu {
-  box-sizing: border-box;
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  height: @top-menu-height;
-  min-height: 30px;
-  background-color: rgb(150, 0, 132);
-  z-index: 1;
-  #hamburger_menu {
-    position: absolute;
-    img {
-      height: 24px;
-      padding : 12px;
-    }
-  }
-  #mobile_title {
-    width: 100%;
-    height: 100%;
-
-    text-align: center;
-    display: inline-block;
-    vertical-align: baseline;
-    line-height: @top-menu-height;
-
-    font-family: @menu-font;
-
-    .name{
-      font-size: 12pt;
-      color: white;
-    }
-
-    .title{
-      font-size: 12pt;
-      color: #B9B9B9;
-    }
-  }
-}
-
-#right_panel {
-  position: relative;
-
   box-sizing: border-box;
   top: 0px;
   bottom: 0px;
-
-  font-family: "Open Sans", Arial, sans-serif;
-  color: black;
-  font-size: 12pt;
-  line-height: 19px;
+  width : 100%;
 
   a {
     text-decoration: none;
-    color: @primary-color;
+    color: @accent-color;
   }
 }
 
-.video_overlay {
-  position: absolute;
-  top : 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+@media screen and (max-width: @small) {
 
-  background-position-x: center;
-  background-position-y: center;
-  background-size: 72px 72px;
-  background-repeat-x: no-repeat;
-  background-repeat-y: no-repeat;
-  background-origin: initial;
-  background-clip: initial;
+  #body_panel {
+    padding: @xsmall-margins;
+    padding-top: calc(2 * @top-menu-height);
+  }
 }
 
-.overlay_play{
-  background-image: url("../img/play.svg");
-  background-color: rgba(0, 0, 0, 0.498039);
+@media screen and (min-width: @small) {
+
+  #body_panel {
+    width: 100%;
+    padding: @small-margins;
+    padding-top: calc(2 * @top-menu-height);
+  }
 }
 
-.overlay_pause{
-  background-image: url("../img/pause.svg");
-  background-color: rgba(0, 0, 0, 0.498039);
+@media screen and (min-width: @medium) {
+
+  #body_panel {
+    width: 100%;
+    padding: @margins;
+    padding-top: calc(2 * @top-menu-height);
+  }
 }
 
-.overlay_caption{
-  position: absolute;
-  width: ~"calc(100% - 20px)";
-  bottom: 10px;
-  right: 10px;
-  left: 10px;
-  text-align: center;
-  font-family: "Open Sans", Arial, sans-serif;
-  font-variant: small-caps;
-  font-size: 14pt;
-  line-height: 19px;
-  color: white;
-}
-
-#disqus_thread{
-  margin-top: 76px;
-}
 
 
 

@@ -4,188 +4,34 @@ body {
   box-sizing: border-box;
   margin: 0;
 }
-@media screen and (min-width: 1000px) {
-  #top_menu {
-    display: none;
-  }
-  #side_menu {
-    display: block;
-  }
-  #right_panel {
-    width: calc(100% - 400px);
-    width: -webkit-calc(100% - 400px);
-    width: -moz-calc(100% - 400px);
-    margin-left: 400px;
-    padding: 100px;
-  }
-  #right_panel.project {
-    padding: 0px;
-  }
-}
-@media screen and (max-width: 1000px) {
-  #top_menu {
-    display: block;
-  }
-  #side_menu {
-    display: none;
-  }
-  #right_panel {
-    width: 100%;
-    margin-top: 48px;
-    margin-left: 0px;
-    padding: 20px;
-  }
-}
-#side_menu {
-  box-sizing: border-box;
-  position: fixed;
-  top: 0px;
-  width: 400px;
-  height: 100%;
-  background-color: #960084;
-  z-index: 1;
-}
-#side_menu #photo_container {
-  position: relative;
-  width: 100%;
-  margin: 100px auto 10px;
-}
-@media screen and (min-height: 650px) {
-  #side_menu #photo_container {
-    height: 300px;
-  }
-}
-#side_menu #photo_container #profile_photo {
-  position: relative;
-  width: 200px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media screen and (max-height: 650px) {
-  #side_menu #photo_container #profile_photo {
-    display: none;
-  }
-}
-#side_menu #photo_container #summary {
-  width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: 'Crimson Text', serif;
-  text-align: center;
-  line-height: 1.5em;
-}
-#side_menu #photo_container #summary #name {
-  font-size: 16pt;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  color: white;
-}
-#side_menu #photo_container #summary #statement {
-  font-style: italic;
-  color: #bababa;
-}
-#menu {
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  width: 200px;
-}
-#menu div {
-  height: 50px;
-  text-align: center;
-  color: white;
-  font-size: 18pt;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-}
-#menu div a {
-  text-decoration: none;
-  color: #bababa;
-  font-weight: 200;
-}
-#top_menu {
-  box-sizing: border-box;
-  position: fixed;
-  top: 0px;
-  width: 100%;
-  height: 48px;
-  min-height: 30px;
-  background-color: #960084;
-  z-index: 1;
-}
-#top_menu #hamburger_menu {
-  position: absolute;
-}
-#top_menu #hamburger_menu img {
-  height: 24px;
-  padding: 12px;
-}
-#top_menu #mobile_title {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  display: inline-block;
-  vertical-align: baseline;
-  line-height: 48px;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
-}
-#top_menu #mobile_title .name {
-  font-size: 12pt;
-  color: white;
-}
-#top_menu #mobile_title .title {
-  font-size: 12pt;
-  color: #B9B9B9;
-}
-#right_panel {
+#body_panel {
   position: relative;
   box-sizing: border-box;
   top: 0px;
   bottom: 0px;
-  font-family: "Open Sans", Arial, sans-serif;
-  color: black;
-  font-size: 12pt;
-  line-height: 19px;
+  width: 100%;
 }
-#right_panel a {
+#body_panel a {
   text-decoration: none;
-  color: #960084;
+  color: #a227be;
 }
-.video_overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-position-x: center;
-  background-position-y: center;
-  background-size: 72px 72px;
-  background-repeat-x: no-repeat;
-  background-repeat-y: no-repeat;
-  background-origin: initial;
-  background-clip: initial;
+@media screen and (max-width: 840px) {
+  #body_panel {
+    padding: 16px;
+    padding-top: calc(112px);
+  }
 }
-.overlay_play {
-  background-image: url("../img/play.svg");
-  background-color: rgba(0, 0, 0, 0.498039);
+@media screen and (min-width: 840px) {
+  #body_panel {
+    width: 100%;
+    padding: 24px;
+    padding-top: calc(112px);
+  }
 }
-.overlay_pause {
-  background-image: url("../img/pause.svg");
-  background-color: rgba(0, 0, 0, 0.498039);
-}
-.overlay_caption {
-  position: absolute;
-  width: calc(100% - 20px);
-  bottom: 10px;
-  right: 10px;
-  left: 10px;
-  text-align: center;
-  font-family: "Open Sans", Arial, sans-serif;
-  font-variant: small-caps;
-  font-size: 14pt;
-  line-height: 19px;
-  color: white;
-}
-#disqus_thread {
-  margin-top: 76px;
+@media screen and (min-width: 1280px) {
+  #body_panel {
+    width: 100%;
+    padding: 48px;
+    padding-top: calc(112px);
+  }
 }

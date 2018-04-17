@@ -1,18 +1,21 @@
-@primary-color : rgb(150, 0, 132);
-@side-menu-width : 400px;
-@max-article-text-width : 46em;
-@responsive-threshold : 1000px;
-@name-text-color : white;
-@statement-text-color : #bababa;
+@import 'global_variables';
 
-@menu-item-text-color :  #bababa;
-@menu-item-text-color-selected : white;
+html, body {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.45rem;
 
-@summary-font : 'Crimson Text', serif;
-@menu-font : "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: @body-font;
+  color: @primary-text-color;
+  text-align: left;
 
-@padding-web : 100px;
-@padding-mobile : 20px;
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -webkit-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+}
 
-@top-menu-height : 48px;
-@gallery-gap : 10px;
+p {
+  margin-bottom: 1rem;
+}

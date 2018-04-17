@@ -1,0 +1,212 @@
+#mobile_drawer {
+  position: fixed;
+  top: 56px;
+  width: 100%;
+  height: calc(100% - 56px);
+  background-color: white;
+  opacity: 0.7;
+}
+#mobile_drawer #menu_items_container {
+  display: block;
+  top: 50%;
+  margin-top: -125px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 200px;
+}
+#mobile_drawer #menu_items_container span {
+  display: block;
+  opacity: 1;
+  height: 50px;
+  text-align: center;
+  color: #a227be;
+  font-size: 18pt;
+  font-family: Helvetica, Verdana, Arial, sans-serif;
+}
+#mobile_drawer #menu_items_container span a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 400;
+}
+#menu {
+  display: block;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+}
+#menu .main {
+  height: 56px;
+  width: 100%;
+  display: table;
+  box-sizing: content-box;
+  background-color: white;
+}
+#menu .main #logo_small_container {
+  position: absolute;
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  left: calc(4px);
+  top: calc(4px);
+}
+#menu .main #logo_small_container #logo_small {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 55%;
+  height: 55%;
+}
+#menu .main #menu_items_container {
+  position: relative;
+  padding-left: calc(12px);
+}
+#menu .main #menu_items_container span {
+  height: 56px;
+  text-align: center;
+  color: #a227be;
+  font-size: 18px;
+  font-family: Helvetica, Verdana, Arial, sans-serif;
+  font-weight: 400;
+}
+#menu .main #menu_items_container span a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 400;
+}
+#menu .main.ontop {
+  border-bottom: 1px solid lightgray;
+}
+#menu .overlay {
+  height: 56px;
+  background-image: linear-gradient(to bottom, white, transparent);
+}
+#hamburger_container {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  right: calc(4px);
+  top: calc(4px);
+}
+#hamburger_icon {
+  width: 18px;
+  height: 12px;
+  position: relative;
+  top: 50%;
+  margin: -6px auto auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+#hamburger_icon span {
+  display: block;
+  position: absolute;
+  height: 20%;
+  width: 100%;
+  background: black;
+  border-radius: 0px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+#hamburger_icon span:nth-child(1) {
+  top: 0px;
+}
+#hamburger_icon span:nth-child(2),
+#hamburger_icon span:nth-child(3) {
+  top: 40%;
+}
+#hamburger_icon span:nth-child(4) {
+  top: 80%;
+}
+#hamburger_icon.open span:nth-child(1) {
+  top: 40%;
+  width: 0%;
+  left: 50%;
+}
+#hamburger_icon.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#hamburger_icon.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#hamburger_icon.open span:nth-child(4) {
+  top: 40%;
+  width: 0%;
+  left: 50%;
+}
+@media screen and (max-width: 600px) {
+  #menu #menu_items_container {
+    display: none;
+  }
+  #menu #hamburger_icon {
+    display: block;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 840px) {
+  #mobile_menu {
+    display: none;
+  }
+  #menu {
+    display: block;
+  }
+  #menu .main #menu_items_container {
+    width: 100%;
+    padding-left: 56px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  #menu .main #menu_items_container span {
+    margin-right: 30px;
+  }
+  #menu .main #hamburger_icon {
+    display: none;
+  }
+}
+@media screen and (min-width: 840px) {
+  #mobile_menu {
+    display: none;
+  }
+  #menu {
+    display: block;
+  }
+  #menu .main #menu_items_container {
+    padding-left: calc(50% + 24px / 2);
+    display: table-cell;
+    vertical-align: middle;
+  }
+  #menu .main #menu_items_container span {
+    margin-right: 16px;
+  }
+  #menu .main #hamburger_icon {
+    display: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #menu .main #menu_items_container span {
+    margin-right: 25px;
+  }
+}

@@ -3,8 +3,11 @@
 	<head>
 		<link rel="stylesheet" href="style/resets.css"/>
 		<link rel="stylesheet" href="style/customgrid.css"/>
+		<link rel="stylesheet" href="style/global.css"/>
 		<link rel="stylesheet" href="style/layout.css"/>
 		<link rel="stylesheet" href="style/index.css"/>
+		<link rel="stylesheet" href="style/menu.css"/>
+
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'/>
 		<link href='https://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
 
@@ -27,6 +30,25 @@
 			})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 		</script>
 
+		<!-- FullStory Tracking Code for http://berdilaovidiu.github.io/portfolio/ -->
+		<script>
+            window['_fs_debug'] = false;
+            window['_fs_host'] = 'fullstory.com';
+            window['_fs_org'] = 'BNK0F';
+            window['_fs_namespace'] = 'FS';
+            (function(m,n,e,t,l,o,g,y){
+                if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+                g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+                o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+                y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+                g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+                y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+                y="consent";g[y]=function(a){g(y,!arguments.length||a)};
+                g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+                g.clearUserCookie=function(){};
+            })(window,document,window['_fs_namespace'],'script','user');
+		</script>
+
 		<title>Ovidiu Berdila UX Designer</title>
 	</head>
 	<body>
@@ -44,48 +66,73 @@
 
     <script>
         $(document).ready(function () {
-            $("#top_menu").load("top_menu.html", initTopMenuActions);
-
-            $("#side_menu").load("side_menu.html", function () {
+			$("#menu").load("menu.html", function () {
                         var menuItemId = "#menu_about";
                         var itemLinkId = menuItemId + " a";
                         var menuItemText = $(itemLinkId).text();
                         $(itemLinkId).remove();
                         $(menuItemId).text(menuItemText);
+
+						$("#logo_small_container").css("visibility", "hidden");
+
+						initTopMenuActions("home_panel");
                     }
             );
         });
     </script>
 
-		<div id="top_menu"></div>
-		<div id="side_menu"></div>
+	<div id="menu"></div>
 
-        <div id="right_panel">
-			<div id="about">
-				<div>User Experience designer, with a strong technical background in software systems and a passion
-					for making technology friendlier.
-				</div>
-				<div>I currently live in <a href="http://en.wikipedia.org/wiki/Cluj-Napoca" target="-blank">Cluj
-					Napoca</a> Romania and I am enjoying every bit of fun this beautiful city has to offer; except the
-					weather, especially during the winters when it gets very cold, so cold that
-					the local flasher was once caught describing himself to women. True story.
-				</div>
+	<div id="home_panel">
+		<div id="logo_container">
+			<div id="title_location">
+				<span id="title">product designer</span><br>
+				<span id="location">Cluj-Napoca, Romania</span>
+			</div>
+			<img id="logo_large" src="img/logo.svg"/>
+			<img id="logo_mobile" src="img/logo_mobile.svg"/>
+			<div id="manifesto">I strive to design simple and elegant solutions to complex problems</div>
+		</div>
+		<div id="right_container">
 
-				<div>Personally, I envision a future where everybody uses technology to make their lives less
-					complicated and focus on the things that truly matter. I will proudly look back twenty years from now, thinking I
-					had a part in all this.
+			<div id="typogrid">
+				<div id="rows">
+					<span class="row"></span>
+					<span class="row"></span>
+					<span class="row"></span>
+					<span class="row"></span>
+					<span class="row"></span>
+					<span class="row"></span>
 				</div>
-
-				<div>I picked up the interest in design in 2011, while attending a cognitive engineering seminar. I was then writing
-					software for a trading company and they brought in a <a href="http://www.didi.com/" target="_blank">design expert</a>
-					from US to teach a class about user-centered design. Since then, I have been working on complex and
-					interesting user interfaces for the financial, bio informatics, IoT and real estate industries.
-				</div>
-
-				<div>When I am not working, I like to travel, read, dance and watch sports. I particularly like snooker,
-					combat sports and most recently, Formula 1 racing.
+				<div id="columns">
+					<span class="column"></span>
+					<span class="column"></span>
+					<span class="column"></span>
+					<span class="column"></span>
+					<span class="column"></span>
+					<span class="column"></span>
 				</div>
 			</div>
+			<div id="short_description">
+
+				<p>I am a designer with a strong technical background in software systems and a passion
+					for making technology friendly.
+				</p>
+
+				<p>I picked up the interest in design in 2011, while attending a cognitive engineering seminar hosted by the company I was writing software for at that time.
+					Since then, I have slowly transitioned into a design role, while working on complex and interesting user interfaces in the financial, bio informatics, IoT
+					and real estate industries.
+				</p>
+
+				<p>Personally, I envision a future where technology enriches people's lives, by simplifying
+					interactions, strengthening social bonds and communities and guiding people to focus on things that truly matter.
+					As an old man, I hope to proudly look back thinking I had a part in all this.
+				</p>
+
+			</div>
+
 		</div>
+		<span id="visual_anchor"/>
+	</div>
 	</body>
 </html>

@@ -2,8 +2,10 @@
 <html lang="en">
 	<head>
 		<link rel="stylesheet" href="style/resets.css"/>
+		<link rel="stylesheet" href="style/global.css"/>
 		<link rel="stylesheet" href="style/layout.css"/>
 		<link rel="stylesheet" href="style/project_typography.css"/>
+		<link rel="stylesheet" href="style/menu.css"/>
 
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'/>
 		<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'/>
@@ -38,6 +40,25 @@
 			})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
 		</script>
 
+		<!-- FullStory Tracking Code for http://berdilaovidiu.github.io/portfolio/ -->
+		<script>
+            window['_fs_debug'] = false;
+            window['_fs_host'] = 'fullstory.com';
+            window['_fs_org'] = 'BNK0F';
+            window['_fs_namespace'] = 'FS';
+            (function(m,n,e,t,l,o,g,y){
+                if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+                g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+                o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+                y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+                g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+                y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+                y="consent";g[y]=function(a){g(y,!arguments.length||a)};
+                g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+                g.clearUserCookie=function(){};
+            })(window,document,window['_fs_namespace'],'script','user');
+		</script>
+
     </head>
 
 	<body>
@@ -59,19 +80,30 @@
                 $("[data-fancybox]").fancybox(fancyboxOptions);
 
                 //init navigation framework
-                $("#top_menu").load("top_menu.html", initTopMenuActions);
-                $("#side_menu").load("side_menu.html");
+                $("#menu").load("menu.html", function(){
+                    initTopMenuActions("body_panel");
+                });
             });
 		</script>
 
-        <div id="top_menu"></div>
-		<div id="side_menu"></div>
-		<div id="right_panel" class="project">
+		<div id="menu"></div>
+		<div id="body_panel" class="project">
 
 			<div class="content">
-				<h1>FLEXI MEETUP</h1>
 
-				<h2>THE STORY</h2>
+				<div class="date">September - November 2016</div>
+				<div class="title">Flexi Meetup</div>
+				<div class="tagline">An easier way to meet with friends and teams</div>
+
+				<div class="tags">
+					<span class="tag">RESEARCH</span>
+					<span class="tag">WIREFRAMING</span>
+					<span class="tag">USER TESTING</span>
+					<span class="tag">VISUAL DESIGN</span>
+					<span class="tag">BALSAMIQ</span>
+					<span class="tag">INVISION</span>
+					<span class="tag">PHOTOSHOP</span>
+				</div>
 
 				<p>18 months ago I enrolled in an online specialization offered by Coursera.org with the goal of sharpening
 					my design skills and obtaining a verifiable degree that would make it easier for me to get a full time
@@ -82,7 +114,7 @@
 					plan their time. Long story short, the most interesting problem was the friction around scheduling a meeting,
 					online or via phone, and I set a goal to solve this through clever design.</p>
 
-				<h2>STORYBOARDS</h2>
+				<div class="subtitle">Storyboards</div>
 
 				<p>The next step in the process was to summarize the research findings and translate the problem and the
 					solution in a more visual way, focusing only on the user need and the context around that need.
@@ -96,7 +128,7 @@
 					</a>
 				</div>
 
-				<h2>PAPER MOCKUPS AND EARLY USER TESTING</h2>
+				<div class="subtitle">Paper prototypes and early user testing</div>
 
 				<p>One of the things emphasized during the class was the importance of a low fidelity prototype and it’s high
 					value when it comes to obtaining quick feedback.</p>
@@ -116,7 +148,7 @@
 					For that, Coursera scheduled a virtual meetup with two of my peers and we got the chance to offer and
 					receive feedback on our work, using Nielsen’s heuristics as a metric for good design.</p>
 
-				<h2>THE INTERACTIVE PROTOTYPE</h2>
+				<div class="subtitle">The interactive prototype</div>
 
 				<p>After receiving enough feedback, it was time to move on to digital mockups that allow a bit more detail
 					and are closer to the final solution, both in how they look and feel.
@@ -136,7 +168,7 @@
 
 
 
-				<h2>ONLINE USABILITY TESTS</h2>
+				<div class="subtitle">Online usability tests</div>
 
 				<p>One of the most interesting parts of the project was to do A/B testing on usertesting.com.
 					I had to design a study that would help me assess the impact of a change in one of the screens and do
@@ -146,7 +178,7 @@
 				<p>The test results were awesome, there were no major usability issues and I got some suggestions on how
 					to improve the look and feel of the application.</p>
 
-				<h2>HIGH FIDELITY MOCKUPS</h2>
+				<div class="subtitle">High fidelity mockups</div>
 
 				<p>With most of the usability issues identified and solved, it was time to focus on details.
 					I defined the name of the application, a logo and the overall visual style. Since I was already
@@ -188,7 +220,7 @@
 					</a>
 				</div>
 
-				<h2>CONCLUSIONS</h2>
+				<div class="subtitle">Conclusions</div>
 
 				<p>The entire project was an interesting challenge and more than anything forced me to do a lot of user
 					testing before getting to any conclusion.

@@ -1,7 +1,0 @@
-This is the project that allowed me to get my online certificate for the Human Computer Interaction course from the Stanford University.
-
-The theme of the application is CHANGE. The goal was to build an application that can help people make some changes in their lifes.
-
-The application is focused in making a change to a healthier lifestyle by improving the way they eat, excercise and relax.
-
-In order to do those changes the appilcation aims to educate the users and to engage them in social activities with other users concerned by health.

@@ -1,116 +1,82 @@
-@import 'global';
+@import 'global_variables';
 
 h1 {
-  font-size: 18pt;
-  line-height: 57px;
-  font-variant: small-caps;
-  letter-spacing: .12em;
+  font-size: 1.33rem;
+  letter-spacing: 0.02rem;
   font-weight: 600;
-  color: @primary-color;
-}
 
-p {
-  color: rgb(70, 70, 70);
-  font-size: 1em;
-  font-weight: 400;
-  text-align: left;
-
-  margin-bottom: 19px;
-}
-
-#introduction {
-  max-width: 1200px;
-  margin-bottom: 19px;
-}
-
-#schools_panel, #books_panel {
-  display: inline-block;
-  vertical-align: top;
-  max-width: 600px;
+  margin-top: 2.66rem;
+  margin-bottom: 2.66rem;
 }
 
 #schools {
-  border-left: 1px solid grey;
+  border-left: 1px solid @secondary-text-color;
 
   .school {
-    margin-top: 19px;
-    margin-bottom: 19px;
+    margin-bottom: 1rem;
 
     position: relative;
-    padding-left: 10px;
+    padding-left: 1rem;
 
     .circle {
       display: inline-block;
       position: absolute;
-      left: ~"calc(-0.5em - 1px)";
+      top: ~"calc(0.225rem)";
+      left: ~"calc(-0.5rem)";
       background: white;
-      width: 1em;
-      height: 1em;
+      width: 1rem;
+      height: 1rem;
       border-radius: 50%;
-      border: 1px solid grey;
+      border: 1px solid @secondary-text-color;
+      box-sizing: border-box;
     }
 
-    .title {
-
+    .details, .timeframe {
+      display: inline-block;
+      vertical-align: top;
     }
 
     .timeframe {
-      margin-left: 3px;
-      width: 140px;
-      margin-bottom: 19px;
+      margin-bottom: 1rem;
 
-      @media screen and (max-width: @responsive-threshold) {
-        width: 250px;
-        .institution, .time {
-          display: inline-block;
-        }
+      .institution, .time {
+        display: inline-block;
       }
 
       .institution {
-
+        margin-right: 0.5rem;
       }
 
       .time {
-        font-size: 10pt;
         color: grey;
         -webkit-font-variant-numeric: onum;
         -moz-font-variant-numeric: onum;
         -moz-font-feature-settings: "onum=1";
       }
     }
-  }
-}
 
-#books_panel {
-  @media screen and (min-width: 1700px) {
-    margin-left: 100px;
-    //max-width: 500px;
-  }
-
-  #books {
-    margin-top: 19px;
-
-    .book {
-      margin-bottom: 19px;
+    .details {
+      .description {
+        margin-bottom: 1rem;
+      }
     }
   }
 }
 
-.details, .timeframe {
-  display: inline-block;
-  vertical-align: top;
+#books_panel {
+
+  #books {
+
+    .book {
+      margin-bottom: 1rem;
+    }
+  }
 }
 
 .title {
   font-weight: 400;
-  color: @primary-color;
-}
-
-.details {
-  max-width: 441px;
-  .description {
-    margin-top: 19px;
-  }
+  color: @accent-color;
+  margin-bottom: 1rem;
 }
 
 .annotation::before{
@@ -118,9 +84,108 @@ p {
 }
 
 .degree, .author {
-  color: grey;
+  color: @secondary-text-color;
   font-style: normal;
   font-variant: small-caps;
-  font-size : 14pt;
+  font-size : 1rem;
+  letter-spacing: 0.08rem;
   text-transform: lowercase;
+}
+
+@media screen and (min-width: @xsmall) {
+  //one on top of another
+  #schools_panel, #books_panel {
+    display: block;
+    width: 100%;
+  }
+
+  #schools_panel{
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: @medium) {
+  //side by side
+
+  #body_panel {
+    white-space: nowrap;
+  }
+
+  #schools_panel, #books_panel{
+    display: inline-block;
+    width: 50%;
+    white-space: normal;
+    box-sizing: border-box;
+    vertical-align: top;
+  }
+
+  #schools_panel {
+    padding-right: @gap;
+
+    .school {
+      margin-bottom: 1.45rem;
+
+      .timeframe {
+        margin-bottom: 1.45rem;
+      }
+
+      .details {
+
+        .title {
+          margin-bottom: 1.45rem;
+        }
+
+        .description {
+          margin-bottom: 1.45rem;
+        }
+      }
+    }
+  }
+
+  #books_panel {
+    padding-left: calc(@gap / 2);
+
+    #books {
+
+      .book {
+        margin-bottom: 1.45rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: @large) {
+
+  #body_panel{
+    max-width: @large;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #schools {
+    .school {
+
+      .timeframe {
+        display: inline-block;
+        vertical-align: top;
+        width: 140px;
+
+        .institution, .time {
+          display: block;
+        }
+
+        .time{
+          font-size: 0.8rem;
+        }
+      }
+
+      .details {
+        display: inline-block;
+        vertical-align: top;
+        width: ~"calc(100% - 170px)";
+        padding-left: 1rem;
+      }
+    }
+  }
+
 }
