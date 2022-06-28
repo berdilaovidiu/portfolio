@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style/resets.css"/>
+    <link rel="stylesheet" href="style/global.css"/>
+    <link rel="stylesheet" href="style/layout.css"/>
+    <link rel="stylesheet" href="style/project_typography.css"/>
+    <link rel="stylesheet" href="style/menu.css"/>
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet'
+          type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic'
+          rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'/>
+
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8"/>
+
+    <title>OctoPlay</title>
+
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+
+    <link rel="stylesheet" href="style/fancybox_styling.css"/>
+
+    <script type="text/javascript" src="js/global.js"></script>
+    <script type="text/javascript" src="js/menu_utils.js"></script>
+
+    <!-- Hotjar Tracking Code for http://berdilaovidiu.github.io/portfolio/ -->
+    <script>
+			(function(h,o,t,j,a,r){
+				h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+				h._hjSettings={hjid:314578,hjsv:5};
+				a=o.getElementsByTagName('head')[0];
+				r=o.createElement('script');r.async=1;
+				r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+				a.appendChild(r);
+			})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+
+
+
+    </script>
+
+    <!-- FullStory Tracking Code for http://berdilaovidiu.github.io/portfolio/ -->
+    <script>
+            window['_fs_debug'] = false;
+            window['_fs_host'] = 'fullstory.com';
+            window['_fs_org'] = 'BNK0F';
+            window['_fs_namespace'] = 'FS';
+            (function(m,n,e,t,l,o,g,y){
+                if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+                g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+                o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+                y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+                g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+                y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+                y="consent";g[y]=function(a){g(y,!arguments.length||a)};
+                g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+                g.clearUserCookie=function(){};
+            })(window,document,window['_fs_namespace'],'script','user');
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+<script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-65113069-1', 'auto');
+            ga('send', 'pageview');
+
+
+
+</script>
+
+<script type="text/javascript">
+            $(document).ready(function() {
+                //apply fancybox options
+                $("[data-fancybox]").fancybox(fancyboxOptions);
+
+                //init navigation framework
+                $("#menu").load("menu.html", function(){
+                    initTopMenuActions("body_panel");
+                });
+            });
+
+
+
+</script>
+
+<div id="menu"></div>
+<div id="body_panel" class="project">
+
+    <div class="content">
+        <div class="date">December 2020 - November 2021</div>
+        <div class="title">OctoPlay</div>
+        <div class="tagline">Mobile games for speech impaired children</div>
+
+        <div class="tags">
+            <span class="tag">USER RESEARCH</span>
+            <span class="tag">WIREFRAMES</span>
+            <span class="tag">USER TESTING</span>
+            <span class="tag">PRODUCT MANAGEMENT</span>
+            <span class="tag">FIGMA</span>
+            <span class="tag">VR</span>
+            <span class="tag">AR</span>
+            <span class="tag">MOBILE</span>
+            <span class="tag">MVP</span>
+            <span class="tag">QUANTITATIVE ANALYSIS</span>
+            <span class="tag">PRICING</span>
+            <span class="tag">BRANDING</span>
+            <span class="tag">COPYWRITING</span>
+            <span class="tag">UX WRITING</span>
+        </div>
+
+        <div class="gallery">
+            <a data-fancybox="hero" class="needsBorder"
+               data-caption="Language game - List of sounds"
+               href="img/octoplay/sunete_izolate_4 sunete a.png">
+                <img class="gallery3 left_image with_border" src="img/octoplay/sunete_izolate_4 sunete a.png"/>
+            </a>
+
+            <a data-fancybox="hero" class="needsBorder"
+               data-caption="Language game - syllable formation"
+               href="img/octoplay/II - 8 - spin button default.png">
+                <img class="gallery3 center_image with_border" src="img/octoplay/II - 8 - spin button default.png"/>
+            </a>
+
+            <a data-fancybox="hero" class="needsBorder"
+               data-caption="Language game - menu"
+               href="img/octoplay/default map - active islands.png">
+                <img class="gallery3 right_image with_border" src="img/octoplay/default map - active islands.png"/>
+            </a>
+        </div>
+
+        <p>OctoPlay is a game platform dedicated to children with speech impairments, parents and therapists. It is
+            co-developed with domain experts in SLP and ASD and leverages AR and VR to keep children engaged and
+            focused.</p>
+
+        <p>There are two games, one that focused maily on short term memory and another one that focuses on pronouncing
+            sounds.</p>
+
+        <div class="subtitle">My Role</div>
+
+        <p>I started as a consultant when the two games were already in the high fidelity prototyping pahse. I slowly became more
+            involved and ended up leading the design efforts for the better part of a year, working with two other
+            designers.</p>
+
+        <p>I was mainly involved in the design of the language game which we had to redo completely after involving
+            Romania’s top SLP practitioner.
+            Later on I took on more product management responsibilities while overseeing design.
+        </p>
+
+
+        <div id="disqus_thread"></div>
+        <script>
+                    /**
+                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+					/*
+					 var disqus_config = function () {
+					 this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+					 this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+					 };
+					 */
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = '//ovidiu-berdila-ux.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+        </script>
+
+    </div>
+</div>
+</body>
+</html>
