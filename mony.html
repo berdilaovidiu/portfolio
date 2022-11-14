@@ -30,6 +30,7 @@
 
     <script type="text/javascript" src="js/global.js"></script>
     <script type="text/javascript" src="js/menu_utils.js"></script>
+    <script type="text/javascript" src="js/video.js"></script>
 
     <!-- Hotjar Tracking Code for http://berdilaovidiu.github.io/portfolio/ -->
     <script>
@@ -41,6 +42,20 @@
 				r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
 				a.appendChild(r);
 			})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
 
     <!-- FullStory Tracking Code for http://berdilaovidiu.github.io/portfolio/ -->
@@ -67,7 +82,21 @@
                 if(m[y])m[y]=function(){return g._w[y].apply(this,arguments)};
                 g._v="1.3.0";
             })(window,document,window['_fs_namespace'],'script','user');
-    	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
 
 </head>
 
@@ -81,6 +110,20 @@
 
             ga('create', 'UA-65113069-1', 'auto');
             ga('send', 'pageview');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 
 <script type="text/javascript">
@@ -93,6 +136,20 @@
                     initTopMenuActions("body_panel");
                 });
             });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 
 <div id="menu"></div>
@@ -154,17 +211,14 @@
             in front of angel investors and large audiences.</p>
 
 
-        <div class="gallery">
-            <a data-fancybox="wip"
-               data-caption="Case studies for this project are being worked on"
-               href="img/wip2.png">
-                <img class="gallery1" src="img/wip2.png"/>
-            </a>
-        </div>
+        <div class="subtitle">The Minimum Viable Product</div>
 
-        <div class="subtitle">Low Fidelity Mockups</div>
-
-        <div class="subtitle2">Basic Flow</div>
+        <p>
+            We launched a very basic app which was able to automatically gather expenses and classify them using a hard
+            coded mapping for some known merchants. It allowed users to filter by a specific interval, inspect each
+            expense category and move expenses between categories, while learning the user generated mappings for a
+            better future experience.
+        </p>
 
         <div class="gallery">
             <a data-fancybox="showcase"
@@ -197,7 +251,37 @@
 
         </div>
 
-        <div class="subtitle2">New Transactions</div>
+        <div class="subtitle">Improving Retention</div>
+        <p>
+            Two months after releasing the MVP we started to look at the numbers and we weren’t satisfied with the
+            retention rate. It was a good moment to do both qualitative and quantitative research. By that time we had
+            acquired a few hundred users that we could reach out to and had an analytics implementation that allowed us
+            to study every user session, besides looking at higher level flows and funnels.
+        </p>
+
+        <p>
+            After a series of interviews, surveys and lots of digging through session recordings, we came up a list of
+            improvements:
+        </p>
+        <ul class="article_list">
+            <li>Some people simply forgot about our app so we had to remind them through push notifications.
+            </li>
+            <li>
+                Users who made an effort to classify some of their unclassified expenses in the first session had better
+                retention rates. This made us think about ways to simplify the flow make it more obvious and rewarding.
+            </li>
+            <li>
+                Others complained about the app being too boring and not showing anything new on subsequent visits. We
+                added animations to highlight what’s new in each spending category and prompted users to review the list
+                of new transactions.
+            </li>
+            <li>
+                Gamification techniques for encouraging wanted behaviour like: classifying a transaction, emptying the
+                list of unclassified transactions, visiting the app each week.
+            </li>
+        </ul>
+
+        <br>
 
         <div class="gallery">
             <a data-fancybox="showcase"
@@ -215,7 +299,119 @@
 
         </div>
 
-        <div class="subtitle2">Manual Entries</div>
+        <p>
+            I had initially resisted push notifications because the competing apps were abusing them, quickly becoming
+            annoying and constantly nagging and shaming users for forgetting to add their daily expenses. I was wrong,
+            push notifications are essential for obtaining good retention, even for the best apps out there.
+        </p>
+        <p>
+            To avoid making the same mistakes, we implemented smarter notifications. They took into account user
+            activity, had good timing, useful content and spoke in an encouraging voice, never condemning users for
+            their behaviour.
+        </p>
+
+        <div class="gallery">
+            <div class="gallery2 left_image with_border">
+                <video id="interaction1" preload="none" width="100%" poster="img/mony/video/mony-animation-1.png">
+                    <source src="img/mony/video/mony%20-%20new%20transactions%201%20short.mp4" type="video/mp4">
+                </video>
+
+                <script type="text/javascript">
+							addVideoControls($("#interaction1"), "sequential deltas");
+
+
+
+
+
+
+
+
+
+                </script>
+            </div>
+
+            <div class="gallery2 right_image with_border">
+                <video id="interaction2" preload="none" width="100%" poster="img/mony/video/mony-animation-2.png">
+                    <source src="img/mony/video/mony - new transactions 2.mp4" type="video/mp4">
+                </video>
+
+                <script type="text/javascript">
+							addVideoControls($("#interaction2"), "sequential bars");
+
+
+
+
+
+
+
+
+
+                </script>
+            </div>
+        </div>
+
+
+        <div class="subtitle">Premium feature</div>
+        <p>
+            The project was treated from the beginning as a learning experience for everyone involved. Even though the
+            product was not ready for monetization yet, we had to go through this step in order to learn how sell
+            something. This was a first for the entire team so we had to learn how to choose prices, how to publish
+            products in the app store, how to market ourselves and how to sell.
+        </p>
+        <p>
+            The simplest thing to do was to come up with a premium feature. Whereas the free version allowed viewing
+            totals by category for a chosen period, the premium feature showed historical data, by category, as a stream
+            of expenses. This made it possible to track progress and added value to the more committed users.
+        </p>
+
+        <div class="gallery">
+            <a data-fancybox="premium" class="needsBorder"
+               data-caption="Original prototype. Real data, charted in a Google Sheet."
+               href="img/mony/trends-original.png">
+                <img class="gallery3 left_image with_border" src="img/mony/trends-original.png"/>
+            </a>
+            <a data-fancybox="premium" class="needsBorder"
+               data-caption="Launched version, obtained after multiple iterations. Solves a lot of issues present in the original version."
+               href="img/mony/trends-final.png">
+                <img class="gallery3 center_image with_border" src="img/mony/trends-final.png"/>
+            </a>
+
+            <a data-fancybox="premium" class="needsBorder"
+               data-caption="Trends purchase page, presents the feature in an attractive way."
+               href="img/mony/trends-marketing.png">
+                <img class="gallery3 right_image with_border" src="img/mony/trends-marketing.png"/>
+            </a>
+        </div>
+
+        <div class="subtitle">Manual Entries</div>
+        <p>The vision was to create a product that needs as little manual intervention as possible, in contrast to the
+            competing apps who relied heavily on manual input of expenses. What’s ironic is that people still needed the
+            feature. By talking to users we found that in order to fully commit to tracking expenses as a habit, the
+            numbers needed to be accurate, otherwise people would simply lose motivation.
+        </p>
+        <p>
+            Cash withdrawals, e-wallet top-ups and transfers were impossible to classify automatically and most of the
+            time the money was spent in more than one place. Because the information was mostly in the user’s memory,
+            having a way to manually input a part of the expenses became a necessity.
+        </p>
+        <p>
+            Because we had knowledge of the amounts withdrawn and transferred, the dates and sometimes the locations, we
+            were able to build a smarter version. That combined with app usage information, allowed us to also send
+            smarter notifications.
+        </p>
+
+        <ul class="article_list">
+            <li>smart triggers
+            </li>
+            <li>
+                fast input
+            </li>
+            <li>
+                helpful information
+            </li>
+        </ul>
+
+        <br>
 
         <div class="gallery">
             <a data-fancybox="showcase"
@@ -255,27 +451,33 @@
 
         </div>
 
-        <div class="subtitle2">End of Month Stats</div>
+        <div class="subtitle">Second premium feature</div>
+        <p>
+            Trends offered a good overview for historical data but it lacked the ability to answer more specific and
+            insightful questions like:
+        </p>
+
+        <ul class="article_list">
+            <li>how much have I spent this december compared to last december?
+            </li>
+            <li>do people with similar age, income, living in the same city spend more or less than I do?
+            </li>
+            <li>how much would the same lifestyle cost me in another country or city?
+            </li>
+            <li>how much more am I spending on bills in the winter months as opposed to summer months?
+            </li>
+            <li>how have our expenses changed since the arrival of the newborn?
+            </li>
+        </ul>
+
+        <p> We were quite excited about this feature, but unfortunately it never saw the light of day because the
+            project was gutted.
+        </p>
 
         <div class="gallery">
             <a data-fancybox="showcase"
                href="img/mony/end of month 1.png">
                 <img class="gallery3 left_image" src="img/mony/end of month 1.png"/>
-            </a>
-            <a data-fancybox="showcase"
-               href="img/mony/end of month 2.png">
-                <img class="gallery3 center_image" src="img/mony/end of month 2.png"/>
-            </a>
-            <a data-fancybox="showcase"
-               href="img/mony/end of month 3.png">
-                <img class="gallery3 right_image" src="img/mony/end of month 3.png"/>
-            </a>
-
-            <p class="gallery_separator"></p>
-
-            <a data-fancybox="showcase"
-               href="img/mony/end of month 4.png">
-                <img class="gallery3 left_image" src="img/mony/end of month 4.png"/>
             </a>
             <a data-fancybox="showcase"
                href="img/mony/end of month 5.png">
@@ -367,6 +569,30 @@
 
         </div>
 
+        <div class="subtitle">Learnings</div>
+        <p>
+            Mony was such a rich learning experience and this makes it very difficult to reduce the lessons learned to a
+            few sentences. I’ll try.
+        </p>
+        <p>Wearing the Product Manager hat for the first time made me a better designer. Every design decision was
+            rooted in user needs, business needs and very tight engineering and budget constraints.
+        </p>
+        <p>
+            The most valuable part of the design process starts once you can measure the results. The analytics tool
+            allowed us to study user flows, build conversion funnels and compute retention rates. By looking at data, we
+            were able to formulate hypothesis, come up with improvements and track the results.
+        </p>
+        <p>
+            The Pirate metrics (Aquisition, Activation, Retention, Referrals , Revenue) is a very useful framework for
+            prioritising product decisions. It is so simple to understand and brings a lot of light into the design
+            process as well.
+        </p>
+
+        <p>
+            As I said, the list is long. I guess the simplest way to put it is that after this experience I felt like UX
+            design no longer describes what I do. It slowly transformed me into a Product Designer.
+        </p>
+
 
         <div id="disqus_thread"></div>
         <script>
@@ -385,6 +611,17 @@
                         s.setAttribute('data-timestamp', +new Date());
                         (d.head || d.body).appendChild(s);
                     })();
+
+
+
+
+
+
+
+
+
+
+
 
 
 
