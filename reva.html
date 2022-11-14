@@ -43,6 +43,17 @@
 				r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
 				a.appendChild(r);
 			})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+
+
+
+
+
+
+
+
+
+
+
     </script>
 
     <!-- FullStory Tracking Code for http://berdilaovidiu.github.io/portfolio/ -->
@@ -69,6 +80,17 @@
                 if(m[y])m[y]=function(){return g._w[y].apply(this,arguments)};
                 g._v="1.3.0";
             })(window,document,window['_fs_namespace'],'script','user');
+
+
+
+
+
+
+
+
+
+
+
     </script>
 
 </head>
@@ -89,6 +111,17 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 </script>
 
 <script type="text/javascript">
@@ -101,6 +134,17 @@
                     initTopMenuActions("body_panel");
                 });
             });
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -144,11 +188,11 @@
             issues and gather actionable analytics.</p>
 
         <div id="team_setup" class="subtitle2">Team setup</div>
-        <p>I was part of a very experienced product team of six. We coordinated with engineering teams on three
-            continents. Most of the product team was on the US west coast and engineering was spread across Romania,
+        <p>I was part of a very experienced Product team of six. We coordinated with engineering teams on three
+            continents. Most of the Product team was on the US west coast while Engineering was spread across Romania,
             Costa Rica and Peru.
-            I collaborated remotely with the product team while acting as a liaison between Product and the Romanian
-            engineering teams.
+            I collaborated remotely with the Product team while acting as a liaison between Product and the Romanian
+            Engineering teams.
         </p>
 
         <div id="my_role" class="subtitle2">My role</div>
@@ -156,8 +200,8 @@
             and design critique as we were laying the foundations of the design system and covering the main flows. The
             role quickly evolved as I began to write engineering stories, plan engineering
             sprints and validate implementations.
-            As I became more familiar with the business and user needs, product vision and technological
-            constraints, I took on more complex assignments that culminated with me managing Contract Renewals, a
+            As I became more familiar with the business, user needs, product vision and technological
+            constraints, I took on more complex assignments that culminated with me managing Contract Renewals. It was a
             large and complex feature that took over a year to design, develop and release.
         </p>
 
@@ -165,13 +209,129 @@
             helped me gain a better understanding of whom I was designing for and what the priorities were.
         </p>
 
-        <div class="gallery">
-            <a data-fancybox="wip"
-               data-caption="Case studies for this project are being worked on"
-               href="img/wip2.png">
-                <img class="gallery1" src="img/wip2.png"/>
-            </a>
-        </div>
+        <div id="highlights" class="subtitle">Highlights</div>
+        <p>Most of what was designed was the result of teamwork and I cannot take full credit for it. There are however
+            pieces that I owned, where my involvement was higher and where I took the lead on research, wireframing,
+            validation with multiple stakeholders and coordinating with visual design and engineering.
+        </p>
+        <p>
+            I could probably write a separate article for each piece since there was a lot of design work in the three
+            and a half years I contributed to the project but I am not going to do that. I will instead summarize the
+            five most interesting areas that I owned.
+        </p>
+
+        <div id="inventory" class="subtitle2">Inventory</div>
+        <p>There were a lot of items that a property could lease to its residents. There were appartments, parking
+            spaces, storage units, boat slips, washers and dryers or common areas. like a clubhouse. Most of them came
+            with pictures, descriptions, amenities, leasing history, availability and price. There were also
+            relationships between them since a primary inventory like an apartment was usually rented together with
+            secondary items like a parking space. Some of the items had names, like unit B-12, while others were just
+            pools with an availability count like washers and dryers. Some of them were meant for long term leasing
+            while others could be rented for a couple of hours, like a clubhouse for a birthday party.
+        </p>
+        <p>
+            All this had to be captured in the design of the Inventory Details Page and this was one of the first
+            assignments I got on the project. It was meant for leasing agents, resident services and managers.
+        </p>
+
+        <div id="inventory" class="subtitle2">Leasing Party Summary</div>
+        <p>There were a lot of prospects in the leasing pipeline, at different stages of the process. Some of them were
+            just making a first contact via phone call or by walking in the leasing office. Others were coming in to
+            tour the property. Others were applying for a background check or signing a contract. In some scenarios,
+            understanding the situation of a party, at a glance, ultimately improved not only the work of the leasing
+            agent, but also the business outcome.
+        </p>
+        <p>Imagine an incoming phone call from a prospect. Even though there was a primary leasing agent assigned,
+            communication via phone was routed based on party stage and agent availability. This meant that sometimes
+            the call was routed to somebody new who had to pick up the conversation. Understanding the context around
+            that prospect at a glance made the conversation more effective and more enjoyable at the same time.
+        </p>
+        <p>I experimented with multiple concepts, some of which I present here. The party page had multiple sections and
+            was quite long so one idea was to summarize each section, as a small card, at the top of the page.
+        </p>
+        <p>Besides the information captured in the page, a lot of interesting information was buried in communication
+            records: emails, text messages, phone calls and notes. Another idea was to introduce a text highlighting
+            feature and display those highlights as part of the summary.
+        </p>
+        <p>The version that ultimately got implemented was simpler and presented only information relevant for the stage
+            of the conversation.
+        </p>
+
+        <div id="inventory" class="subtitle2">Merging persons and parties</div>
+        <p>The communication module automatically created person and party records for unknown contacts. So every time a
+            new number called the leasing office, a new person was added to the system and a new leasing party was
+            created for that person. This worked well most of the time. It was an appreciated feature but there were
+            situations when it backfired.
+        </p>
+        <p>The wife calls to ask about availability and the system captures her contact info. During the conversation
+            the agent learns about the husband and adds a second person record, with only his name to the party. Two
+            days later, the husband calls to schedule a tour of the property. The system sees it as a new contact and
+            creates a new person record and a new leasing party. There are now two person records for the husband and
+            two leading parties for the same group of people. In order to keep the data clean and the system performing
+            optimally, duplicated entities had to be merged. Easier said than done.
+        </p>
+        <p>The backend piece was definitely the hardest part of the job. Persons and parties had a bunch of other data
+            associated with them: property, leasing team, tasks, preferences, communication, appointments, applications,
+            payments, contracts, history. Coming up with rules to cover every possible combination was a huge effort
+            that had Product and Engineering working closely for some time.
+        </p>
+        <p>The UI piece was challenging as well. The system had to suggest possible duplicates during data entry, while
+            on the phone, and do it in a clear way so that the leasing agent had the confidence to trigger an
+            irreversible data change while focused on the conversation. The second piece was highlighting possible
+            duplicates to be reviewed on the dashboard, party and person pages.
+        </p>
+
+        <div id="inventory" class="subtitle2">Responsiveness</div>
+        <p>Mobility was one of the value propositions of the system. Even though leasing agents have mostly desk jobs,
+            part of the work could be happening on the move. During the commute they could do part of the planning
+            tasks. During tours they could take notes or answer questions about availability, amenities or prices.
+        </p>
+        <p>The plan was to design a responsive UI right from the start and wrap the web app in a mobile container along
+            the way, to take advantage of native functionalities of the device, like push notifications, calls and
+            location.
+        </p>
+        <p>Designing a responsive enterprise web app is not very straightforward. Some of the screens were quite
+            information dense and there was quite a bit of task concurrency e.g. taking notes, searching for available
+            units and scheduling a tour while on the phone with a prospect. Things like communication flyouts, side
+            panels and tables were quite challenging as well.
+        </p>
+
+        <div id="inventory" class="subtitle2">Renewals</div>
+        <p>Once the MVP of the leasing module was successfully deployed at a dozen properties, the first step towards
+            the Resident Services module was Contract Renewals. It was an obvious choice because it leveraged existing
+            pricing and contract implementations. The more tricky parts were integrating with the legacy systems in
+            order to pull and push data and adjusting the UI and the data model to fit the new workflow.
+        </p>
+        <p>
+            The UI had to account for a separate dashboard and for ways to switch between the leasing and RS dashboards
+            seamlessly. The party page had to evolve to accommodate multiple workflows that could be sequential or
+            parallel in nature e.g. a resident party could be transferring to a different unit during the renewal
+            period.
+        </p>
+
+        <div id="inventory" class="subtitle">Learnings</div>
+        <p>During the three and a half years working on this project I grew immensely. This happened mostly because the
+            company was led by well versed designers with startup experience. I think the most important learning was to
+            link every design decision to business metrics. If it’s not going to affect the bottom line, it’s not
+            worth the effort.
+        </p>
+        <p>Secondly, I need to involve the engineering team quite early in the process to get feedback and buy-in. There
+            were a couple of occasions in the beginning when I presented pixel perfect work for the first time during
+            sprint planning and it backfired badly. I had either worked outside of the technical constraints and the
+            proposal was worthless or the team felt left out and showed a lot of resistance in accepting the
+            requirements.
+        </p>
+        <p>Collaboration is probably the most important design skill. At times it felt like communication and people
+            skills weigh more than design skills. No matter how good the solution is for the final user, it needs a lot
+            of alignment internally in order to see the light of day. It is also the responsibility of the designer and
+            they don't teach you this in school.
+        </p>
+
+        <div id="visuals" class="subtitle">Showcase</div>
+        <p>
+            While I'm curating the visual artefacts that go with each story, please enjoy a generic selection of key
+            screens that showcase some of the capabilities worked on.
+        </p>
 
         <div class="gallery">
 
@@ -206,9 +366,9 @@
 
         </div>
 
+
         <div id="disqus_thread"></div>
         <script>
-
                     /**
                      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
                      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
@@ -224,7 +384,6 @@
                         s.setAttribute('data-timestamp', +new Date());
                         (d.head || d.body).appendChild(s);
                     })();
-
 
 
 
