@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style/resets.css"/>
+    <link rel="stylesheet" href="style/global.css"/>
+    <link rel="stylesheet" href="style/layout.css"/>
+    <link rel="stylesheet" href="style/menu.css"/>
+    <link rel="stylesheet" href="style/project_typography.css"/>
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet'
+          type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic'
+          rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'/>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8"/>
+
+    <title>Rezolve</title>
+
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+
+    <link rel="stylesheet" href="style/fancybox_styling.css"/>
+
+    <script type="text/javascript" src="js/global.js"></script>
+    <script type="text/javascript" src="js/menu_utils.js"></script>
+    <script type="text/javascript" src="js/video.js"></script>
+
+    <!-- Hotjar Tracking Code for http://berdilaovidiu.github.io/portfolio/ -->
+    <script>
+			(function(h,o,t,j,a,r){
+				h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+				h._hjSettings={hjid:314578,hjsv:5};
+				a=o.getElementsByTagName('head')[0];
+				r=o.createElement('script');r.async=1;
+				r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+				a.appendChild(r);
+			})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+
+    </script>
+
+    <!-- FullStory Tracking Code for http://berdilaovidiu.github.io/portfolio/ -->
+    <script>
+            window['_fs_debug'] = false;
+            window['_fs_host'] = 'fullstory.com';
+            window['_fs_script'] = 'edge.fullstory.com/s/fs.js';
+            window['_fs_org'] = 'BNK0F';
+            window['_fs_namespace'] = 'FS';
+            (function(m,n,e,t,l,o,g,y){
+                if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+                g=m[e]=function(a,b,s){g.q?g.q.push([a,b,s]):g._api(a,b,s);};g.q=[];
+                o=n.createElement(t);o.async=1;o.crossOrigin='anonymous';o.src='https://'+_fs_script;
+                y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+                g.identify=function(i,v,s){g(l,{uid:i},s);if(v)g(l,v,s)};g.setUserVars=function(v,s){g(l,v,s)};g.event=function(i,v,s){g('event',{n:i,p:v},s)};
+                g.anonymize=function(){g.identify(!!0)};
+                g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};
+                g.log = function(a,b){g("log",[a,b])};
+                g.consent=function(a){g("consent",!arguments.length||a)};
+                g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+                g.clearUserCookie=function(){};
+                g.setVars=function(n, p){g('setVars',[n,p]);};
+                g._w={};y='XMLHttpRequest';g._w[y]=m[y];y='fetch';g._w[y]=m[y];
+                if(m[y])m[y]=function(){return g._w[y].apply(this,arguments)};
+                g._v="1.3.0";
+            })(window,document,window['_fs_namespace'],'script','user');
+
+    </script>
+
+</head>
+
+<body>
+
+<script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-65113069-1', 'auto');
+            ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript">
+            $(document).ready(function() {
+                //apply fancybox options
+                $("[data-fancybox]").fancybox(fancyboxOptions);
+
+                //init navigation framework
+                $("#menu").load("menu.html", function(){
+                    initTopMenuActions("body_panel");
+                });
+            });
+
+
+
+
+
+
+
+
+</script>
+
+<div id="menu"></div>
+<div id="body_panel" class="project">
+
+    <div class="content">
+        <div class="date">December 2021 - Present</div>
+        <div class="title">Rezolve</div>
+        <div class="tagline">Mobile e-commerce engagement platform</div>
+
+        <div class="tags">
+            <span class="tag">WEB</span>
+            <span class="tag">RESPONSIVENESS</span>
+            <span class="tag">ENTERPRISE</span>
+            <span class="tag">WIREFRAMING</span>
+            <span class="tag">PROTOTYPING</span>
+            <span class="tag">USER TESTING</span>
+            <span class="tag">FIGMA</span>
+            <span class="tag">REMOTE</span>
+        </div>
+
+        <div class="gallery">
+            <a data-fancybox="hero" class="needsBorder"
+               data-caption="Location baased engagement creation"
+               href="img/rezolve/Frame 4387.png">
+                <img class="gallery1 with_border" src="img/rezolve/Frame 4387.png"/>
+            </a>
+        </div>
+
+        <p class="first_paragraph">Rezolve is a marketing platform that offers a mobile shopping solution along with
+            digital payments and e-marketing products. It allows brands and over 150000 merchants to leverage location
+            data from geo zones and beacons and to convert visual and audio media into interactive experiences on mobile
+            devices.</p>
+
+        <div id="team_setup" class="subtitle2">Team setup</div>
+        <p>Rezolve is a totally remote company with people working from all over the world. I work closely with the Head
+            of UX and a visual designer. When needed, we reach out to a couple of design
+            agencies to extend our capabilities. I also work with Product Managers and engineering teams to
+            clarify needs, timelines and get feedback on designs.
+        </p>
+
+        <div id="my_role" class="subtitle2">Role and key achievements</div>
+        <p>I was hired as a Senior UX Designer and the role has gradually gotten more complex. I am involved in most
+            products of the company, I manage a couple of people and I attend and contribute to the product team’s
+            meetings regularly.
+        </p>
+
+        <p>My greatest achievements are all the result of teamwork, but there are some areas where I contributed more
+            and had the most ownership:
+        </p>
+
+        <ul class="article_list">
+            <li>redesigned the Rezolve Experiece Portal to drastically improve usability, responsiveness, modularity,
+                and provide a simpler and friendlier look and feel, all based on a solid design system.
+            </li>
+            <li>simplified the merchant onboarding flow from an assisted to a self-serve experience.
+            </li>
+            <li>enhanced the content creation flow to allow small merchants with little marketing experience to create
+                effective campaigns.
+            </li>
+            <li>reimagined the Instant Buy flow into a simple and intuitive experience for web and mobile and worked
+                with multiple design teams to produce it.
+            </li>
+            <li>developed a good relationship with engineering, to better understand technical constraints, provide
+                guidance and review changes.
+            </li>
+        </ul>
+
+        <div id="showcase" class="subtitle">Reimagining the instant buy experience</div>
+
+        <p>
+            The challenge was to design a mobile e-commerce product description page with an exciting instant purchase
+            experience. This allows buying a product without leaving the product page and going to a standard
+            e-commerce cart. The flow is optimised for the returning customer who has already expressed delivery and
+            payment preferences and makes it also fun for a first time user who needs to input this data.
+        </p>
+
+        <div id="wizard" class="subtitle2">The accordion</div>
+        <p>The first time user goes through three clearly separated steps in order to complete the purchase, without
+            leaving the product page.</p>
+        <p>
+            The returning user is only asked to select the product options, while the rest of the sections are
+            collapsed, but still show a summary. By tapping on the collapsed steps, the user is able to update her
+            preferences.
+        </p>
+        <div class="gallery">
+            <a data-fancybox="wizard"
+               data-caption="The first time user experience"
+               href="img/rezolve/rezolve-ib-new.png">
+                <img class="gallery1" src="img/rezolve/rezolve-ib-new.png"/>
+            </a>
+        </div>
+
+
+        <div id="overlay" class="subtitle2">The overlay</div>
+        <p>
+            This is a more conventional approach, with the purchasing mechanism displayed on demand, as a bottom sheet.
+            Both of these early explorations ended up shaping the solutions released for web and mobile.
+        </p>
+        <div class="gallery">
+            <a data-fancybox="overlay"
+               data-caption="The overlay approach - multiple colour schemes"
+               href="img/rezolve/rezolve-ib-overlay1.png">
+                <img class="gallery2 left_image" src="img/rezolve/rezolve-ib-overlay1.png"/>
+            </a>
+            <a data-fancybox="overlay"
+               data-caption="The overlay approach - multiple colour schemes"
+               href="img/rezolve/rezolve-ib-overlay2.png">
+                <img class="gallery2 right_image" src="img/rezolve/rezolve-ib-overlay2.png"/>
+            </a>
+        </div>
+
+        <div id="redesign" class="subtitle">A fresh new design</div>
+        <p>The Rezolve Experience Portal (RXP) is a dashboard used by merchants to create and publish mobile
+            engagements. When I joined the company, RXP was being redesigned in order to incorporate new capabilities,
+            some large pieces of functionality from a recently acquired company.
+        </p>
+
+        <div class="subtitle2">Existing situation</div>
+        <p>The production version had a lot of usability issues, especially on smaller devices, and an inconsistent and
+            outdated look and feel. There was already a set of improved designs, including the new functionality, but
+            those were only addressing some of the aesthetic issues, while introducing more complexity.
+        </p>
+
+        <div class="gallery">
+            <a data-fancybox="rxp-before" class="needsBorder"
+               data-caption="The overlay approach - multiple colour schemes"
+               href="img/rezolve/engagement-target-old.png">
+                <img class="gallery1  with_border" src="img/rezolve/engagement-target-old.png"/>
+            </a>
+        </div>
+
+        <p>A thorough UX audit of the existing situation brought to light some severe issues:</p>
+
+        <ul class="article_list">
+            <li>Lack of a pattern for selecting an existing entity vs creating a new one. This situation was quite
+                frequent during campaign creation and applied to entities like: locations, beacons, watermarked assets,
+                landing pages and lead generation forms.
+            </li>
+
+            <li>Poor new user experience. The app is based on specific mental model that was not clearly communicated.
+                The empty states were not informative. The new user had to put in a lot of effort before seeing a
+                benefit.
+            </li>
+
+            <li>Critical responsiveness issues. Central flows like the engagement creation and content creation provided
+                a poor experience on mobile.
+            </li>
+
+            <li>Outdated aesthetics. Aesthetics and attention to details play a huge role in creating trust.
+            </li>
+        </ul>
+
+
+        <div class="subtitle2">Improved solution</div>
+
+        <p>The redesign started with addressing the above mentioned issues and continued with others that were
+            discovered when looking at the flows in more depth.
+        </p>
+        <ul class="article_list">
+            <li>Solid pattern for adding new entities. It works the same as a standalone flow or when spawned from a
+                more complex flow, like creating an engagement. The side overlay on large screens works as a full screen
+                dialog on small screens, consistent with the short duration of the operation.
+            </li>
+            <li>Vertical layout for the engagement creation wizard progress indicator. Better visual separation and more
+                adaptable to different screen sizes.
+            </li>
+            <li>Cleaner and friendlier visuals. We introduced a contrasting accent colour, fun illustrations, reduced
+                the visual clutter and increased negative space.
+            </li>
+        </ul>
+
+        <div class="gallery">
+
+            <a data-fancybox="rxp-redesign" class="needsBorder"
+               data-caption="To be added"
+               href="img/rezolve/Engagements-listing-large.png">
+                <img class="gallery1 with_border " src="img/rezolve/Engagements-listing-large.png"/>
+            </a>
+
+            <a data-fancybox="rxp-redesign" class="needsBorder"
+               data-caption="To be added"
+               href="img/rezolve/Engagement screeen.png">
+                <img class="gallery1  with_border" src="img/rezolve/Engagement screeen.png"/>
+            </a>
+
+            <a data-fancybox="rxp-redesign" class="needsBorder"
+               data-caption="Location based engagement creation"
+               href="img/rezolve/engagement-target-redesign.png">
+                <img class="gallery1 with_border" src="img/rezolve/engagement-target-redesign.png"/>
+            </a>
+
+            <a data-fancybox="rxp-redesign" class="needsBorder"
+               data-caption="Location baased engagement creation"
+               href="img/rezolve/engagement-target-new-redesign.png">
+                <img class="gallery1 with_border" src="img/rezolve/engagement-target-new-redesign.png"/>
+            </a>
+
+            <a data-fancybox="rxp-redesign" class="needsBorder"
+               data-caption="To be added"
+               href="img/rezolve/Schedule.png">
+                <img class="gallery1 with_border" src="img/rezolve/Schedule.png"/>
+            </a>
+
+            <a data-fancybox="rxp-redesign" class="needsBorder"
+               data-caption="To be added"
+               href="img/rezolve/Summary.png">
+                <img class="gallery1 with_border" src="img/rezolve/Summary.png"/>
+            </a>
+
+            <a data-fancybox="rxp-redesign"
+               data-caption="To be added"
+               href="img/rezolve/Frame 4820.png">
+                <img class="gallery1" src="img/rezolve/Frame 4820.png"/>
+            </a>
+
+
+        </div>
+
+        <div class="subtitle">More to come soon</div>
+        <p>I am currently working on adding more interesting content to this project. Until then, please feel free to
+            reach out and ask for more. There are a ton of fun things I have worked on recently.
+        </p>
+
+        <div id="disqus_thread"></div>
+        <script>
+
+                    /**
+                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                    /*
+                     var disqus_config = function () {
+                     this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                     };
+                     */
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = '//ovidiu-berdila-ux.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+
+        </script>
+
+    </div>
+</div>
+</body>
+</html>
