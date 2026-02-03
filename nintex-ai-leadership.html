@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style/resets.css" />
+    <link rel="stylesheet" href="style/global.css" />
+    <link rel="stylesheet" href="style/layout.css" />
+    <link rel="stylesheet" href="style/project_typography.css" />
+    <link rel="stylesheet" href="style/menu.css" />
+
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet'
+        type='text/css' />
+    <link
+        href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic'
+        rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css' />
+
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+
+    <title>Nintex Solution Designer</title>
+
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+
+    <link rel="stylesheet" href="style/fancybox_styling.css" />
+
+    <script type="text/javascript" src="js/global.js"></script>
+    <script type="text/javascript" src="js/menu_utils.js"></script>
+
+    <!-- Hotjar Tracking Code for http://berdilaovidiu.github.io/portfolio/ -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 314578, hjsv: 5 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
+
+
+    </script>
+
+    <!-- FullStory Tracking Code for http://berdilaovidiu.github.io/portfolio/ -->
+    <script>
+        window['_fs_debug'] = false;
+        window['_fs_host'] = 'fullstory.com';
+        window['_fs_script'] = 'edge.fullstory.com/s/fs.js';
+        window['_fs_org'] = 'BNK0F';
+        window['_fs_namespace'] = 'FS';
+        (function (m, n, e, t, l, o, g, y) {
+            if (e in m) { if (m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].'); } return; }
+            g = m[e] = function (a, b, s) { g.q ? g.q.push([a, b, s]) : g._api(a, b, s); }; g.q = [];
+            o = n.createElement(t); o.async = 1; o.crossOrigin = 'anonymous'; o.src = 'https://' + _fs_script;
+            y = n.getElementsByTagName(t)[0]; y.parentNode.insertBefore(o, y);
+            g.identify = function (i, v, s) { g(l, { uid: i }, s); if (v) g(l, v, s) }; g.setUserVars = function (v, s) { g(l, v, s) }; g.event = function (i, v, s) { g('event', { n: i, p: v }, s) };
+            g.anonymize = function () { g.identify(!!0) };
+            g.shutdown = function () { g("rec", !1) }; g.restart = function () { g("rec", !0) };
+            g.log = function (a, b) { g("log", [a, b]) };
+            g.consent = function (a) { g("consent", !arguments.length || a) };
+            g.identifyAccount = function (i, v) { o = 'account'; v = v || {}; v.acctId = i; g(o, v) };
+            g.clearUserCookie = function () { };
+            g.setVars = function (n, p) { g('setVars', [n, p]); };
+            g._w = {}; y = 'XMLHttpRequest'; g._w[y] = m[y]; y = 'fetch'; g._w[y] = m[y];
+            if (m[y]) m[y] = function () { return g._w[y].apply(this, arguments) };
+            g._v = "1.3.0";
+        })(window, document, window['_fs_namespace'], 'script', 'user');
+    </script>
+
+</head>
+
+<body>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-65113069-1', 'auto');
+        ga('send', 'pageview');
+
+
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //apply fancybox options
+            $("[data-fancybox]").fancybox(fancyboxOptions);
+
+            //init navigation framework
+            $("#menu").load("menu.html", function () {
+                initTopMenuActions("body_panel");
+            });
+        });
+
+
+    </script>
+
+    <div id="menu"></div>
+    <div id="body_panel" class="project">
+
+        <div class="content">
+            <div class="date">September 2023 - January 2026</div>
+            <div class="title">Leading AI Design at Nintex</div>
+            <div class="tagline">Building an AI design practice from zero</div>
+
+            <div class="tags">
+                <span class="tag">GENERATIVE AI</span>
+                <span class="tag">STRATEGIC RESEARCH</span>
+                <span class="tag">ENTERPRISE UX</span>
+                <span class="tag">AI DESIGN LEADERSHIP</span>
+                <span class="tag">AI DESIGN PATTERNS</span>
+                <span class="tag">WORKSHOPS</span>
+            </div>
+
+            <div class="gallery">
+                <a data-fancybox="hero" class="needsBorder" data-caption="AI Interaction patterns documented by the AI guild, formatted as giftable workshop cards."
+                    href="img/ai-leadership/AI interaction patterns - hero.png">
+                    <img class="gallery1 with_border" src="img/ai-leadership/AI interaction patterns - hero.png" />
+                </a>
+            </div>
+
+            <p>When generative AI exploded in late 2023, Nintex, like many enterprise software companies, had a problem:
+                engineers were racing to ship AI features in technical POCs that would become user experiences, but
+                nobody understood how AI fundamentally changes interaction design. There was no AI design expertise,
+                no shared language for evaluating AI patterns, and no process for ensuring genAI features would
+                actually deliver value to users.</p>
+
+            <p>I saw an opportunity others missed. While most designers were waiting for AI to stabilize, I went back to
+                school, literally taking online courses in generative AI fundamentals, and started building what would
+                become Nintex's AI design practice. This wasn't about creating a few AI features. It was about
+                establishing
+                organizational AI literacy across product, design, and engineering so that everyone could make better
+                decisions as we navigated this technological shift.</p>
+
+            <p>Within a year, I transformed scattered experimentation into structured practice: researched 100+ AI
+                products,
+                documented 45 interaction patterns, founded the AI Design Guild that grew to 7 designers, and delivered
+                workshop series that elevated AI fluency across the entire product organization. The work wasn't just
+                influential,
+                it became foundational. The AI assistant guidelines and platform-level patterns I established are now
+                being built into Nintex's design system, shaping how every product team approaches AI.</p>
+
+            <p>The impact was recognized formally: promoted to Staff Product Designer, appointed AI Design Lead for the
+                organization, and given the company's most critical AI initiative (Solution Designer). But the real
+                impact was cultural, transforming how Nintex approaches AI from "let's see what the tech can do" to
+                "let's understand how this changes user experience."</p>
+
+            <div class="subtitle">My Contributions</div>
+
+            <ul class="article_list">
+                <li style="
+                padding-bottom: 12px;
+            "><strong style="font-weight: 700;">0→1 Practice Building:</strong> Founded AI Design Guild from nothing,
+                    growing it to 7 designers while establishing design principles adopted across 5+ product teams,
+                    creating
+                    organizational capability where none existed</li>
+                <li style="
+                padding-bottom: 12px;
+            "><strong style="font-weight: 700;">Knowledge Infrastructure:</strong> Researched 100+ AI products and
+                    documented
+                    45 emerging interaction patterns, transforming scattered observations into structured knowledge that
+                    guided product
+                    decisions across multiple teams</li>
+                <li style="
+                padding-bottom: 12px;
+            "><strong style="font-weight: 700;">Cross-Functional AI Literacy:</strong> Designed and delivered workshop
+                    series
+                    for product organization (not just design), teaching non-technical peers how genAI changes UX,
+                    elevating collective
+                    fluency so better decisions happened at every level
+                </li>
+                <li style="
+                padding-bottom: 12px;
+            "><strong style="font-weight: 700;">Strategic Pattern Systems:</strong> Created AI assistant guidelines and
+                    platform-level
+                    proposals, working with design system team to build foundational components that ensure consistency
+                    as AI scales
+                    across all Nintex products</li>
+                <li style="
+                padding-bottom: 12px;
+            "><strong style="font-weight: 700;">Organizational Influence:</strong> Presented at quarterly product
+                    reviews, monthly
+                    PM-UX syncs, and executive AI workshops, establishing credibility that led to formal recognition as
+                    AI Design Lead
+                    and assignment to company's highest-value AI initiative</li>
+            </ul>
+
+            <p>Full case study coming soon, exploring: how I built AI expertise from curiosity to organizational authority, 
+                the challenge of designing in fast-moving tech space, navigating tension between technical POCs and user-centered 
+                design, and scaling knowledge sharing to drive organizational change</p>
+
+            <div class="gallery">
+                <a data-fancybox="wip" data-caption="Case studies for this project are being worked on"
+                    href="img/wip2.png">
+                    <img class="gallery1" src="img/wip.png" />
+                </a>
+            </div>
+
+
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                /*
+                 var disqus_config = function () {
+                 this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                 this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                 };
+                 */
+                (function () { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = '//ovidiu-berdila-ux.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+
+
+            </script>
+
+        </div>
+    </div>
+</body>
+
+</html>
