@@ -18,20 +18,20 @@ body {
 @media screen and (max-width: 840px) {
   #body_panel {
     padding: 16px;
-    padding-top: calc(112px);
+    padding-top: calc(2 * 56px);
   }
 }
 @media screen and (min-width: 840px) {
   #body_panel {
     width: 100%;
     padding: 24px;
-    padding-top: calc(112px);
+    padding-top: calc(2 * 56px);
   }
 }
 @media screen and (min-width: 1280px) {
   #body_panel {
     width: 100%;
     padding: 48px;
-    padding-top: calc(112px);
+    padding-top: calc(2 * 56px);
   }
 }

@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding-right: calc(12px);
+  padding-right: calc(24px / 2);
 }
 #logo_container #logo_large {
   flex: 1 1 auto;
@@ -51,7 +51,7 @@
   float: right;
   width: 50%;
   box-sizing: border-box;
-  padding-left: calc(12px);
+  padding-left: calc(24px / 2);
   height: 100%;
   background-image: linear-gradient(145deg, white, white 65%, transparent);
 }
@@ -64,7 +64,7 @@
 #right_container #typogrid {
   position: absolute;
   top: 0px;
-  left: calc(12px);
+  left: calc(24px / 2);
   width: calc(100% - (24px/2));
   height: 100%;
   z-index: -1;
@@ -106,13 +106,13 @@
   height: 7px;
   width: calc((100% - (11 * 24px) - (2 * 48px))/12);
   max-width: calc((1600px - (11 * 24px))/12);
-  margin-left: calc(12px);
+  margin-left: calc(24px / 2);
   box-sizing: content-box;
 }
 @media screen and (max-width: 600px) {
   #home_panel {
     height: 100%;
-    padding-top: calc(112px);
+    padding-top: calc(2 * 56px);
     padding-bottom: 16px;
     margin-left: 16px;
     margin-right: 16px;
@@ -215,7 +215,7 @@
 }
 @media screen and (min-width: 600px) and (max-width: 1600px) {
   #home_panel {
-    padding-top: calc(112px);
+    padding-top: calc(2 * 56px);
     padding-bottom: 48px;
     margin-left: 48px;
     margin-right: 48px;
@@ -225,7 +225,7 @@
 @media screen and (min-width: 1600px) {
   #home_panel {
     max-width: 1600px;
-    padding-top: calc(112px);
+    padding-top: calc(2 * 56px);
     padding-bottom: 48px;
     margin-left: auto;
     margin-right: auto;

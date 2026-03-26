@@ -1,0 +1,12 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "scripts": {
+    "build:css": "lessc style/global.less style/global.css && lessc style/layout.less style/layout.css && lessc style/menu.less style/menu.css && lessc style/index.less style/index.css && lessc style/project_typography.less style/project_typography.css && lessc style/contact.less style/contact.css && lessc style/education.less style/education.css && lessc style/projects.less style/projects.css",
+    "watch:css": "less-watch-compiler style style"
+  },
+  "devDependencies": {
+    "less": "^4.2.0",
+    "less-watch-compiler": "^1.16.3"
+  }
+}
