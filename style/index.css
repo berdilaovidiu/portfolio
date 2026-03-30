@@ -34,7 +34,7 @@
 }
 #logo_container #title_location #location {
   font-size: 1rem;
-  color: #908F8F;
+  color: #737373;
 }
 #logo_container #manifesto {
   flex: 0 1 auto;
@@ -43,8 +43,8 @@
   max-width: 30%;
   font-size: 0.8rem;
   line-height: 1rem;
-  letter-spacing: 1pt;
-  color: #908F8F;
+  letter-spacing: 0.08em;
+  color: #737373;
 }
 #right_container {
   position: relative;
