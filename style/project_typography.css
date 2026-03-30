@@ -7,8 +7,8 @@
 .project .content .date {
   font-size: 0.8rem;
   margin-bottom: 1rem;
-  letter-spacing: 1pt;
-  color: #908F8F;
+  letter-spacing: 0.08em;
+  color: #737373;
 }
 .project .content .title {
   font-size: 2.66rem;
@@ -16,7 +16,7 @@
   letter-spacing: 0.1rem;
   font-weight: 700;
   padding-bottom: 0.5rem;
-  border-bottom: 10px solid #a227be;
+  border-bottom: 8px solid #a227be;
   margin-bottom: 0.5rem;
   display: inline-block;
 }
@@ -29,7 +29,7 @@
 }
 .project .content .tags {
   font-size: 0.7rem;
-  color: #908F8F;
+  color: #737373;
   margin-bottom: 1.5rem;
   line-height: 1.5rem;
 }
@@ -71,6 +71,7 @@
 }
 .gallery {
   font-size: 0pt;
+  line-height: 24px;
   margin-bottom: 1rem;
   position: relative;
 }
@@ -118,7 +119,7 @@
 }
 .pullquote-wide::before {
   content: "\" ";
-  color: #908F8F;
+  color: #737373;
   font-weight: bold;
   font-size: 1rem;
 }
@@ -151,7 +152,7 @@
   right: 10px;
   left: 10px;
   text-align: center;
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: Arial, sans-serif;
   font-variant: small-caps;
   font-size: 14pt;
   line-height: 19px;

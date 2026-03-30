@@ -6,7 +6,7 @@ h1 {
   margin-bottom: 2.66rem;
 }
 #schools {
-  border-left: 1px solid #908F8F;
+  border-left: 1px solid #737373;
 }
 #schools .school {
   margin-bottom: 1rem;
@@ -22,7 +22,7 @@ h1 {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  border: 1px solid #908F8F;
+  border: 1px solid #737373;
   box-sizing: border-box;
 }
 #schools .school .details,
@@ -62,7 +62,7 @@ h1 {
 }
 .degree,
 .author {
-  color: #908F8F;
+  color: #737373;
   font-style: normal;
   font-variant: small-caps;
   font-size: 1rem;
