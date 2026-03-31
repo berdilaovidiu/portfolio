@@ -29,26 +29,21 @@
 
 <body>
 
-
     <script type="text/javascript">
         $(document).ready(function () {
-            //apply fancybox options
             $("[data-fancybox]").fancybox(fancyboxOptions);
-
-            //init navigation framework
             $("#menu").load("menu.html", function () {
                 initTopMenuActions("body_panel");
             });
         });
-
-
     </script>
 
     <div id="menu"></div>
     <div id="body_panel" class="project">
-
         <div class="content">
-            <div class="date">December 2024 - January 2026</div>
+
+            <!-- ── Intro ──────────────────────────────────────────── -->
+            <div class="date">November 2024 – Present</div>
             <div class="title">Nintex AI Solution Designer</div>
             <div class="tagline">Pioneering spec-driven no-code development</div>
 
@@ -76,7 +71,7 @@
                 the entire market was obsessed with "vibe-coding" and one-shot generation.</p>
 
             <p>This wasn't a safe bet. I repeatedly had to defend this vision to product leadership while
-                competitors were getting viral traction with their instant gratification experiences. But research
+                competitors were getting viral traction with their instant-gratification experiences. But research
                 with low-code professionals revealed what the hype missed: users need control at each stage,
                 not hope that AI guesses right.</p>
 
@@ -85,48 +80,310 @@
                 a new category: structured AI-assisted development for non-technical users.</p>
 
             <p>The impact went beyond one feature. Solution Designer became Nintex's highest-value strategic
-                initiative, aiming to compress proof-of-concept timelines from weeks to hours for mid-market businesses,
-                and
-                the AI-assisted design patterns I established were adopted across multiple product teams.</p>
+                initiative, designed to compress proof-of-concept timelines from weeks to hours for mid-market
+                businesses, and the AI-assisted design patterns I established were adopted across multiple
+                product teams.</p>
 
+            <!-- ── Stats row ──────────────────────────────────────── -->
+            <div class="project_stats">
+                <div class="stat">
+                    <span class="stat_value">Weeks → Hours</span>
+                    <span class="stat_label">Target solution development timeline</span>
+                </div>
+                <div class="stat">
+                    <span class="stat_value">7</span>
+                    <span class="stat_label">Product domains aligned</span>
+                </div>
+                <div class="stat">
+                    <span class="stat_value">Alpha → Beta</span>
+                    <span class="stat_label">Shipped under my design lead</span>
+                </div>
+            </div>
+
+            <!-- ── My Contributions ───────────────────────────────── -->
             <div class="subtitle">My Contributions</div>
 
-            <ul class="article_list">
-                <li style="
-                padding-bottom: 12px;
-            "><strong style="font-weight: 700;">Strategic Vision Under Pressure:</strong> Advocated for research-backed
-                    methodical approach over trending "vibe-coding," repeatedly risking reputation with product
-                    leadership to champion what users actually needed versus what market hype suggested they wanted</li>
-                <li style="
-                padding-bottom: 12px;
-            "><strong style="font-weight: 700;">Novel Design Concepts:</strong> Pioneered the "asset outline"
-                    pattern, AI-generated skeletons users review before costly detail generation, reducing iteration
-                    cycles while increasing control and trust, a concept that required stakeholder buy-in without
-                    ability to validate before building</li>
-                <li style="
-                padding-bottom: 12px;
-            "><strong style="font-weight: 700;">Research-Led Decision Making:</strong> Established research-first
-                    approach in fast-moving AI space, partnering with customer success teams to recruit external
-                    low-code professionals, ensuring user needs informed technical direction before engineering POC phase began
-                </li>
-                <li style="
-                padding-bottom: 12px;
-            "><strong style="font-weight: 700;">Cross-Domain Pattern Systems:</strong> Facilitated design workshop
-                    with product teams, creating framework for consistent AI-assisted interactions adopted across
-                    workflows, web applications, forms, and business processes, each owned by different teams
-                    with competing roadmaps</li>
-            </ul>
+            <div class="subtitle2">Strategic Vision Under Pressure</div>
+            <p>Advocated for a research-backed, methodical approach over trending "vibe-coding," repeatedly
+                risking reputation with product leadership to champion what users actually needed versus what
+                market hype suggested they wanted.</p>
 
-            <p>Full case study coming soon, exploring the research process, design challenges of asset outlines,
-                stakeholder
-                navigation, and how we compressed proof-of-concept timelines from weeks to hours.</p>
+            <div class="subtitle2">Novel Design Concepts</div>
+            <p>Pioneered the "asset outline" pattern, AI-generated skeletons users review before costly detail
+                generation, reducing iteration cycles while increasing control and trust, a concept that
+                required stakeholder buy-in without any ability to validate before building.</p>
+
+            <div class="subtitle2">Research-Led Decision Making</div>
+            <p>Established a research-first approach in a fast-moving AI space, partnering with customer
+                success teams to recruit external low-code professionals, ensuring user needs informed
+                technical direction before the engineering POC phase began.</p>
+
+            <div class="subtitle2">Cross-Domain Pattern Systems</div>
+            <p>Facilitated a design workshop with product teams, creating a framework for consistent
+                AI-assisted interactions adopted across workflows, web applications, forms, and business
+                processes, each owned by different teams with competing roadmaps.</p>
+
+            <!-- ── 01 Context ─────────────────────────────────────── -->
+            <div class="subtitle" id="context">01 — Context</div>
+
+            <p>Nintex already had all the pieces: workflow automation, web app builders, forms, document
+                generation, and data connectors. Mid-sized businesses were looking to consolidate their software
+                spend. Generative AI had just made it plausible, for the first time, that non-technical users
+                could actually build production-ready software themselves, without expensive development teams
+                or months of waiting.</p>
+
+            <p>In November 2024, I was invited as AI Design Lead to a week-long strategy workshop with senior
+                product and engineering leadership in South Africa. Out of that workshop, one initiative emerged
+                as the highest-value thing Nintex could build: an AI-powered Solution Designer that would serve
+                as the gateway to the entire platform, letting customers experiment with all Nintex capabilities
+                before committing to a higher-tier subscription.</p>
+
+            <div class="pull_quote">
+                <p>The industry had been talking for decades about enabling non-technical people to build real
+                    software. This felt like the moment it was actually becoming possible.</p>
+            </div>
+
+            <p>The strategic stakes were high. Get it right and Nintex accelerates digital transformation for
+                thousands of mid-market businesses. Get it wrong and the company burns credibility on an
+                expensive feature that doesn't actually solve the problem it promised to solve.</p>
+
+            <!-- ── 02 Research ────────────────────────────────────── -->
+            <div class="subtitle" id="research">02 — Research</div>
+
+            <p>The company had a pattern of starting with quick technical POCs and productionising features
+                before proper research. With engineers leading the proof-of-concept phase, I knew the loudest
+                technical voices would shape the solution, unless I could anchor decisions in real user evidence.</p>
+
+            <p>I quickly partnered with customer success and services teams to recruit external low-code/no-code
+                builders, professionals who do this work daily for clients. Despite spending my career in
+                software development, I knew LCNC development has its own dynamics. I needed to understand them
+                properly before designing anything.</p>
+
+            <div class="insight_grid">
+                <div class="insight_card">
+                    <span class="insight_number">Finding 01</span>
+                    <div class="insight_title">Iterations are shorter and cheaper</div>
+                    <p>The cost of being wrong in LCNC is significantly lower than traditional development.
+                        Builders iterate fast and often, which changes what "good enough" requirements
+                        look like upfront.</p>
+                </div>
+                <div class="insight_card">
+                    <span class="insight_number">Finding 02</span>
+                    <div class="insight_title">Requirements emerge during building</div>
+                    <p>Unlike traditional software projects, LCNC practitioners don't clarify all requirements
+                        before starting. Quick proofs of concept are used to surface requirements that couldn't
+                        have been articulated beforehand.</p>
+                </div>
+                <div class="insight_card">
+                    <span class="insight_number">Finding 03</span>
+                    <div class="insight_title">AI lowers the iteration cost further</div>
+                    <p>Generating assets instead of building them manually makes the cost of being wrong even
+                        lower, which means the opportunity for iterative, guided generation is even more
+                        valuable than in traditional LCNC.</p>
+                </div>
+            </div>
+
+            <p>This research fundamentally changed the design direction. If LCNC users iterate quickly and
+                discover requirements as they build, the AI experience couldn't be a one-shot black box. Users
+                needed to guide the system, reviewing, adjusting, and steering, not just submitting prompts
+                and hoping for the best.</p>
+
+            <!-- ── 03 The Design Bet ──────────────────────────────── -->
+            <div class="subtitle" id="design-bet">03 — The Design Bet</div>
+
+            <p>The competitive landscape in early 2025 was dominated by one thing: instant gratification.
+                One-shot generation demos were going viral. Vibe-coding was becoming a cultural moment.
+                Products barely capable of generating prototypes were being marketed as the future of software
+                development, and those experiences were setting expectations for everyone, including our
+                product leadership.</p>
+
+            <p>The path of least resistance was obvious: build the same thing. A slick prompt box, an
+                animation, an app appears. Ship it fast. Ride the wave. I argued for a different approach, 
+                directly, repeatedly, and with full awareness that I was going against the grain of what
+                leadership was seeing in the market.</p>
+
+            <div class="callout_box">
+                <div class="callout_header">The strategic choice</div>
+                <div class="callout_split">
+                    <div class="split_col">
+                        <span class="split_label">What the market was doing</span>
+                        <p>One-shot generation. Describe your app, get your app. Impressive demos,
+                            prototype-quality outputs, limited ability to steer or correct.
+                            Instant, but unreliable.</p>
+                    </div>
+                    <div class="split_col chosen">
+                        <span class="split_label">What I designed instead</span>
+                        <p>Spec-driven development for non-technical users. Multi-step journey. Review
+                            outlines before generating details. Meaningful control at each stage. Slower
+                            to start, far more accurate in the end.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subtitle2">Asset Outlines</div>
+
+            <p>Central to the approach was the concept of <strong>asset specifications</strong>, AI-generated
+                skeletons that users review before the system generates full detail. The logic is simple: wrong
+                assumptions and hallucinations are far easier to catch in a skeleton than in a fully
+                fleshed-out application. Catching them early means fewer iterations, less frustration, and
+                more accurate final outputs.</p>
+
+            <p>Getting buy-in for this concept wasn't straightforward. The value wasn't obvious to all
+                stakeholders, the outline lived in a separate workspace from the final asset (creating temporary
+                confusion for users), and integrating the concept across 7 different product domains required
+                winning over teams with their own roadmaps. I had to trust the vision while building the
+                evidence to justify it.</p>
 
             <div class="gallery">
-                <a data-fancybox="wip" data-caption="Case studies for this project are being worked on"
-                    href="img/wip2.png">
-                    <img class="gallery1" src="img/wip.png" />
-                </a>
+                <div class="img_placeholder">Page &amp; Workflow Outline Design, coming soon</div>
             </div>
+
+            <!-- ── 04 Design Process ──────────────────────────────── -->
+            <div class="subtitle" id="design-process">04 — Design Process</div>
+
+            <p>After weeks of conversations where everyone seemed to agree, I put pen to paper. Low-fidelity
+                sketches exposed misalignment instantly, things that had sounded like consensus turned out to
+                be different mental models. The low-fidelity nature of the artifacts made it safe for
+                stakeholders to contribute their own ideas and feel ownership over the direction, which paid
+                dividends in buy-in later.</p>
+
+            <p>Because this initiative would shape the design-time AI architecture across all of Nintex's
+                product domains, I made sure early designs reached leaders who weren't directly involved in
+                the project but would be affected by its decisions. Winning their alignment early was critical
+               , we needed their roadmaps to move with ours.</p>
+
+            <div class="subtitle2">Hand-Drawn Sketches</div>
+
+            <p>Early pen-and-paper sketches of the full solution, broken down by incremental delivery. The
+                rough fidelity was intentional: it invited editing rather than approval.</p>
+
+            <div class="gallery">
+                <div class="img_placeholder">Early Sketches, Delivery Breakdown, coming soon</div>
+            </div>
+
+            <div class="subtitle2">Competitive Analysis</div>
+
+            <p>As the market started getting excited about vibe-coding, I spent weeks systematically testing
+                every relevant competitor, direct LCNC competitors and the broader wave of app generators, 
+                to understand where the technology and market were heading. More mature players were starting
+                to move beyond one-shot generation toward more methodical approaches, but none had gone as far
+                as what we were designing. Presenting these findings to the broader stakeholder group gave us
+                the confidence to move forward and clarity on where we needed to invest further.</p>
+
+            <div class="gallery">
+                <div class="img_placeholder">Competitive Analysis Slides, coming soon</div>
+            </div>
+
+            <div class="subtitle2">Cross-Team Alignment</div>
+
+            <p>I ran a design workshop with product teams across all seven affected domains, establishing a
+                shared framework for consistent AI-assisted design-time patterns. The patterns developed for
+                Solution Designer became the foundation adopted across multiple Nintex products, turning a
+                feature into a platform capability.</p>
+
+            <div class="gallery">
+                <div class="img_placeholder">Beta UI, End-to-End Prototype, coming soon</div>
+            </div>
+
+            <!-- ── 05 Challenges ──────────────────────────────────── -->
+            <div class="subtitle" id="challenges">05 — Challenges</div>
+
+            <div class="subtitle2">Establishing research before the POC ran away</div>
+
+            <p>The company's instinct in fast-moving spaces was to start with a technical proof-of-concept
+                and figure out the design layer later. With engineers already leading the POC phase and
+                generative AI moving quickly, there was a real risk that the solution's shape would be locked
+                in before any user research had taken place, leaving design to decorate an already-made
+                decision.</p>
+
+            <p>The response was to move fast on research rather than waiting for the POC to settle. By
+                partnering with customer success teams to recruit external LCNC builders early, I could put
+                user evidence on the table before the technical architecture calcified.</p>
+
+            <div class="subtitle2">Selling a slower-feeling approach to a leadership team watching fast-moving competitors</div>
+
+            <p>The harder challenge wasn't the design itself, it was the sustained advocacy required to keep
+                the approach alive. Product leadership was watching competitors ship viral demos. The market
+                narrative was loud. A multi-step, spec-driven experience doesn't demo as cleanly as a single
+                prompt box producing an app in seconds, and that gap in first impressions created real pressure.</p>
+
+            <p>Getting buy-in required building the case incrementally rather than winning a single argument.
+                Presenting competitive analysis that showed where more mature players were heading, framing the
+                research findings explicitly against the one-shot failure modes, and using low-fidelity sketches
+                to make the concept tangible enough to evaluate, each of these created a stronger foundation
+                for the direction without requiring stakeholders to simply take it on faith.</p>
+
+            <div class="subtitle2">The outline concept and the two-workspace problem</div>
+
+            <p>The asset outline, a generated skeleton that users review before the system fills in full
+                detail, was central to the design's value. But it introduced a UX problem: the outline
+                lived in a different workspace from the final asset. Users had to mentally bridge two contexts,
+                which created confusion that wasn't obvious until we put the design in front of people.</p>
+
+            <p>What it required was ongoing refinement of how the two workspaces related to each other, making
+                the connection legible without forcing users to context-switch unnecessarily. The value of
+                catching wrong assumptions early had to outweigh the cost of the added step, and making that
+                trade-off feel worthwhile to users was an active design problem throughout.</p>
+
+            <div class="subtitle2">Scaling one concept across seven product domains</div>
+
+            <p>The design patterns developed for Solution Designer needed to work across workflows, web apps,
+                forms, processes, document packages, data tables, and connectors, seven domains, each with its
+                own product team, its own roadmap, and its own view of what the AI experience should look like
+                for their users.</p>
+
+            <p>The approach was to run a design workshop that established a shared framework before teams went
+                off to implement independently. Getting teams to adopt patterns they didn't originate required
+                making the framework flexible enough to accommodate domain-specific needs while being opinionated
+                enough to hold together as a system. Early alignment on principles, rather than prescribing
+                exact UI, gave teams room to adapt without drifting.</p>
+
+            <!-- ── 06 Validation ──────────────────────────────────── -->
+            <div class="subtitle" id="validation">06 — Validation</div>
+
+            <p>Months after we had committed to the spec-driven approach, major competitors moved in the same
+                direction. The industry shifted from one-shot generation and conversational editing toward
+                multi-step generation journeys with contextual AI interactions for precise refinement, closer
+                to what we had already built.</p>
+
+            <div class="pull_quote">
+                <p>This wasn't prescience, it was the result of making decisions based on research rather
+                    than market noise. When the loudest voices were pointing one way, having user evidence gave
+                    us a more stable foundation to stand on.</p>
+            </div>
+
+            <p>At a staff level, that's part of the job: knowing when to hold a position under pressure, and
+                knowing why. The market eventually catching up is less important than making the right call
+                for users at the time.</p>
+
+            <!-- ── 07 Outcomes ────────────────────────────────────── -->
+            <div class="subtitle" id="outcomes">07 — Outcomes</div>
+
+            <div class="subtitle2">Weeks → Hours</div>
+            <p>The core strategic promise of the initiative: compressing proof-of-concept timelines from weeks
+                to hours for mid-market businesses. The design directly enables this, though with the product
+                in beta, measured results are still to come.</p>
+
+            <div class="subtitle2">Alpha → Beta</div>
+            <p>Led the design of Solution Designer from initial concept through Alpha to Beta launch,
+                maintaining design coherence and user experience quality through the full product lifecycle.</p>
+
+            <div class="subtitle2">7 Domains</div>
+            <p>Established AI design patterns adopted across seven product domains, workflows, web apps,
+                forms, processes, document packages, data tables, and connectors, turning feature-level work
+                into platform-level design architecture.</p>
+
+            <div class="subtitle2">Industry Validated</div>
+            <p>The methodical, spec-driven generation approach aligned with the direction major competitors
+                eventually moved toward, a signal that the research-led decision making held up against the
+                market pressure at the time.</p>
+
+            <!-- ── Closing ────────────────────────────────────────── -->
+            <div class="subtitle">Design decisions that hold up</div>
+
+            <p>The most important decisions on this project were the ones that required some pushback.
+                Research, conviction, and a willingness to be wrong publicly are what made it possible to
+                make them at all.</p>
 
         </div>
     </div>
