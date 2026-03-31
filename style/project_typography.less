@@ -73,8 +73,8 @@
       letter-spacing: 0.01rem;
       font-weight: 600;
 
-      margin-top: 2rem;
-      margin-bottom: 1rem;
+      margin-top: 1.75rem;
+      margin-bottom: 0.3rem;
     }
 
     ul.article_list {
@@ -86,6 +86,13 @@
         font-size: 1rem;
         line-height: 1.45rem;
         font-weight: 300;
+        margin-bottom: 0.75rem;
+
+        // Label on its own line when strong is the first child
+        > strong:first-child {
+          display: block;
+          margin-bottom: 0.2rem;
+        }
       }
     }
   }
@@ -144,6 +151,154 @@
 
 .gallery_separator{
   height: @gallery-gap;
+}
+
+// ── Stats row ──────────────────────────────────────────────────────────────
+.project_stats {
+  display: flex;
+  margin: 2rem 0;
+
+  .stat {
+    flex: 1;
+    padding: 1.5rem 0;
+    padding-left: 1.5rem;
+    border-right: 1px solid #e0e0e0;
+
+    &:first-child { padding-left: 0; }
+    &:last-child  { border-right: none; }
+
+    .stat_value {
+      font-size: 1.33rem;
+      font-weight: 700;
+      color: @accent-color;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .stat_label {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: @secondary-text-color;
+    }
+  }
+}
+
+// ── Pull quote ──────────────────────────────────────────────────────────────
+.pull_quote {
+  border-left: 4px solid @accent-color;
+  padding: 0.75rem 1.5rem;
+  margin: 2rem 0;
+
+  p {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+    color: @primary-text-color;
+    margin-bottom: 0 !important;
+    hyphens: auto;
+  }
+}
+
+// ── 3-column insight grid ───────────────────────────────────────────────────
+.insight_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 2rem 0;
+  border: 1px solid #e0e0e0;
+
+  .insight_card {
+    padding: 1.5rem;
+    border-right: 1px solid #e0e0e0;
+
+    &:last-child { border-right: none; }
+
+    .insight_number {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: @accent-color;
+      text-transform: uppercase;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+
+    .insight_title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.85rem;
+      line-height: 1.4rem;
+      color: @secondary-text-color;
+      margin-bottom: 0;
+      hyphens: auto;
+    }
+  }
+}
+
+// ── Callout box (design bet / comparison) ──────────────────────────────────
+.callout_box {
+  border: 1px solid #e0e0e0;
+  margin: 2rem 0;
+
+  .callout_header {
+    padding: 0.75rem 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: @secondary-text-color;
+    font-weight: 600;
+  }
+
+  .callout_split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .split_col {
+      padding: 1.25rem 1.5rem;
+
+      &:first-child { border-right: 1px solid #e0e0e0; }
+
+      .split_label {
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: @secondary-text-color;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 0.75rem;
+      }
+
+      p {
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+        margin-bottom: 0;
+        hyphens: auto;
+      }
+
+      &.chosen .split_label { color: @accent-color; }
+    }
+  }
+}
+
+// ── Image placeholder ───────────────────────────────────────────────────────
+.img_placeholder {
+  background: #f0f0f0;
+  width: 100%;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  color: @secondary-text-color;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
 }
 
 .pullquote-wide{
