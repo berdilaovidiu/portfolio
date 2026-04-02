@@ -7,7 +7,7 @@ var fancyboxOptions = {
     },
 
     margin: [60, 0, 80, 0],
-
+    buttons: ["zoom", "fullScreen", "close"],
     slideShow: false,
     fullScreen: true,
     thumbs: false,

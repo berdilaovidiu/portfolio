@@ -28,7 +28,6 @@
 </head>
 
 <body>
-
     <script type="text/javascript">
         $(document).ready(function () {
             $("[data-fancybox]").fancybox(fancyboxOptions);
@@ -59,10 +58,9 @@
             </div>
 
             <div class="gallery">
-                <a data-fancybox="hero" class="needsBorder" data-caption="Nintex Solution Designer"
-                    href="img/sgp/Solution Designer - Hero.png">
-                    <img class="gallery1 with_border" src="img/sgp/Solution Designer - Hero.png" />
-                </a>
+                <video preload="metadata" controls class="gallery1" poster="img/sgp/Solution Designer - Hero.png">
+                        <source src="https://pub-0a05b55f0234472d99c27e5ff219f6bd.r2.dev/SGP-walkthrough-web.mp4" type="video/mp4">
+                </video>
             </div>
 
             <p>In late 2024, every AI app generator was racing toward the same flashy demo: type what you want,
@@ -234,9 +232,18 @@
                 winning over teams with their own roadmaps. I had to trust the vision while building the
                 evidence to justify it.</p>
 
-            <div class="gallery">
-                <div class="img_placeholder">Page &amp; Workflow Outline Design, coming soon</div>
-            </div>
+                <div class="gallery">
+                    <a data-fancybox="sgp-outlines" class="needsBorder"
+                       data-caption="Application page outline, describing the structure at a high level before details are generated. Each section contains a layout intent, a title and a brief description and is editable in place."
+                       href="img/sgp/Page outline.png">
+                        <img class="gallery2 left_image with_border" src="img/sgp/Page outline.png"/>
+                    </a>
+                    <a data-fancybox="sgp-outlines" class="needsBorder"
+                       data-caption="Workflow outline, showing the high level steps in a process and the logic between them before any details are generated. Each step has a editable title and description, and the connections between steps are editable as well."
+                       href="img/sgp/Workflow outline.png">
+                        <img class="gallery2 right_image with_border" src="img/sgp/Workflow outline.png"/>
+                    </a>
+                </div>  
 
             <!-- ── 04 Design Process ──────────────────────────────── -->
             <div class="subtitle" id="design-process">04 — Design Process</div>
@@ -258,7 +265,29 @@
                 rough fidelity was intentional: it invited editing rather than approval.</p>
 
             <div class="gallery">
-                <div class="img_placeholder">Early Sketches, Delivery Breakdown, coming soon</div>
+                <a data-fancybox="sgp-sketches" class="needsBorder" 
+                    data-caption="Builder intent is captured via a guided inteview. The system asks questions to clarify the builder's needs, and the builder's answers are used to generate non techincal requirements like user personas and processes."
+                    href="img/sgp/SGP - sketches - requirements.png">
+                    <img class="gallery1 with_border" src="img/sgp/SGP - sketches - requirements.png" />
+                </a>
+
+                <a data-fancybox="sgp-sketches" class="needsBorder" 
+                    data-caption="The asset outline, a skeleton of the final output, is generated and reviewed before any detail is filled in. This allows builders to catch wrong assumptions and hallucinations early, when they're cheaper to fix. The outline eveolves in-place into a fully generated asset through iterative refinement."
+                    href="img/sgp/SGP - sketches - outlines.png">
+                    <img class="gallery1 with_border" src="img/sgp/SGP - sketches - outlines - small.png" />
+                </a>
+
+                <a data-fancybox="sgp-sketches" class="needsBorder" 
+                    data-caption="The AI assistant works consinstely across domains, providing builders with a familiar way to ask for help and make adjustments. Cross-cutting solution changes are highlighted, so builders can understand the impact of their requests and retain control."
+                    href="img/sgp/SGP - sketches - AI assistant.png">
+                    <img class="gallery1 with_border" src="img/sgp/SGP - sketches - AI assistant - small.png" />
+                </a>
+
+                <a data-fancybox="sgp-sketches" class="needsBorder" 
+                    data-caption="Building one feature at a time becomes available when non techincal and technical aspects of the solution are linked properly. This enables faster time to value, offers more control to builders and creates momentum with incremental wins."
+                    href="img/sgp/SGP - sketches - incremental building.png">
+                    <img class="gallery1 with_border" src="img/sgp/SGP - sketches - incremental building - small.png" />
+                </a>   
             </div>
 
             <div class="subtitle2">Competitive Analysis</div>
@@ -271,7 +300,11 @@
                 the confidence to move forward and clarity on where we needed to invest further.</p>
 
             <div class="gallery">
-                <div class="img_placeholder">Competitive Analysis Slides, coming soon</div>
+                <a data-fancybox="sgp-research" class="needsBorder"
+                   data-caption="Competitor research report, showing that while one-shot generation was the current market narrative, more mature players were already moving toward multi-step generation journeys with more control and better handling of complex requirements."
+                   href="img/sgp/Sharable findings.png">
+                    <img class="gallery1 with_border" src="img/sgp/Sharable findings small.png"/>
+                </a>
             </div>
 
             <div class="subtitle2">Cross-Team Alignment</div>
@@ -282,7 +315,7 @@
                 feature into a platform capability.</p>
 
             <div class="gallery">
-                <div class="img_placeholder">Beta UI, End-to-End Prototype, coming soon</div>
+                <div class="img_placeholder">Platform level AI Assistant proposal document, coming soon. <br> (Need to clean up PII and sensitive information)</div>
             </div>
 
             <!-- ── 05 Challenges ──────────────────────────────────── -->
